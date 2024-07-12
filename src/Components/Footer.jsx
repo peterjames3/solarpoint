@@ -11,7 +11,7 @@ import {
 function Footer() {
   return (
     <section className="w-full bg-gray-800 ">
-      <div className=" max-w-[1400px] mt-0 mx-auto py-16 px-9 grid  grid-cols-1 text-center ss:text-start  space-y-3 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-300 ">
+      <div className=" max-w-[1600px] mt-0 mx-auto py-16 px-9 grid  grid-cols-1 text-center ss:text-start  space-y-3 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-300 ">
 
    
       <div className="">
@@ -27,7 +27,7 @@ function Footer() {
         </p>
         <div className="flex justify-between md:w-[75%] my-6">
           <a
-            href="https://www.facebook.com/YourPageName"
+            href="https://web.facebook.com/profile.php?id=61557063135392"
             target="_blank"
             rel="noopener noreferrer"
           >
