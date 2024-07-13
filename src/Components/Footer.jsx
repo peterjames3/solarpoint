@@ -47,7 +47,7 @@ function Footer() {
             />
           </a>
           <a
-            href="https://twitter.com/YourUsername"
+            href="https://x.com/Solarsystems_1"
             target="_blank"
             rel="noopener noreferrer"
           >
