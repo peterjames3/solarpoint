@@ -24,7 +24,7 @@ function FromClient() {
     <>
       <section
         data-aos="fade-up"
-        data-aos-duration="3000"
+        data-aos-duration="300"
         className="min-h-[16rem] bg-white"
       >
         <div className="w-full pb-4 flex flex-col items-center space-y-3">
@@ -73,18 +73,17 @@ function FromClient() {
                     </span>
                   </nav>
                   <nav className="mb-8">
-                  <h4 className="text-3xl text-center py-2">Mary</h4>
-                  <p>
-                    "I want to express my gratitude for the quick, efficient,
-                    and amiable manner in which you addressed my issue, from the
-                    initial quote to the finalization of the task. Working with
-                    you has been an immensely satisfying experience." Warm
-                    regards. The pursuit of genuine
-                    passion, the innovator, does not dwell in hatred as much as
-                    it embraces the similarity of accusations, the uncorrupted
-                    and those not deserted, laborious in spirit, rich in
-                    adversities.
-                  </p>
+                    <h4 className="text-3xl text-center py-2">Mary</h4>
+                    <p>
+                      I want to express my gratitude for the quick, efficient,
+                      and amiable manner in which you addressed my issue, from
+                      the initial quote to the finalization of the task. Working
+                      with you has been an immensely satisfying experience. Warm
+                      regards. The pursuit of genuine passion, the innovator,
+                      does not dwell in hatred as much as it embraces the
+                      similarity of accusations, the uncorrupted and those not
+                      deserted, laborious in spirit, rich in adversities.
+                    </p>
                   </nav>
                 </div>
               </div>
@@ -109,19 +108,19 @@ function FromClient() {
                       <GoStarFill />
                     </span>
                   </nav>
-                  <h4 className="text-3xl text-center py-2">Peter james</h4>
+                  <h4 className="text-3xl text-center py-2">Peter</h4>
                   <nav className="mb-8">
-                  <p>
-                    {" "}
-                    "I would like to add my appreciation of the speedy efficient
-                    and friendly way, both from initial estimate to completion
-                    of the work, that you solved my problem. It has been a great
-                    pleasure to work with you." Sincere best wishes- Kenya
-                    Ministry of Energy. Cumque porro pariatur animi vero,
-                    inventore, non sit vitae odio quam eaque similique accusamus
-                    corrupti neque, deserunt nam laboriosam eos voluptas
-                    asperiores?
-                  </p>
+                    <p>
+                      {" "}
+                      I want to express my gratitude for the quick, efficient,
+                      and friendly service I received. From the initial quote to
+                      the final installation, everything was handled
+                      professionally and smoothly. Working with your team has
+                      been a truly satisfying experience. Your commitment to
+                      excellence and genuine passion for renewable energy shine
+                      through. The journey has been inspiring, and I am thrilled
+                      with the outcome.
+                    </p>
                   </nav>
                 </div>
               </div>
@@ -148,17 +147,16 @@ function FromClient() {
                   </nav>
                   <h4 className="text-3xl text-center py-2">Hanzo</h4>
                   <nav className="mb-8">
-                  <p>
-                    {" "}
-                    "I would like to add my appreciation of the speedy efficient
-                    and friendly way, both from initial estimate to completion
-                    of the work, that you solved my problem. It has been a great
-                    pleasure to work with you." Sincere best wishes- Kenya
-                    Ministry of Energy. Cumque porro pariatur animi vero,
-                    inventore, non sit vitae odio quam eaque similique accusamus
-                    corrupti neque, deserunt nam laboriosam eos voluptas
-                    asperiores?
-                  </p>
+                    <p>
+                      {" "}
+                      Your team has exceeded my expectations in every way. The
+                      speed and efficiency of the solar panel installation were
+                      remarkable, and the customer service was top-notch.
+                      Everyone was knowledgeable and helpful, making the entire
+                      process stress-free. I am delighted with the quality of
+                      the products and the positive impact on my energy bills.
+                      This experience has been nothing short of excellent.
+                    </p>
                   </nav>
                 </div>
               </div>
@@ -185,17 +183,16 @@ function FromClient() {
                   </nav>
                   <h4 className="text-3xl text-center py-2">Derric</h4>
                   <nav className="mb-8">
-                  <p>
-                    {" "}
-                    "I would like to add my appreciation of the speedy efficient
-                    and friendly way, both from initial estimate to completion
-                    of the work, that you solved my problem. It has been a great
-                    pleasure to work with you." Sincere best wishes- Kenya
-                    Ministry of Energy. Cumque porro pariatur animi vero,
-                    inventore, non sit vitae odio quam eaque similique accusamus
-                    corrupti neque, deserunt nam laboriosam eos voluptas
-                    asperiores?
-                  </p>
+                    <p>
+                      {" "}
+                      I highly commend your team for their exceptional service.
+                      The entire process, from consultation to installation, was
+                      handled with utmost care and expertise. The staff's
+                      professionalism and dedication to customer satisfaction
+                      were apparent throughout. I am thrilled with the solar
+                      system's performance and the reduction in my energy costs.
+                      Thank you for a wonderful experience.
+                    </p>
                   </nav>
                 </div>
               </div>
@@ -221,18 +218,17 @@ function FromClient() {
                     </span>
                   </nav>
                   <nav className="mb-8">
-                  <h4 className="text-3xl text-center py-2">Lucy</h4>
-                  <p>
-                    {" "}
-                    "I would like to add my appreciation of the speedy efficient
-                    and friendly way, both from initial estimate to completion
-                    of the work, that you solved my problem. It has been a great
-                    pleasure to work with you." Sincere best wishes- Kenya
-                    Ministry of Energy. Cumque porro pariatur animi vero,
-                    inventore, non sit vitae odio quam eaque similique accusamus
-                    corrupti neque, deserunt nam laboriosam eos voluptas
-                    asperiores?
-                  </p>
+                    <h4 className="text-3xl text-center py-2">Lucy</h4>
+                    <p>
+                      {" "}
+                      Thank you for the outstanding service and high-quality
+                      solar products. Your team was friendly, efficient, and
+                      highly knowledgeable, making the whole experience pleasant
+                      and easy. I appreciate the thorough explanations and
+                      support provided throughout the process. The results have
+                      been impressive, and I am very satisfied with my decision
+                      to go solar.
+                    </p>
                   </nav>
                 </div>
               </div>

@@ -24,7 +24,7 @@ function Hero() {
     cursor: Cursor.ALL,
   });
   return (
-    <section className="w-full h-[70svh] ss:h-[100dvh]">
+    <section className="w-full h-[100svh] ss:h-[100dvh]">
       <div className="relative w-full bg-gradient-to-r from-slate-900 to-gray-600 h-full  ">
         <img
           src={HeroImg}
