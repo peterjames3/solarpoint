@@ -22,11 +22,7 @@ function FromClient() {
   };
   return (
     <>
-      <section
-        data-aos="fade-up"
-        data-aos-duration="300"
-        className="min-h-[16rem] bg-white"
-      >
+      <section className="min-h-[16rem] bg-white">
         <div className="w-full pb-4 flex flex-col items-center space-y-3">
           <h3 className="text-center text-3xl text-black font-Poppins font-semibold pt-9">
             Real Stories, Real Impact

@@ -5,13 +5,11 @@ import Blog3 from "../assets/carousel-3..webp";
 import SolarPanel from "../assets/Solarpanel..webp";
 import { FaEye } from "react-icons/fa";
 import BlogButton from "./BlogButton";
-import AOS from 'aos'
-import 'aos/dist/aos.css';
+
 
 function Blog() {
   return (
-    <section data-aos="fade-up"
-    data-aos-duration="2000" className="max-w-[1400px] mx-auto flex flex-col md:flex-row gap-5 font-Iter  mt-[10rem]">
+    <section className="max-w-[1400px] mx-auto flex flex-col md:flex-row gap-5 font-Iter  mt-[10rem]">
       <div className="w-full space-y-6 px-5  md:px-10 md:w-1/2">
         <h4 className="text-6xl  text-black font-semibold">Our Blog</h4>
         <p className="text-xl">
@@ -36,9 +34,8 @@ function Blog() {
           </div>
           <div className="divide-y-2 divide-slate-500 h-[10rem] w-full">
             <h6 className="text-2xl text-black font-semibold">
-            "Dawn of a New Era: How Solar Power is Lighting Up the World"
+              "Dawn of a New Era: How Solar Power is Lighting Up the World"
             </h6>
-            
           </div>
         </div>
         <div className="flex flex-col space-y-3">
@@ -52,9 +49,8 @@ function Blog() {
           </div>
           <div className="divide-y-2 divide-slate-500 h-[10rem] w-full">
             <h6 className="text-2xl text-black font-semibold">
-            "Green Giants: The Role of Solar Farms in Sustainable Energy"
+              "Green Giants: The Role of Solar Farms in Sustainable Energy"
             </h6>
-           
           </div>
         </div>
         <div className="flex flex-col space-y-3">
@@ -68,9 +64,8 @@ function Blog() {
           </div>
           <div className="divide-y-2 divide-slate-500 h-[10rem] w-full">
             <h6 className="text-2xl text-black font-semibold">
-            "From Sun to Socket: The Journey of Solar Energy into Our Homes"
+              "From Sun to Socket: The Journey of Solar Energy into Our Homes"
             </h6>
-          
           </div>
         </div>
         <div className="flex flex-col space-y-3">
@@ -84,9 +79,9 @@ function Blog() {
           </div>
           <div className="divide-y-2 divide-slate-500 h-[10rem] w-full">
             <h6 className="text-2xl text-black font-semibold">
-            "Harnessing the Sun: Innovations and Advances in Solar Panel Technology"
+              "Harnessing the Sun: Innovations and Advances in Solar Panel
+              Technology"
             </h6>
-           
           </div>
         </div>
       </div>
