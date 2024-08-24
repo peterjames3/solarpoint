@@ -1,7 +1,6 @@
-import React from "react";
+"react";
 import HeroImg from "../assets/hero-2..webp";
-import img3 from "../assets/img3..webp";
-import { Typewriter, Cursor, useTypewriter } from "react-simple-typewriter";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 import ContactUsButton from "./ContactUsButton";
 import AboutUsButton from "./AboutUsButton";
 
@@ -23,32 +22,44 @@ function Hero() {
     deleteSpeed: 50,
     cursor: Cursor.ALL,
   });
+
   return (
     <section className="w-full h-[100svh] ss:h-[100dvh]">
-      <div className="relative w-full bg-gradient-to-r from-slate-900 to-gray-600 h-full  ">
+      <div className="relative w-full bg-gradient-to-r from-gray-900 to-gray-700 h-full">
         <img
           src={HeroImg}
-          alt=""
+          alt="Solar panels and renewable energy solutions"
           loading="lazy"
-          className="flex-shrink-0 mix-blend-overlay  object-cover h-full w-full"
+          className="flex-shrink-0 mix-blend-overlay object-cover h-full w-full"
         />
-        <div className=" absolute top-[55%] left-[50%] transition -translate-x-1/2 -translate-y-1/2 text-white space-y-5 text-center flex flex-col items-start w-full sm:h-auto rounded-sm pt-4 ">
-          <div className="w-full px-8  h-full space-y-10">
-            <h1 className=" text-6xl md:text-8xl px-8 uppercase  font-bold ">
-              At Solar Point Systems
+        <div className=" absolute left-[0%] top-[22%] max-w-[890px] space-y-6 pl-8  py-4 sm:left-[0%]  xl:pl-2 xl:translate-x-[14%] xxl:translate-x-[40%]">
+          <div className="w-full h-full space-y-10">
+            <h1 className="py-2 text-5xl text-green-500 font-body md:text-7xl font-semibold">
+              Empowering Sustainable Energy Solutions for a Brighter Tomorrow
             </h1>
-            <h2 className=" text-3xl xs:text-5xl font-medium px-8 leading-tight">
-              We deal with a variety of products ranging from:
-              <span className="text-green-500">{typeEffect}</span>
-            </h2>
-            <div className="flex gap-6 justify-center">
-              <AboutUsButton />
 
-              <ContactUsButton />
+            <h2 className="text-2xl font-Rubik xs:text-3xl font-medium text-slate-400 leading-[]">
+              Explore our range of high-quality solar products designed to
+              provide sustainable energy solutions for homes and businesses.
+            </h2>
+            <p className="text-2xl font-Rubik xs:text-3xl text-slate-400 font-medium  leading-tight">
+              Powering your future with{" "}
+              <span className="text-green-500">{typeEffect}</span>
+            </p>
+            <div className="flex gap-6 justify-start">
+              <AboutUsButton
+                data-aos="fade-left"
+                data-aos-delay="1200"
+                data-aos-offset="50"
+              />
+              <ContactUsButton
+                data-aos="fade-left"
+                data-aos-delay="1200"
+                data-aos-offset="50"
+              />
             </div>
           </div>
         </div>
-     
       </div>
     </section>
   );

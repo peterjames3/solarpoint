@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default  {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   mode: "jit",
   theme: {
@@ -8,10 +8,14 @@ module.exports = {
         primary: "#00040f",
         secondary: "#00f6ff",
         dimWhite: "rgba(255, 255, 255, 0.7)",
-        dimBlue: "rgba(9, 151, 124, 0.1)",
+        brandC: '#16a34a',
+        cardBg: '#ecf4f0',
+        brandD:'#01502b',
+        textColor:'#4459a7'
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        Rubik: ["Rubik", "sans-serif"],
       },
     },
     screens: {
@@ -20,7 +24,8 @@ module.exports = {
       sm: "768px",
       md: "1060px",
       lg: "1200px",
-      xl: "1700px",
+      xl: "1400px",
+      xxl: '1900px',
     },
   },
   plugins: [],

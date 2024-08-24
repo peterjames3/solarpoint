@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import  { useRef } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { GoStarFill } from "react-icons/go";
@@ -7,7 +7,6 @@ import { GoStarFill } from "react-icons/go";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import AOS from "aos";
 import "aos/dist/aos.css";
 
 // import required modules
@@ -22,8 +21,8 @@ function FromClient() {
   };
   return (
     <>
-      <section className="min-h-[16rem] bg-white">
-        <div className="w-full pb-4 flex flex-col items-center space-y-3">
+      <section className="min-h-[16rem] ">
+        <div className="w-full pb-4 flex flex-col items-center space-y-3 font-poppins">
           <h3 className="text-center text-3xl text-black font-Poppins font-semibold pt-9">
             Real Stories, Real Impact
           </h3>
@@ -49,8 +48,8 @@ function FromClient() {
         >
           <div className="min-h-[16rem]">
             <SwiperSlide>
-              <div className=" p-2 flex justify-center md:px-10 bg-white text-black font-bold mt-4 mx-auto min-h-[29rem] sm:py-8 ">
-                <div className="w-full px-3 pb-7 md:pb-2 align-center items-center justify-center h-[100%] bg-slate-500 md:w-1/2 md:px-20 rounded-lg shadow-md cursor-pointer shadow-black hover:scale-100 border-x-2 border-green-600 transition-all delay-300">
+              <div className=" p-2 flex justify-center md:px-10  text-black font-bold mt-4 mx-auto min-h-[29rem] sm:py-8 ">
+                <div className="w-full px-3 pb-7 md:pb-2 align-center items-center justify-center h-[100%] bg-cardBg md:w-1/2 md:px-20 rounded-lg shadow-md cursor-pointer shadow-black hover:scale-100 border-x-2 border-green-600 transition-all delay-300">
                   <nav className="flex items-center justify-center gap-4 py-5">
                     <span className="text-pink-500 cursor-pointer text-xl ">
                       <GoStarFill />
@@ -85,8 +84,8 @@ function FromClient() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className=" p-2 flex justify-center md:px-10 bg-white text-black font-bold mt-4 mx-auto min-h-[29rem] md:py-8 ">
-                <div className="w-full px-3 pb-7 md:pb-2 align-center items-center justify-center h-[100%] bg-slate-500 md:w-1/2 md:px-20 rounded-lg shadow-md cursor-pointer shadow-black hover:scale-100 border-x-2 border-green-600 transition-all delay-300">
+              <div className=" p-2 flex justify-center md:px-10  text-black font-bold mt-4 mx-auto min-h-[29rem] md:py-8 ">
+                <div className="w-full px-3 pb-7 md:pb-2 align-center items-center justify-center h-[100%] bg-cardBg md:w-1/2 md:px-20 rounded-lg shadow-md cursor-pointer shadow-black hover:scale-100 border-x-2 border-green-600 transition-all delay-300">
                   <nav className="flex items-center justify-center gap-4 py-5">
                     <span className="text-pink-500 cursor-pointer text-xl ">
                       <GoStarFill />
@@ -122,8 +121,8 @@ function FromClient() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className=" p-2 flex justify-center md:px-10 bg-white text-black font-bold mt-4 mx-auto min-h-[29rem] md:py-8 ">
-                <div className="w-full px-3 pb-7 md:pb-2 align-center items-center justify-center h-[100%] bg-slate-500 md:w-1/2 md:px-20 rounded-lg shadow-md cursor-pointer shadow-black hover:scale-100 border-x-2 border-green-600 transition-all delay-300">
+              <div className=" p-2 flex justify-center md:px-10  text-black font-bold mt-4 mx-auto min-h-[29rem] md:py-8 ">
+                <div className="w-full px-3 pb-7 md:pb-2 align-center items-center justify-center h-[100%] bg-cardBg md:w-1/2 md:px-20 rounded-lg shadow-md cursor-pointer shadow-black hover:scale-100 border-x-2 border-green-600 transition-all delay-300">
                   <nav className="flex items-center justify-center gap-4 py-5">
                     <span className="text-pink-500 cursor-pointer text-xl ">
                       <GoStarFill />
@@ -158,8 +157,8 @@ function FromClient() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className=" p-2 flex justify-center md:px-10 bg-white text-black font-bold mt-4 mx-auto min-h-[29rem] md:py-8 ">
-                <div className="w-full px-3 pb-7 md:pb-2 align-center items-center justify-center h-[100%] bg-slate-500 md:w-1/2 md:px-20 rounded-lg shadow-md cursor-pointer shadow-black hover:scale-100 border-x-2 border-green-600 transition-all delay-300">
+              <div className=" p-2 flex justify-center md:px-10 text-black font-bold mt-4 mx-auto min-h-[29rem] md:py-8 ">
+                <div className="w-full px-3 pb-7 md:pb-2 align-center items-center justify-center h-[100%] bg-cardBg md:w-1/2 md:px-20 rounded-lg shadow-md cursor-pointer shadow-black hover:scale-100 border-x-2 border-green-600 transition-all delay-300">
                   <nav className="flex items-center justify-center gap-4 py-5">
                     <span className="text-pink-500 cursor-pointer text-xl ">
                       <GoStarFill />
@@ -183,10 +182,10 @@ function FromClient() {
                       {" "}
                       I highly commend your team for their exceptional service.
                       The entire process, from consultation to installation, was
-                      handled with utmost care and expertise. The staff's
+                      handled with utmost care and expertise. The staff&apos;s
                       professionalism and dedication to customer satisfaction
                       were apparent throughout. I am thrilled with the solar
-                      system's performance and the reduction in my energy costs.
+                      system&apos;s performance and the reduction in my energy costs.
                       Thank you for a wonderful experience.
                     </p>
                   </nav>
@@ -194,8 +193,8 @@ function FromClient() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className=" p-2 flex justify-center md:px-10 bg-white text-black font-bold mt-4 mx-auto min-h-[29rem] md:py-8 ">
-                <div className="w-full px-3 pb-7 md:pb-2 align-center items-center justify-center h-[100%] bg-slate-500 md:w-1/2 md:px-20 rounded-lg shadow-md cursor-pointer shadow-black hover:scale-100 border-x-2 border-green-600 transition-all delay-300">
+              <div className=" p-2 flex justify-center md:px-10  text-black font-bold mt-4 mx-auto min-h-[29rem] md:py-8 ">
+                <div className="w-full px-3 pb-7 md:pb-2 align-center items-center justify-center h-[100%] bg-cardBg md:w-1/2 md:px-20 rounded-lg shadow-md cursor-pointer shadow-black hover:scale-100 border-x-2 border-green-600 transition-all delay-300">
                   <nav className="flex items-center justify-center gap-4 py-5">
                     <span className="text-pink-500 cursor-pointer text-xl ">
                       <GoStarFill />

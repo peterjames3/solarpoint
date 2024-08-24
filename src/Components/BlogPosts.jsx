@@ -1,21 +1,31 @@
-import React from "react";
+import PropTypes from 'prop-types';
+
 
 export function BlogPosts({ blog, goBack }) {
     if (!blog) {
-      return <p>Sorry, the requested blog does not exist.</p>; // Error handling for undefined blog
-    }
+      return <p>Sorry, the requested blog does not exist.</p>; 
+     }
   
     return (
       <article>
-        <h1 className="text-4xl font-bold">{blog.title}</h1>
+        <h1 className="text-4xl font-bold font-poppins">{blog.title}</h1>
         <img src={blog.image} alt="Blog cover" className="my-4" />
-        <p className="text-xl">{blog.content}</p>
+        <p className="text-xl font-Rubik">{blog.content}</p>
         <button
           onClick={goBack}
-          className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300"
+          className="btn--primary"
         >
           Go Back
         </button>
       </article>
     );
   }
+
+BlogPosts.propTypes = {
+  blog: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+  }).isRequired,
+  goBack: PropTypes.func.isRequired,
+};

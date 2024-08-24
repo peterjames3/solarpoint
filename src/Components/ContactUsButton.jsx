@@ -11,7 +11,7 @@ function ContactUsButton() {
   }
 
   return (
-    <button onClick={handleClick} type="button" className="px-10 py-3  text-xl  font-semibold rounded-md text-white border hover:bg-black transition-all delay-300">Contact Us</button>
+    <button onClick={handleClick} type="button" className="btn--secondary-mobile sm:btn--secondary">Contact Us</button>
   );
 }
 

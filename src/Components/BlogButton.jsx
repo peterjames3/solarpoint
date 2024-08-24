@@ -11,7 +11,7 @@ function BlogButton() {
   }
 
   return (
-    <button onClick={handleClick} type="button" className=' w-[100%] xs:w-[30%] md:w-[35%] py-3  mt-5 text-white text-xl font-semibold bg-blue-700 md:py-3 md:px-8  lg:py-3 lg:px-10 cursor-pointer transition-all delay-300 hover:bg-black' >See More..</button>
+    <button onClick={handleClick} type="button" className=' w-[100%] xs:w-[30%] md:w-[35%]  mt-5 btn--primary md:py-3 md:px-8  lg:py-3 lg:px-10' >See More..</button>
   );
 }
 

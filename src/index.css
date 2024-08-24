@@ -2,12 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   scroll-behavior: smooth;
 }
-.blob{
+.btn--primary {
+  @apply border border-green-700 bg-green-700 px-10 py-3 text-xl font-medium text-white outline-cardBg transition-all delay-300 hover:bg-brandD focus:outline;
+}
+.btn--secondary {
+  @apply border border-green-700 bg-transparent px-10 py-4 text-xl font-medium text-white transition-all delay-300 hover:cursor-pointer hover:bg-green-700;
+}
+.btn--primary-mobile {
+  @apply border border-green-700 bg-green-700 px-8 py-3 font-medium text-white outline-cardBg transition-all delay-300 hover:bg-brandD focus:outline;
+}
+.btn--secondary-mobile {
+  @apply border border-green-700 bg-transparent px-8 py-3 text-xl font-medium text-white transition-all delay-300 hover:cursor-pointer hover:bg-green-700;
+}
+
+.wrapper {
+  @apply mx-auto my-10 max-w-[1400px];
+}
+.wrapperproduct {
+  @apply mx-auto my-20 max-w-[1400px];
+}
+/* custom.css */
+.custom-bg-transparent {
+  background: rgba(12, 12, 12, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.blob {
   background-image: url("../src/assets/illustration-your-users.svg");
- 
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -17,24 +45,25 @@
   transition: all 1s ease-in-out;
 }
 @keyframes animate {
-  0%, 100% {
+  0%,
+  100% {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   }
   50% {
     border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
   }
-
 }
 
-.solar-heading{
-  font-size: clamp(2.5rem, 2.2727rem + .9697vw, 3rem);
+.solar-heading {
+  font-size: clamp(2.5rem, 2.2727rem + 0.9697vw, 3rem);
   color: whitesmoke;
 }
 /* Define a class for the menu */
 .menu-transition {
-  transition: transform 0.5s ease 0.2s, opacity 0.5s ease 0.2s;
+  transition:
+    transform 0.5s ease 0.2s,
+    opacity 0.5s ease 0.2s;
 }
-
 
 /* Define the visible state */
 .menu-visible {
@@ -48,82 +77,82 @@
   opacity: 0;
 }
 
-
-.home_clip{
+.home_clip {
   clip-path: polygon(0% 0%, 100% 0, 86% 47%, 69% 100%, 0% 100%);
 
- border-bottom: 2px;
- border-color: #000063;
+  border-bottom: 2px;
+  border-color: #000063;
 }
- .backgroundImage{
+.backgroundImage {
   background: url(./assets/quote..webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 75%;
   background-blend-mode: overlay;
- }
- .btn {
-  width: 9em;
-  height: 3em;
-  border-radius: 30em;
+}
+.btn {
+  width: 12em;
+  height: 4em;
   font-size: 15px;
   font-family: inherit;
   border: none;
   position: relative;
   overflow: hidden;
   z-index: 1;
-  box-shadow: 6px 6px 12px #c5c5c5,
-              -6px -6px 12px #ffffff;
- }
- 
- .btn::before {
-  content: '';
+  box-shadow:
+    6px 6px 12px #c5c5c5,
+    -6px -6px 12px #ffffff;
+}
+
+.btn::before {
+  content: "";
   width: 0;
-  height: 3em;
-  border-radius: 30em;
+  height: 4em;
   position: absolute;
   top: 0;
   left: 0;
-  background-image: linear-gradient(to right, #004E92 0%, #000063 100%);
-  color:whitesmoke;
+  background-image: linear-gradient(to right, #16a34a 0%, #01502b 100%);
+  color: whitesmoke;
 
-  transition: .5s ease;
+  transition: 0.5s ease;
   display: block;
   z-index: -1;
- }
- 
- button:hover::before {
-  width: 9em;
- }
- .card, .card_1, .card_2, .card_3, .card_4, .card_5{
+}
+
+button:hover::before {
+  width: 12em;
+}
+.card,
+.card_1,
+.card_2,
+.card_3,
+.card_4,
+.card_5 {
   max-width: 500px;
   height: 220px;
-  background-color: #f2f2f2;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  
+  border: 1px solid rgb(185, 236, 185);
 }
 /* .img{
   max-width: 500px !important;
   min-height:500px;
 } */
-.card__title{
-  color:#000063;
+.card__title {
+  color: rgb(29, 28, 28);
   font-size: 1.5rem;
 }
 
 .swiper {
   width: 100%;
   height: 100%;
-  background: whitesmoke;
 }
 
 .swiper-slide {
   font-size: 18px;
-  color: #fff;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 40px 60px;
@@ -155,8 +184,6 @@
   line-height: 1.3;
 }
 
-
-
 .autoplay-progress {
   position: absolute;
   right: 16px;
@@ -168,7 +195,6 @@
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  color: var(--swiper-theme-color);
 }
 
 .autoplay-progress svg {
@@ -180,13 +206,12 @@
   width: 100%;
   height: 100%;
   stroke-width: 4px;
-  stroke: var(--swiper-theme-color);
+
   fill: none;
   stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
   stroke-dasharray: 125.6;
   transform: rotate(-90deg);
 }
-
 
 /* Custom animation styles */
 .divider-animate {
@@ -196,7 +221,10 @@
   left: 50%;
   width: 4px; /* Width of the divider */
   background: transparent; /* Initial background */
-  transition: background-color 1.8s ease, height 1.8s ease, transform 1.8s ease;
+  transition:
+    background-color 1.8s ease,
+    height 1.8s ease,
+    transform 1.8s ease;
   transform: scaleY(0);
   transform-origin: top;
 }
@@ -228,8 +256,12 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes fadeIn {
@@ -245,23 +277,23 @@
   animation: fadeIn ease-in 1s;
   animation-fill-mode: forwards;
 }
-.fade-enter{
-  opacity:0;
-
+.fade-enter {
+  opacity: 0;
 }
-.fade-enter-active{
-  opacity:1;
+.fade-enter-active {
+  opacity: 1;
   transition: opacity 300ms ease-in-out;
 }
-.fade-exit{
-  opacity:1;
+.fade-exit {
+  opacity: 1;
 }
-.fade-exit-active{
-  opacity:0;
-  transition:opacity 300ms ease-in-out;
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
 }
 
-@media (max-width: 640px) { /* Tailwind's 'sm' breakpoint */
+@media (max-width: 640px) {
+  /* Tailwind's 'sm' breakpoint */
   .divider-animate {
     top: 50%;
     left: 0;
@@ -275,7 +307,12 @@
   .group:hover .divider-animate {
     transform: scaleX(1);
   }
-  .card, .card_1, .card_2, .card_3, .card_4, .card_5{
+  .card,
+  .card_1,
+  .card_2,
+  .card_3,
+  .card_4,
+  .card_5 {
     height: 220px;
     background-color: #f2f2f2;
     border-radius: 10px;
@@ -284,12 +321,10 @@
     justify-content: center;
     overflow: hidden;
     max-width: 800px;
-    
   }
-  .img{
+  .img {
     max-width: 800px;
     visibility: hidden;
     display: none !important;
   }
-
 }

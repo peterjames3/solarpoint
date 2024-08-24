@@ -3,14 +3,13 @@ import { VscWorkspaceTrusted } from "react-icons/vsc";
 import IsometricDiagram from "../assets/Camper-Van..webp";
 import Principle from "../assets/Principle..webp";
 import waterHeater from "../assets/water-heater..webp";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 
 function WaterHeaterMain() {
   return (
-    <section data-aos="fade-up" data-aos-duration="3000" className="h-auto w-full ">
-      <div className="max-w-[1400px] px-5 my-4 py-10 mx-auto flex flex-col sx:flex-col ss:flex-col md:flex-row-reverse md:gap-5 min-h-[32rem] md:px-7 ">
-        <div className=" w-full md:w-[50%] h-[32rem] ss:h-auto md:h-[32rem] overflow-hidden rounded-md relative bg-gradient-to-r from-slate-800 to-gray-500">
+    <section  className="h-auto w-full ">
+      <div className="wrapper bg-cardBg px-5 py-10 flex flex-col sx:flex-col ss:flex-col md:flex-row-reverse md:gap-5 min-h-[32rem] md:px-7 ">
+        <div className=" w-full md:w-[50%]  ss:h-auto overflow-hidden rounded-md relative bg-gradient-to-r from-slate-800 to-gray-500">
           <img
             src={waterHeater}
             alt="man working"
@@ -27,12 +26,12 @@ function WaterHeaterMain() {
           </div>
         </div>
         <div className="w-full px-2 md:w-[50%] md:px-3 ss:space-y-2 md:space-y-4 font-Poppins py-2 animate-puls">
-          <h2 className="font-semibold text-3xl text-blue-700 pt-2">
+          <h3 className="font-bold font-poppins text-3xl text-textColor pt-2">
             Warm water on demand, every day of the year, without the burden of a
             large electric bill?
-          </h2>
+          </h3>
           <hr className="border-b-2 border-blue-700" />
-          <p className="text-gray-900 text-xl">
+          <p className="text-gray-900 font-Rubik text-xl">
             In the niche arena of merging solar energy technology with water
             heating solutions, we are leaders. Our proficiency encompasses
             small-scale residential projects to large-scale commercial
@@ -45,31 +44,31 @@ function WaterHeaterMain() {
           </p>
           <div className=" flex flex-col text-start font-medium space-y-2">
             <div className="flex flex-row items-center">
-              <span className="px-2  text-blue-700">
+              <span className="px-2  text-brandC">
                 <TbSquareCheckFilled aria-label="Feature checked" />
               </span>
               <span className="text-black ">Minimal Maintenance Required</span>
             </div>
             <div className="flex flex-row items-center">
-              <span className="px-2  text-blue-700">
+              <span className="px-2  text-brandC">
                 <TbSquareCheckFilled aria-label="Feature checked" />
               </span>
               <span>No Complex Wiring or Installation</span>
             </div>
             <div className="flex flex-row items-center">
-              <span className="px-2  text-blue-700">
+              <span className="px-2  text-brandC">
                 <TbSquareCheckFilled aria-label="Feature checked" />
               </span>
               <span>Significantly Lowers Energy Expenses</span>
             </div>
             <div className="flex flex-row items-center">
-              <span className="px-2  text-blue-700">
+              <span className="px-2  text-brandC">
                 <TbSquareCheckFilled aria-label="Feature checked" />
               </span>
               <span>Easy and Straightforward Installation</span>
             </div>
             <div className="flex flex-row items-center">
-              <span className="px-2  text-blue-700">
+              <span className="px-2  text-brandC">
                 <TbSquareCheckFilled aria-label="Feature checked" />
               </span>
               <span>Hassle Free Install.</span>
@@ -78,7 +77,7 @@ function WaterHeaterMain() {
         </div>
       </div>
       <div className=" max-w-[1400px] px-5 my-4 mx-auto min-h-auto  ss:overflow-y-scroll md:overflow-auto">
-        <div className="flex flex-col items-center space-y-3">
+        <div className="flex flex-col items-center font-poppins space-y-3">
           <h3 className="text-3xl font-semibold text-black font-Inter text-center ">
             {" "}
             Water Heater
@@ -88,7 +87,7 @@ function WaterHeaterMain() {
             Working Principle
           </h5>
         </div>
-        <div data-aos="fade-right" className="grid grid-cols-1 grid-rows-4 gap-0 ss:grid-cols-2 ss:grid-rows-2 font-Inter mt-10">
+        <div  className=" font-Rubik grid grid-cols-1 grid-rows-4 gap-0 ss:grid-cols-2 ss:grid-rows-2 font-Inter mt-10">
           <div className="w-full h-auto md:h-[35rem]">
             <img
               src={IsometricDiagram}
@@ -118,7 +117,7 @@ function WaterHeaterMain() {
               solution as the system heats water only when it's needed.
             </p>
           </div>
-          <div data-aos="fade-left" className="h-[35rem] py-5 space-y-3 text-xl space-x-2">
+          <div  className="h-[35rem] py-5 space-y-3 text-xl space-x-2">
             <h6 className="font-medium"> 2). Storage Water Heaters</h6>
             <p>
               These water heaters involve heating water and storing it in a tank
@@ -149,7 +148,7 @@ function WaterHeaterMain() {
               maximize water delivery.
             </p>
           </div>
-          <div data-aos="fade-left" className=" md:h-[40rem] ">
+          <div  className=" md:h-[40rem] ">
             <img
               src={Principle}
               alt="working principle img"

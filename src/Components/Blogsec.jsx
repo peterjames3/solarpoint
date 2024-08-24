@@ -1,23 +1,22 @@
-import React from "react";
 import Blog1 from "../assets/carousel-1..webp";
 import Blog2 from "../assets/carousel-2..webp";
 import Blog3 from "../assets/carousel-3..webp";
 import SolarPanel from "../assets/Solarpanel..webp";
-import { FaEye } from "react-icons/fa";
 import BlogButton from "./BlogButton";
-
 
 function Blog() {
   return (
-    <section className="max-w-[1400px] mx-auto flex flex-col md:flex-row gap-5 font-Iter  mt-[10rem]">
+    <section className="wrapper  flex flex-col md:flex-row gap-5 ">
       <div className="w-full space-y-6 px-5  md:px-10 md:w-1/2">
-        <h4 className="text-6xl  text-black font-semibold">Our Blog</h4>
-        <p className="text-xl">
+        <h4 className="text-5xl  text-black font-semibold font-poppins">
+          Our Blog
+        </h4>
+        <p className="text-xl font-Rubik">
           We invite you to bookmark our blog, subscribe to our newsletter, and
           follow us on social media to stay updated on our latest posts and
           features. Your feedback and contributions are invaluable to us, as
           they help us grow and improve. Share your thoughts, ask questions, and
-          let's foster a vibrant community of enthusiasts and professionals
+          let&apos;s foster a vibrant community of enthusiasts and professionals
           dedicated to advancing our industry.
         </p>
         <BlogButton />
@@ -33,9 +32,10 @@ function Blog() {
             />
           </div>
           <div className="divide-y-2 divide-slate-500 h-[10rem] w-full">
-            <h6 className="text-2xl text-black font-semibold">
-              "Dawn of a New Era: How Solar Power is Lighting Up the World"
-            </h6>
+            <h5 className="text-2xl text-black font-semibold">
+              &apos;Dawn of a New Era: How Solar Power is Lighting Up the
+              World&apos;
+            </h5>
           </div>
         </div>
         <div className="flex flex-col space-y-3">
@@ -48,9 +48,10 @@ function Blog() {
             />
           </div>
           <div className="divide-y-2 divide-slate-500 h-[10rem] w-full">
-            <h6 className="text-2xl text-black font-semibold">
-              "Green Giants: The Role of Solar Farms in Sustainable Energy"
-            </h6>
+            <h5 className="text-2xl text-black font-semibold">
+              &apos;Green Giants: The Role of Solar Farms in Sustainable
+              Energy&apos;
+            </h5>
           </div>
         </div>
         <div className="flex flex-col space-y-3">
@@ -63,9 +64,10 @@ function Blog() {
             />
           </div>
           <div className="divide-y-2 divide-slate-500 h-[10rem] w-full">
-            <h6 className="text-2xl text-black font-semibold">
-              "From Sun to Socket: The Journey of Solar Energy into Our Homes"
-            </h6>
+            <h5 className="text-2xl text-black font-semibold">
+              &apos;From Sun to Socket: The Journey of Solar Energy into Our
+              Homes&apos;
+            </h5>
           </div>
         </div>
         <div className="flex flex-col space-y-3">
@@ -78,10 +80,10 @@ function Blog() {
             />
           </div>
           <div className="divide-y-2 divide-slate-500 h-[10rem] w-full">
-            <h6 className="text-2xl text-black font-semibold">
-              "Harnessing the Sun: Innovations and Advances in Solar Panel
-              Technology"
-            </h6>
+            <h5 className="text-2xl text-black font-semibold">
+              &apos;Harnessing the Sun: Innovations and Advances in Solar Panel
+              Technology&apos;
+            </h5>
           </div>
         </div>
       </div>

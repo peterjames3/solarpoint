@@ -11,7 +11,7 @@ function MoreProductsButton() {
   }
 
   return (
-    <button onClick={handleClick} type="button" className="bg-blue-700 text-white text-bold py-3 px-8 text-xl font-Poppins cursor-pointer hover:bg-black transition-all delay-300">More Products</button>
+    <button onClick={handleClick} type="button" className=" btn--primary ">More Products</button>
   );
 }
 

@@ -1,29 +1,39 @@
-import Button from "./Button";
-import React, { useState } from "react";
-import ProductsModal from "./ProductModal"
+import { useNavigate } from "react-router-dom";
 
-function ProductsItems({ img, name, desc, price }) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleOpenModal = () => setIsModalOpen(true);
-  const handleCloseModal = () => setIsModalOpen(false);
+function ProductsItems({ id, img, name, desc, price }) {
+  const navigate = useNavigate();
 
-  const productDetails = { img, name, desc, price };
+  const handleViewDetails = () => {
+    navigate(`/products/${id}`, { state: { img, name, desc, price } });
+  };
+
+
+
   return (
-    <section className=" my-2 mx-auto min-h-[40rem] rounded-sm  max-w-5xl flex flex-col  font-Inter">
-    <div className="h-[60%]  hover:scale-105 transform ease-in-out duration-300 cursor-pointer">
-      <img src={img} loading="lazy" alt={name} className="object-fit w-full h-[19rem]" />
-    </div>
-    <div className="flex-grow px-2 space-y-2 text-center">
-      <h2 className="text-3xl text-blue-700">{name}</h2>
-      <p className="text-2xl">{desc}</p>
-      <h3 className="text-2xl font-semibold">{price}</h3>
-      {/* Pass the handleOpenModal to the Button component */}
-      <Button onClick={handleOpenModal} />
-      {/* Modal Component */}
-      <ProductsModal isOpen={isModalOpen} onClose={handleCloseModal} product={productDetails} />
-    </div>
-  </section>
+    <section className="font-Inter mx-auto my-2 flex min-h-[35rem] max-w-5xl flex-col rounded-lg bg-cardBg">
+      <div className="h-[60%] transform cursor-pointer duration-300 ease-in-out hover:scale-105">
+        <img
+          src={img}
+          loading="lazy"
+          alt={name}
+          className="object-fit h-[19rem] w-full"
+        />
+      </div>
+      <div className="flex-grow space-y-2 px-2 pt-4 text-center">
+        <h2 className="font-poppins text-2xl text-[#4459a7]">{name}</h2>
+        <p className="line-clamp-2 font-Rubik text-xl">{desc}</p>
+        <h3 className="text-2xl font-semibold text-brandD">Ksh {price}</h3>
+        <nav className="pt-4">
+          <a
+            className="btn--primary cursor-pointer"
+            onClick={handleViewDetails}
+          >
+            Order
+          </a>
+        </nav>
+      </div>
+    </section>
   );
 }
 

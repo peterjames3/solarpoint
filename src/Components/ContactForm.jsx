@@ -1,11 +1,9 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import quote from "../assets/quote..webp"; // Assuming this path is correct
 import { FaMapMarkedAlt, FaPhone } from "react-icons/fa";
 import { MdMarkEmailRead } from "react-icons/md";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import AOS from "aos";
 import "aos/dist/aos.css";
 
 function ContactForm() {
@@ -81,10 +79,10 @@ function ContactForm() {
     <section
       /* data-aos="fade-up"
       data-aos-duration="3000" */
-      className="max-w-[1400px]  mx-auto my-4 py-20 grid grid-cols-1 sm:grid-cols-2 "
+      className="wrapper py-20 grid grid-cols-1 sm:grid-cols-2 "
     >
       <div className="space-y-7  h-[25rem] sm:h-auto ">
-        <nav className="w-full h-full text-center pt-3 text-black flex flex-col items-center relative  bg-blue-900">
+        <nav className="w-full h-full text-center pt-3 text-black flex flex-col items-center relative  bg-brandD">
           <h5 className="text-5xl pt-8 text-black font-semibold">
             Get in Touch
           </h5>
@@ -113,9 +111,7 @@ function ContactForm() {
               </nav>
               <nav className="text-white ">solarpointsystems1@gmail.com</nav>
             </div>
-            <p className=" text-xl underline font-semibold text-green-700">
-              Customer Service Department
-            </p>
+          
           </div>
         </nav>
       </div>
@@ -199,7 +195,7 @@ function ContactForm() {
             type="submit"
             disabled={isSubmitting}
             value="Send"
-            className="bg-blue-700 rounded-md py-4 font-semibold text-xl text-white cursor-pointer hover:bg-black transition-all delay-300"
+            className="bg-brandC rounded-md py-4 font-semibold text-xl text-white cursor-pointer hover:bg-brandD transition-all delay-300"
           >
             {isSubmitting ? "Sending..." : "Send"}
           </button>

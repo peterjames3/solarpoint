@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import AnimatedRoutes from "./Components/AnimatedRoutes";
 import Header from "./Components/Navbar";

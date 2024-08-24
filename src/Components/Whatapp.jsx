@@ -22,7 +22,7 @@ const Whatapp = () => {
     <div className="fixed bottom-10 left-10">
       {isVisible && (
         <a
-          href="https://wa.me/254768283966"
+          href="https://wa.me/254703704062"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Whatsapp"

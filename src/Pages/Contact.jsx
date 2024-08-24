@@ -1,4 +1,5 @@
-import React, {useEffect} from 'react'
+import  {useEffect} from 'react'
+import { Helmet } from "react-helmet-async";
 import ContactHero from '../Components/ContactHero'
 import OurContact from '../Components/OurContact'
 import  ContactForm from "../Components/ContactForm"
@@ -11,17 +12,25 @@ function Contact() {
     window.scrollTo(0, 0)
   }, [location])
   return (
-    <motion.section className='w-full'
-    intial={{opacity:0}}
-    animate={{opacity:1}}
-    exit={{opacity:0}}
+    <motion.section
+      className="w-full"
+      intial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
     >
-        <ContactHero />  
-        <OurContact />  
-        <ContactForm />
-       
+      <Helmet>
+        <title>Solar Point Systems | Contact Us</title>
+        <meta
+          name="description"
+          content="Get in touch with solarPointsystem. Find contact details, our location on the map, and read our FAQ section for more information."
+        />
+        <link rel="canonical" href="https://kimgym.netlify.app/contact" />
+      </Helmet>
+      <ContactHero />
+      <OurContact />
+      <ContactForm />
     </motion.section>
-  )
+  );
 }
 
 export default Contact

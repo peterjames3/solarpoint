@@ -3,17 +3,16 @@ import { GiEarthAfricaEurope } from "react-icons/gi";
 import { GrUserExpert } from "react-icons/gr";
 import { CiStar } from "react-icons/ci";
 import CountUp from 'react-countup';
-import AOS from 'aos'
 import 'aos/dist/aos.css';
 
 function CompletedProject() {
   return (
     <section data-aos="fade-up"
-    data-aos-duration="3000" className='w-full my-24 mx-auto flex  md:flex-row flex-wrap gap-4  justify-around py-6'>
+    data-aos-duration="3000" className='wrapper flex font-Rubik md:flex-row flex-wrap gap-4  justify-around py-6'>
         <div className='space-y-4 flex items-center flex-col'>
             <nav className='text-8xl  text-yellow-950 hover:text-yellow-800 transition-all delay-300 cursor-pointer'><GrCompliance /></nav>
             <h5 className='text-5xl text-black font-medium'><CountUp start={0} end={20} duration={4.75} /></h5>
-            <p className='text-2xl'>complete projects</p>
+            <p className='text-2xl font-Rubik'>complete projects</p>
         </div>
         <div className='space-y-4 flex items-center flex-col'>
             <nav className='text-8xl  text-yellow-950 hover:text-yellow-800 transition-all delay-300 cursor-pointer'><GiEarthAfricaEurope /></nav>

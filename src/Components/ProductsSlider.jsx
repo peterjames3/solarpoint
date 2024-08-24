@@ -9,9 +9,9 @@ import Jackery from "../assets/Jackery..webp";
 import LED from "../assets/30LED..webp";
 import Product1 from "../assets/Lifetime _ Built-in BMS..webp";
 import Roomn from "../assets/amerisolar-280w..webp";
-import MoreProductsButton from "../Components/MoreProductsButton"
-import AOS from 'aos'
-import 'aos/dist/aos.css';
+import MoreProductsButton from "../Components/MoreProductsButton";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // import required modules
 import { Parallax, Pagination, Navigation } from "swiper/modules";
@@ -19,18 +19,24 @@ import { Parallax, Pagination, Navigation } from "swiper/modules";
 function ProductsSlider() {
   return (
     <>
-    <section className="w-full flex flex-col items-center space-y-3">
-      <h3 className="text-center text-3xl text-black  font-Poppins font-semibold pt-9">
-         Products
-      </h3>
-      <hr className="w-[10rem] border-b-[3px] rounded border-blue-700" />
-      <h4 className="text-center text-4xl font-bold ">Discover Our Premier Product Collection</h4>  
-       </section>
-      <section data-aos="zoom-in" data-aos-delay="70" className="my-20 min-h-[28rem]">
+      <section className="w-full flex flex-col items-center space-y-3">
+        <h3 className="text-center text-3xl text-black  font-poppins font-semibold pt-9">
+          Products
+        </h3>
+        <hr className="w-[10rem] border-b-[3px] rounded border-blue-700" />
+        <h4 className="text-center text-4xl font-bold font-poppins">
+          Discover Our Premier Product Collection
+        </h4>
+      </section>
+      <section
+        data-aos="zoom-in"
+        data-aos-delay="70"
+        className="my-20 min-h-[28rem] bg-cardBg"
+      >
         <Swiper
           style={{
-            "--swiper-navigation-color": "#fff",
-            "--swiper-pagination-color": "#fff",
+            "--swiper-navigation-color": "",
+            "--swiper-pagination-color": "",
           }}
           speed={600}
           parallax={true}
@@ -39,11 +45,11 @@ function ProductsSlider() {
           }}
           navigation={true}
           modules={[Parallax, Pagination, Navigation]}
-          className="mySwiper"
+          className="mySwiper wrapper"
         >
           <div
             slot="container-start"
-            className="parallax-bg bg-[#E5E9EC]"
+            className="bg-cardBg  "
             data-swiper-parallax="-23%"
           ></div>
 
@@ -51,7 +57,7 @@ function ProductsSlider() {
             <section className="flex mt-2 px-2 mx-auto flex-col-reverse gap-0 xs:flex-col-reverse ss:flex-col-reverse ss:gap-2 sm:flex-row md:flex-row md:gap-3 max-w-8xl ss:px-16 ">
               <div className="w-full md:w-1/2 space-y-6 px-4">
                 <div
-                  className="title text-black font-bond text-5xl py-4 font-Inter"
+                  className="title text-black font-bond text-5xl py-4 font-poppins"
                   data-swiper-parallax="-300"
                 >
                   <h3 className="text-4xl md:text-5xl font-bold font-Poppins">
@@ -59,13 +65,13 @@ function ProductsSlider() {
                   </h3>
                 </div>
                 <div
-                  className="subtitle text-black font-semibold font-Inter"
+                  className="subtitle text-black font-semibold font-poppins"
                   data-swiper-parallax="-200"
                 >
                   <p>Power-based product</p>
                 </div>
                 <div
-                  className="text-xl text-slate-600 font-medium font-Inter"
+                  className="text-xl text-slate-600 font-medium font-Rubik"
                   data-swiper-parallax="-100"
                 >
                   <p>
@@ -80,8 +86,7 @@ function ProductsSlider() {
                     Intergrate and combine the Explorer 1500 and 2 SolarSaga
                   </p>
                 </div>
-
-                \<MoreProductsButton /> 
+                <MoreProductsButton />
               </div>
 
               <div className="w-full md:w-1/2 ">
@@ -98,7 +103,7 @@ function ProductsSlider() {
             <section className="flex mt-2 px-2 mx-auto flex-col-reverse gap-0 xs:flex-col-reverse ss:flex-col-reverse ss:gap-2 sm:flex-row md:flex-row md:gap-3 max-w-8xl ss:px-16">
               <div className="w-full md:w-1/2 space-y-6 px-4">
                 <div
-                  className="title font-bond text-5xl py-4 font-Inter"
+                  className="title font-bond text-5xl py-4 font-poppins"
                   data-swiper-parallax="-300"
                 >
                   <h3 className="text-4xl md:text-5xl font-bold font-Poppins text-black">
@@ -106,13 +111,13 @@ function ProductsSlider() {
                   </h3>
                 </div>
                 <div
-                  className="subtitle text-black font-semibold font-Inter"
+                  className="subtitle text-black font-semibold font-poppins"
                   data-swiper-parallax="-200"
                 >
                   <p>Power-based product</p>
                 </div>
                 <div
-                  className="text-xl text-slate-600 font-medium font-Inter"
+                  className="text-xl text-slate-600 font-medium font-Rubik"
                   data-swiper-parallax="-100"
                 >
                   <p>
@@ -126,7 +131,7 @@ function ProductsSlider() {
                     Efficient, and Competitively priced
                   </p>
                 </div>
-                <MoreProductsButton />  
+                <MoreProductsButton />
               </div>
 
               <div className="w-full md:w-1/2 ">
@@ -143,7 +148,7 @@ function ProductsSlider() {
             <section className="flex mt-2 px-2 mx-auto flex-col-reverse gap-0 xs:flex-col-reverse ss:flex-col-reverse ss:gap-2 sm:flex-row  max-w-8xl md:flex-row md:gap-3 max-w-8xl ss:px-16">
               <div className="w-full md:w-1/2 space-y-6 px-4">
                 <div
-                  className="title text-black font-bond text-5xl py-4 font-Inter"
+                  className="title text-black font-bond text-5xl py-4 font-poppins"
                   data-swiper-parallax="-300"
                 >
                   <h3 className="text-4xl md:text-5xl font-bold font-Poppins">
@@ -151,13 +156,13 @@ function ProductsSlider() {
                   </h3>
                 </div>
                 <div
-                  className="subtitle text-black font-semibold font-Inter"
+                  className="subtitle text-black font-semibold font-poppins"
                   data-swiper-parallax="-200"
                 >
                   <h4>Power-based product</h4>
                 </div>
                 <div
-                  className="text-xl text-slate-600 font-medium font-Inter"
+                  className="text-xl text-slate-600 font-medium font-Rubik"
                   data-swiper-parallax="-100"
                 >
                   <p>
@@ -174,13 +179,13 @@ function ProductsSlider() {
                     Intergrate and combine the Explorer 1500 and 2 SolarSaga
                   </p>
                 </div>
-                <MoreProductsButton />  
+                <MoreProductsButton />
               </div>
               <div className="w-full md:w-1/2 ">
                 <img
                   src={LED}
                   alt="img"
-                  loading='lazy'
+                  loading="lazy"
                   className="rounded-md h-[30rem] w-[100%] object-fit"
                 />
               </div>
@@ -190,7 +195,7 @@ function ProductsSlider() {
             <section className="flex mt-2 px-2 mx-auto flex-col-reverse gap-0 xs:flex-col-reverse ss:flex-col-reverse ss:gap-2 sm:flex-row md:flex-row md:gap-3 max-w-8xl ss:px-16">
               <div className="w-full md:w-1/2 space-y-6 px-4">
                 <div
-                  className="title text-black font-bond text-5xl py-4 font-Inter"
+                  className="title text-black font-bond text-5xl py-4 font-poppins"
                   data-swiper-parallax="-300"
                 >
                   <h3 className="text-4xl md:text-5xl font-bold font-Poppins">
@@ -198,13 +203,13 @@ function ProductsSlider() {
                   </h3>
                 </div>
                 <div
-                  className="subtitle text-black font-semibold font-Inter"
+                  className="subtitle text-black font-semibold font-poppins"
                   data-swiper-parallax="-200"
                 >
                   <h4>Power-based product</h4>
                 </div>
                 <div
-                  className="text-xl text-slate-600 font-medium font-Inter"
+                  className="text-xl text-slate-600 font-medium font-Rubik"
                   data-swiper-parallax="-100"
                 >
                   <p>
@@ -214,14 +219,14 @@ function ProductsSlider() {
                     They are preferred for their high energy density, long life
                     cycle, and relative lightness compared to other types of
                     rechargeable batteries.
-                    <br />{" "}
-                    <span className="uppercase font-medium">
+                    <br /> <span className="uppercase font-medium">
                       Types:
                     </span>{" "}
-                    Lithium-ion (Li-ion), Lithium Polymer (LiPo), Lithium Iron Phosphate (LiFePO₄)  
+                    Lithium-ion (Li-ion), Lithium Polymer (LiPo), Lithium Iron
+                    Phosphate (LiFePO₄)
                   </p>
                 </div>
-                <MoreProductsButton />  
+                <MoreProductsButton />
               </div>
               <div className="w-full md:w-1/2 ">
                 <img

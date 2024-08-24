@@ -13,8 +13,8 @@ function Solutions() {
       <SolarLedsHero />
       <OurSolutions />
 
-      <h4 className="text-center text-4xl textblack underline font-semibold font-Inter">Some of Our Solar LEDS Products</h4>
-      <div className="max-w-[1400px] mt-1 mx-auto grid grid-cols-1 ss:grid-cols-2 md:grid-rows-2 md:grid-cols-4 gap-5 min-h-[10rem]">
+      <h4 className="text-center text-4xl font-poppins pt-10 textblack  font-semibold font-Inter">Some of Our Solar LEDS Products</h4>
+      <div className="wrapper grid grid-cols-1 ss:grid-cols-2 md:grid-rows-2 md:grid-cols-4 gap-5 min-h-[10rem]">
         {LedsData.map((item) => (
           <LedsProducts
             key={item.id}
