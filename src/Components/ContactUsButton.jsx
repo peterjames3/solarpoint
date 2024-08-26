@@ -11,7 +11,7 @@ function ContactUsButton() {
   }
 
   return (
-    <button onClick={handleClick} type="button" className="btn--secondary-mobile sm:btn--secondary">Contact Us</button>
+    <button onClick={handleClick} type="button" className="btn--secondary">Contact Us</button>
   );
 }
 

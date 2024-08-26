@@ -20,11 +20,11 @@ function ProductsSlider() {
   return (
     <>
       <section className="w-full flex flex-col items-center space-y-3">
-        <h3 className="text-center text-3xl text-black  font-poppins font-semibold pt-9">
+        <h3 className="text-center text-3xl text-black  font-poppins font-bold pt-9">
           Products
         </h3>
-        <hr className="w-[10rem] border-b-[3px] rounded border-blue-700" />
-        <h4 className="text-center text-4xl font-bold font-poppins">
+        <hr className="w-[10rem] border-b-[3px] rounded border-textColor" />
+        <h4 className="text-center text-4xl font-medium font-poppins">
           Discover Our Premier Product Collection
         </h4>
       </section>

@@ -6,17 +6,12 @@
   scroll-behavior: smooth;
 }
 .btn--primary {
-  @apply border border-green-700 bg-green-700 px-10 py-3 text-xl font-medium text-white outline-cardBg transition-all delay-300 hover:bg-brandD focus:outline;
+  @apply border border-green-700 bg-green-700 px-8 sm:px-10 py-3  text-xl font-medium text-white outline-cardBg transition-all delay-300 hover:bg-brandD focus:outline;
 }
 .btn--secondary {
-  @apply border border-green-700 bg-transparent px-10 py-4 text-xl font-medium text-white transition-all delay-300 hover:cursor-pointer hover:bg-green-700;
+  @apply border border-green-700 bg-transparent px-8 sm:px-10 py-4 text-xl font-medium text-white transition-all delay-300 hover:cursor-pointer hover:bg-green-700;
 }
-.btn--primary-mobile {
-  @apply border border-green-700 bg-green-700 px-8 py-3 font-medium text-white outline-cardBg transition-all delay-300 hover:bg-brandD focus:outline;
-}
-.btn--secondary-mobile {
-  @apply border border-green-700 bg-transparent px-8 py-3 text-xl font-medium text-white transition-all delay-300 hover:cursor-pointer hover:bg-green-700;
-}
+
 
 .wrapper {
   @apply mx-auto my-10 max-w-[1400px];

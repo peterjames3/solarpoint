@@ -15,9 +15,9 @@ function SolarSystem() {
       className="wrapper px-2  flex flex-col"
     >
       <div className="text-center mb-7 font-poppins text-slate-900 space-y-2 py-4">
-        <h3 className="text-3xl font-medium">Solar Home Systems</h3>
-        <hr className="w-[12rem] mx-auto rounded-md  border-2 border-blue-700" />
-        <h4 className="text-4xl font-semibold">A System For Every Need</h4>
+        <h3 className="text-3xl font-bold">Solar Home Systems</h3>
+        <hr className="w-[12rem] mx-auto rounded-md  border-2 border-textColor" />
+        <h4 className="text-4xl font-medium">A System For Every Need</h4>
       </div>
       <div className="w-full px-10 space-y-10 ss:px-20 grid grid-cols-1 grid-rows-4 ss:grid-rows-2 ss:grid-cols-1 ss:gap-4 sm:grid-cols-2 sm:place-items-center sm:space-y-0 sm:px-4 sm:gap-8 sm:grid-rows-2 md:gap-12 md:grid-rows-1  md:grid-cols-3 lg:grid-cols-4">
         <div className="rounded-md flex flex-col shadow-xl shadow-black h-[55rem] ss:h-[56rem] sm:h-[55rem] ss:w-full sm:w-[20rem] md:max-w-[22rem] md:max-h-[55rem] overflow-hidden hover:scale-105 transform duration-300">

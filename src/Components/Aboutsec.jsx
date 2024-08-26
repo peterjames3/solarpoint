@@ -17,11 +17,11 @@ function Aboutus() {
       className="wrapper px-10  "
     >
       <section className="w-full pb-4 flex font-poppins flex-col items-center space-y-3">
-        <h3 className="text-center text-3xl text-black  font-Poppins font-semibold pt-9">
+        <h3 className="text-center text-3xl text-black  font-poppins font-bold pt-9">
           About Us
         </h3>
-        <hr className="w-[10rem] border-b-[3px] rounded border-blue-700" />
-        <h4 className="text-center text-4xl font-bold ">
+        <hr className="w-[10rem] border-b-[3px] rounded border-textColor" />
+        <h4 className="text-center text-4xl font-medium ">
           {" "}
           We are #1 In The World Of Solar & Renewable Energy
         </h4>

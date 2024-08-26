@@ -9,11 +9,11 @@ function OurAchievements() {
       <section   data-aos="fade-up"
       data-aos-duration="3000" className="w-full   py-7 px-10  ">
         <div className="w-full font-poppins pb-4 flex flex-col items-center space-y-3">
-          <h3 className="text-center text-3xl text-black font-Poppins font-semibold pt-9">
+          <h3 className="text-center text-3xl text-black font-poppins font-bold pt-9">
             Our Achievements
           </h3>
-          <hr className="w-[10rem] border-b-[3px] rounded border-blue-700" />
-          <h4 className="text-center text-4xl font-bold">
+          <hr className="w-[10rem] border-b-[3px] rounded border-textColor" />
+          <h4 className="text-center text-4xl font-medium">
             Illuminating a Greener Future with Over 1 Gigawatt of Solar Energy
             Deployed
           </h4>

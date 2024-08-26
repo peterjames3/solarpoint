@@ -127,7 +127,7 @@ const Navbar = () => {
           className="flex items-center gap-2 text-3xl font-bold text-green-600 hover:cursor-pointer"
         >
           <img src={logo} alt="logo" className="size-12 flex-1" />
-          <nav className="hidden md:flex">SolarPoint Systems</nav>
+          <nav className="hidden md:flex">SolarPoint Systems E.A</nav>
         </Link>
 
         {/* Desktop Navigation */}
@@ -160,7 +160,6 @@ const Navbar = () => {
             <div className="relative">
               <Link
                 className="cursor-pointer text-xl font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
-                
                 onMouseOver={toggleDropdown}
               >
                 SOLUTIONS
@@ -234,7 +233,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {nav && (
-          <nav className="fixed left-0 top-0 h-full w-[60%] border-r border-r-gray-900 bg-black duration-500 ease-in-out">
+          <nav className="z-100 fixed left-0 top-0 h-screen w-[60%] border-r pt-16 border-r-gray-900 bg-black duration-500 ease-in-out">
             <Link
               to="/"
               className="flex items-center gap-2 px-4 pt-7 text-2xl font-medium text-[#00df9a] transition-all delay-300 ease-out hover:cursor-pointer"
@@ -249,7 +248,7 @@ const Navbar = () => {
             <ul className="flex flex-col space-y-10 px-4 pt-10 font-normal">
               <Link
                 to="/"
-                className="cursor-pointer font-medium text-white transition-all delay-300 ease-out hover:text-blue-700"
+                className="cursor-pointer font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
                 onClick={closeMenu}
                 style={location.pathname === "/" ? activeStyle : null}
               >
@@ -257,7 +256,7 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/about"
-                className="cursor-pointer font-medium text-white transition-all delay-300 ease-out hover:text-blue-700"
+                className="cursor-pointer font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
                 onClick={closeMenu}
                 style={location.pathname === "/about" ? activeStyle : null}
               >
@@ -265,7 +264,7 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/products"
-                className="cursor-pointer font-medium text-white transition-all delay-300 ease-out hover:text-blue-700"
+                className="cursor-pointer font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
                 onClick={closeMenu}
                 style={location.pathname === "/products" ? activeStyle : null}
               >
@@ -273,7 +272,7 @@ const Navbar = () => {
               </Link>
               <div className="relative">
                 <Link
-                  className="cursor-pointer font-medium text-white transition-all delay-300 ease-out hover:text-blue-700"
+                  className="cursor-pointer font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
                   to="/solutions"
                   onClick={toggleDropdown}
                 >
@@ -321,7 +320,7 @@ const Navbar = () => {
               </div>
               <Link
                 to="/blog"
-                className="cursor-pointer font-medium text-white transition-all delay-300 ease-out hover:text-blue-700"
+                className="cursor-pointer font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
                 onClick={closeMenu}
                 style={location.pathname === "/blog" ? activeStyle : null}
               >
@@ -329,7 +328,7 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/contact"
-                className="cursor-pointer font-medium text-white transition-all delay-300 ease-out hover:text-blue-700"
+                className="cursor-pointer font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
                 onClick={closeMenu}
                 style={location.pathname === "/contact" ? activeStyle : null}
               >

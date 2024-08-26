@@ -4,7 +4,7 @@ import cart from "../assets/green-blue-shopping-cart-yellow.jpg"
 function ProductsIntro() {
   return (
     <section className="w-full  mx-auto bg-gradient-to-r from-slate-700 to-gray-800">
-      <div className="wrapperproduct flex flex-col xs:flex-col  sm:flex-row gap-5 min-h-[30rem] pt-[5rem]  px-5 ">
+      <div className="wrapperproduct flex flex-col xs:flex-col  sm:flex-row gap-5 min-h-[30rem] pt-[6rem] sm:pt-[5rem]  px-5 ">
       <div className="w-full sm:w-1/2 text-center sm:text-start space-y-3 ss:pt-1">
         <h3 className="text-4xl  sm:text-6xl  font-bold text-green-600 font-poppins py-4 ">
           Shop Top Solar Products at Unmatched Prices

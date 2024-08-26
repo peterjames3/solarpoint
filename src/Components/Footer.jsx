@@ -10,11 +10,11 @@ function Footer() {
           <Link to="/" className="flex cursor-pointer items-center gap-2">
             <img src={logo} alt="logo" className="size-12" />
             <h3 className="hidden text-3xl font-bold text-brandC md:flex">
-              SolarPointSystem..
+              SolarPoint Systems E.A
             </h3>
           </Link>
           <p className="py-4 font-Rubik text-xl">
-            At SolarPoint Systems, we harness the power of the sun to bring you
+            At SolarPoint Systems East Africa, we harness the power of the sun to bring you
             clean, renewable energy solutions. Our commitment to sustainability
             drives us to innovate, ensuring that every home and business can
             achieve energy independence.

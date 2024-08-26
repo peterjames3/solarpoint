@@ -1,112 +1,118 @@
-import  { useRef } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-import { GoStarFill } from "react-icons/go";
+import { useEffect, useRef } from "react";
+import "keen-slider/keen-slider.min.css";
+import KeenSlider from "keen-slider";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "aos/dist/aos.css";
+const Testimonial = () => {
+  const sliderRef = useRef(null);
+  const previousRef = useRef(null);
+  const nextRef = useRef(null);
 
-// import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+  useEffect(() => {
+    if (sliderRef.current) {
+      const slider = new KeenSlider(sliderRef.current, {
+        loop: true,
+        slides: {
+          origin: "center",
+          perView: 1.25,
+          spacing: 16,
+        },
+        breakpoints: {
+          "(min-width: 1024px)": {
+            slides: {
+              origin: "auto",
+              perView: 2.5,
+              spacing: 32,
+            },
+          },
+        },
+      });
 
-function FromClient() {
-  const progressCircle = useRef(null);
-  const progressContent = useRef(null);
-  const onAutoplayTimeLeft = (s, time, progress) => {
-    progressCircle.current.style.setProperty("--progress", 1 - progress);
-    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
-  };
+      const prevHandler = () => slider.prev();
+      const nextHandler = () => slider.next();
+
+      if (previousRef.current) {
+        previousRef.current.addEventListener("click", prevHandler);
+      }
+
+      if (nextRef.current) {
+        nextRef.current.addEventListener("click", nextHandler);
+      }
+
+      return () => {
+        if (previousRef.current) {
+          previousRef.current.removeEventListener("click", prevHandler);
+        }
+        if (nextRef.current) {
+          nextRef.current.removeEventListener("click", nextHandler);
+        }
+        slider.destroy();
+      };
+    }
+  }, []);
+
   return (
-    <>
-      <section className="min-h-[16rem] ">
-        <div className="w-full pb-4 flex flex-col items-center space-y-3 font-poppins">
-          <h3 className="text-center text-3xl text-black font-Poppins font-semibold pt-9">
-            Real Stories, Real Impact
-          </h3>
-          <hr className="w-[15rem] border-b-[3px] rounded border-blue-700" />
-          <h4 className="text-center text-4xl font-bold ">
-            How Our Products Made a Difference
-          </h4>
+    <section className="">
+      <div className="wrapper px-4 py-12 sm:px-6 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
+        <div className="items-end justify-between sm:flex sm:pe-6 lg:pe-8">
+          <h2 className="max-w-xl font-poppins text-4xl font-bold text-black ">
+            Read trusted reviews from our customers
+          </h2>
+          <div className="mt-8 flex gap-4 lg:mt-0">
+            <button
+              aria-label="Previous slide"
+              ref={previousRef}
+              className="rounded-full border border-brandD p-3 text-brandC transition hover:bg-brandD hover:text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="size-5 rtl:rotate-180"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15.75 19.5L8.25 12l7.5-7.5"
+                />
+              </svg>
+            </button>
+            <button
+              aria-label="Next slide"
+              ref={nextRef}
+              className="rounded-full border border-brandD p-3 text-brandC transition hover:bg-brandD hover:text-white"
+            >
+              <svg
+                className="size-5 rtl:rotate-180"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5l7 7-7 7"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
-        <Swiper
-          spaceBetween={30}
-          centeredSlides={true}
-          autoplay={{
-            delay: 9500,
-            disableOnInteraction: false,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
-          onAutoplayTimeLeft={onAutoplayTimeLeft}
-          className="mySwiper"
-        >
-          <div className="min-h-[16rem]">
-            <SwiperSlide>
-              <div className=" p-2 flex justify-center md:px-10  text-black font-bold mt-4 mx-auto min-h-[29rem] sm:py-8 ">
-                <div className="w-full px-3 pb-7 md:pb-2 align-center items-center justify-center h-[100%] bg-cardBg md:w-1/2 md:px-20 rounded-lg shadow-md cursor-pointer shadow-black hover:scale-100 border-x-2 border-green-600 transition-all delay-300">
-                  <nav className="flex items-center justify-center gap-4 py-5">
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                  </nav>
-                  <nav className="mb-8">
-                    <h4 className="text-3xl text-center py-2">Mary</h4>
-                    <p>
-                      I want to express my gratitude for the quick, efficient,
-                      and amiable manner in which you addressed my issue, from
-                      the initial quote to the finalization of the task. Working
-                      with you has been an immensely satisfying experience. Warm
-                      regards. The pursuit of genuine passion, the innovator,
-                      does not dwell in hatred as much as it embraces the
-                      similarity of accusations, the uncorrupted and those not
-                      deserted, laborious in spirit, rich in adversities.
-                    </p>
-                  </nav>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className=" p-2 flex justify-center md:px-10  text-black font-bold mt-4 mx-auto min-h-[29rem] md:py-8 ">
-                <div className="w-full px-3 pb-7 md:pb-2 align-center items-center justify-center h-[100%] bg-cardBg md:w-1/2 md:px-20 rounded-lg shadow-md cursor-pointer shadow-black hover:scale-100 border-x-2 border-green-600 transition-all delay-300">
-                  <nav className="flex items-center justify-center gap-4 py-5">
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                  </nav>
-                  <h4 className="text-3xl text-center py-2">Peter</h4>
-                  <nav className="mb-8">
-                    <p>
-                      {" "}
+        <div className="mx-auto mt-8 max-w-[1400px] lg:col-span-2 lg:mx-0">
+          <div ref={sliderRef} className="keen-slider">
+            <div className="keen-slider__slide">
+              <blockquote className="font-Lato flex h-full flex-col justify-between rounded-md bg-brandD p-6 shadow-sm sm:p-8 lg:p-12">
+                <div>
+                  <div className="flex gap-0.5 text-green-500">
+                    {/* SVG stars omitted for brevity */}
+                  </div>
+                  <div className="mt-4">
+                    <h3 className="font-Lato text-2xl font-bold text-white sm:text-2xl">
+                      &apos;Best Decision Ever &apos;
+                    </h3>
+                    <p className="font-Lato mt-4 text-xl text-dimWhite">
                       I want to express my gratitude for the quick, efficient,
                       and friendly service I received. From the initial quote to
                       the final installation, everything was handled
@@ -114,36 +120,26 @@ function FromClient() {
                       been a truly satisfying experience. Your commitment to
                       excellence and genuine passion for renewable energy shine
                       through. The journey has been inspiring, and I am thrilled
-                      with the outcome.
+                      with the outcome.!&apos;
                     </p>
-                  </nav>
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className=" p-2 flex justify-center md:px-10  text-black font-bold mt-4 mx-auto min-h-[29rem] md:py-8 ">
-                <div className="w-full px-3 pb-7 md:pb-2 align-center items-center justify-center h-[100%] bg-cardBg md:w-1/2 md:px-20 rounded-lg shadow-md cursor-pointer shadow-black hover:scale-100 border-x-2 border-green-600 transition-all delay-300">
-                  <nav className="flex items-center justify-center gap-4 py-5">
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                  </nav>
-                  <h4 className="text-3xl text-center py-2">Hanzo</h4>
-                  <nav className="mb-8">
-                    <p>
-                      {" "}
+                <footer className="font-Lato mt-8 text-xl text-brandC">
+                  &mdash; Jane
+                </footer>
+              </blockquote>
+            </div>
+            <div className="keen-slider__slide">
+              <blockquote className="flex h-full flex-col justify-between rounded-md bg-brandD p-6 shadow-sm sm:p-8 lg:p-12">
+                <div>
+                  <div className="flex gap-0.5 text-green-500">
+                    {/* SVG stars omitted for brevity */}
+                  </div>
+                  <div className="font-Lato mt-4">
+                    <h3 className="text-2xl font-bold text-white sm:text-2xl">
+                      &apos;Best customer service&apos;.
+                    </h3>
+                    <p className="mt-4 text-xl text-dimWhite">
                       Your team has exceeded my expectations in every way. The
                       speed and efficiency of the solar panel installation were
                       remarkable, and the customer service was top-notch.
@@ -152,70 +148,50 @@ function FromClient() {
                       the products and the positive impact on my energy bills.
                       This experience has been nothing short of excellent.
                     </p>
-                  </nav>
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className=" p-2 flex justify-center md:px-10 text-black font-bold mt-4 mx-auto min-h-[29rem] md:py-8 ">
-                <div className="w-full px-3 pb-7 md:pb-2 align-center items-center justify-center h-[100%] bg-cardBg md:w-1/2 md:px-20 rounded-lg shadow-md cursor-pointer shadow-black hover:scale-100 border-x-2 border-green-600 transition-all delay-300">
-                  <nav className="flex items-center justify-center gap-4 py-5">
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                  </nav>
-                  <h4 className="text-3xl text-center py-2">Derric</h4>
-                  <nav className="mb-8">
-                    <p>
-                      {" "}
+                <footer className="font-Lato mt-8 text-xl text-brandC">
+                  &mdash; Mary
+                </footer>
+              </blockquote>
+            </div>
+            <div className="keen-slider__slide">
+              <blockquote className="flex h-full flex-col justify-between rounded-md bg-brandD p-6 shadow-sm sm:p-8 lg:p-12">
+                <div>
+                  <div className="flex gap-0.5 text-green-500">
+                    {/* SVG stars omitted for brevity */}
+                  </div>
+                  <div className="font-Lato mt-4">
+                    <h3 className="text-xl font-bold text-white sm:text-2xl">
+                      &apos; Wonderful Team&apos;.
+                    </h3>
+                    <p className="mt-4 text-xl text-dimWhite">
                       I highly commend your team for their exceptional service.
                       The entire process, from consultation to installation, was
                       handled with utmost care and expertise. The staff&apos;s
                       professionalism and dedication to customer satisfaction
                       were apparent throughout. I am thrilled with the solar
-                      system&apos;s performance and the reduction in my energy costs.
-                      Thank you for a wonderful experience.
+                      system&apos;s performance and the reduction in my energy
+                      costs. Thank you for a wonderful experience.
                     </p>
-                  </nav>
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className=" p-2 flex justify-center md:px-10  text-black font-bold mt-4 mx-auto min-h-[29rem] md:py-8 ">
-                <div className="w-full px-3 pb-7 md:pb-2 align-center items-center justify-center h-[100%] bg-cardBg md:w-1/2 md:px-20 rounded-lg shadow-md cursor-pointer shadow-black hover:scale-100 border-x-2 border-green-600 transition-all delay-300">
-                  <nav className="flex items-center justify-center gap-4 py-5">
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                    <span className="text-pink-500 cursor-pointer text-xl ">
-                      <GoStarFill />
-                    </span>
-                  </nav>
-                  <nav className="mb-8">
-                    <h4 className="text-3xl text-center py-2">Lucy</h4>
-                    <p>
-                      {" "}
+                <footer className="font-Lato mt-8 text-xl text-brandC">
+                  &mdash; Michael
+                </footer>
+              </blockquote>
+            </div>
+            <div className="keen-slider__slide">
+              <blockquote className="flex h-full flex-col justify-between rounded-md bg-brandD p-6 shadow-sm sm:p-8 lg:p-12">
+                <div>
+                  <div className="flex gap-0.5 text-green-500">
+                    {/* SVG stars omitted for brevity */}
+                  </div>
+                  <div className="font-Lato mt-4">
+                    <h3 className="text-2xl font-bold text-white sm:text-2xl">
+                      &apos;Amazing Community&apos;
+                    </h3>
+                    <p className="mt-4 text-xl text-dimWhite">
                       Thank you for the outstanding service and high-quality
                       solar products. Your team was friendly, efficient, and
                       highly knowledgeable, making the whole experience pleasant
@@ -224,21 +200,19 @@ function FromClient() {
                       been impressive, and I am very satisfied with my decision
                       to go solar.
                     </p>
-                  </nav>
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
+                <footer className="font-Lato mt-8 text-xl text-brandC">
+                  &mdash; Hanzo
+                </footer>
+              </blockquote>
+            </div>
+            {/* Add more slides as needed */}
           </div>
-          <div className="autoplay-progress" slot="container-end">
-            <svg viewBox="0 0 48 48" ref={progressCircle}>
-              <circle cx="24" cy="24" r="20"></circle>
-            </svg>
-            <span ref={progressContent}></span>
-          </div>
-        </Swiper>
-      </section>
-    </>
+        </div>
+      </div>
+    </section>
   );
-}
+};
 
-export default FromClient;
+export default Testimonial;

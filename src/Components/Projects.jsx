@@ -6,11 +6,11 @@ function Projects() {
   <section data-aos="fade-up"
   data-aos-duration="3000" className='max-w-8xl my-2 mx-auto min-h-[30rem]'>
      <div className="w-full pb-8 flex flex-col font-poppins items-center space-y-3">
-        <h3 className="text-center text-3xl text-black  font-Poppins font-semibold pt-9">
+        <h3 className="text-center text-3xl text-black  font-poppins font-bold pt-9">
           Projects
         </h3>
-        <hr className="w-[10rem] border-b-[3px] rounded border-blue-700" />
-        <h4 className="text-center text-4xl font-bold ">
+        <hr className="w-[10rem] border-b-[3px] rounded border-textColor" />
+        <h4 className="text-center text-4xl font-medium ">
           {" "}
           Explore Our Projects Catalog
         </h4>

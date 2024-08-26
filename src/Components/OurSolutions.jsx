@@ -11,9 +11,9 @@ function OurSolutions() {
   return (
     <section className="w-full px-2  md:px-3 my-4 mx-auto  flex flex-col space-y-5">
       <div className="w-full space-y-3 text-center font-poppins ">
-        <h3 className="text-3xl font-medium">Our Solutions</h3>
-        <hr className="w-[12rem] mx-auto rounded-md  border-2 border-blue-700" />
-        <h4 className="text-4xl font-semibold">
+        <h3 className="text-3xl font-bold">Our Solutions</h3>
+        <hr className="w-[12rem] mx-auto rounded-md  border-2 border-textColor" />
+        <h4 className="text-4xl font-medium">
           Invest in your future with our solutions.
         </h4>
       </div>

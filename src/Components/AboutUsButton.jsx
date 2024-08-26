@@ -11,7 +11,7 @@ function AboutUsButton() {
   }
 
   return (
-    <button onClick={handleClick} type="button" className=' btn--primary-mobile md:btn--primary' >Learn More </button>
+    <button onClick={handleClick} type="button" className=' btn--primary' >Learn More </button>
   );
 }
 

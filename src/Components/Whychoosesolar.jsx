@@ -9,10 +9,7 @@ const Whychoosesolar = () => {
         </div>
         <div className="font-Poppins px-5 md:px-10 pt-6 md:w-[55%]">
           <p className="pt-4 font-Rubik text-xl">
-            Since the industry revolution humans have had a negative impact on
-            the environment by burning fossils fuels for energy, releasing CO2
-            into atmosphere causing climate change. Many are Turning to solar
-            power because it is environmental friendly!
+          SolarPoint systems E.A has close to 2 decades of experience as a leader and an innovator in the Kenya solar space. Which makes us one of the top solar company in Kenya.  We have a wide range of experience in various components of solar power systems including: Solar panel installation, highly efficient solar systems, sustainable energy solutions, and a leading solar energy provider.
           </p>
         </div>
       </div>

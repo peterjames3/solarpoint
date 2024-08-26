@@ -70,7 +70,7 @@ function AccordionSection() {
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                     <p className="text-xl font-Rubik">
-                    Yes, you can use the above apliances as long as the sizing of the system factored the in. However, for hot water heating, we recomend a solar thermal hot water system for water heating
+                    Yes, you can use the above appliances as long as the sizing of the system was factored in during the design. However, for hot water heating, we recommend a solar thermal hot water system for water heating. 
                     </p>
                 </AccordionItemPanel>
             </AccordionItem>

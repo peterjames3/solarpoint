@@ -7,11 +7,11 @@ function Industryweserve() {
   return (
     <section className="w-full">
       <div className="w-full pb-4 flex flex-col items-center space-y-3 font-poppins">
-        <h3 className="text-center text-3xl text-black  font-Poppins font-semibold pt-9">
+        <h3 className="text-center text-3xl text-black  font-Poppins font-bold pt-9">
           Switch Today
         </h3>
         <hr className="w-[10rem] border-b-[3px] rounded border-blue-700" />
-        <h4 className="text-center text-4xl font-bold ">
+        <h4 className="text-center text-4xl font-medium ">
           {" "}
           Switch to solar in four easy steps
         </h4>

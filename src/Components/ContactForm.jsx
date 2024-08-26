@@ -72,30 +72,30 @@ function ContactForm() {
             progress: undefined,
           });
           setIsSubmitting(false); // Enable the button again in case of failure
-        }
+        },
       );
   };
   return (
     <section
       /* data-aos="fade-up"
       data-aos-duration="3000" */
-      className="wrapper py-20 grid grid-cols-1 sm:grid-cols-2 "
+      className="wrapper grid grid-cols-1 py-20 sm:grid-cols-2"
     >
-      <div className="space-y-7  h-[25rem] sm:h-auto ">
-        <nav className="w-full h-full text-center pt-3 text-black flex flex-col items-center relative  bg-brandD">
-          <h5 className="text-5xl pt-8 text-black font-semibold">
+      <div className="h-[25rem] space-y-7 sm:h-auto">
+        <nav className="relative flex h-full w-full flex-col items-center bg-brandD pt-3 text-center text-black">
+          <h5 className="pt-8 text-5xl font-semibold text-black">
             Get in Touch
           </h5>
-          <div className="absolute top-[30%] flex flex-col md:space-y-10 space-y-5 px-2">
-            <h4 className="text-3xl font-semibold font-Inter text-white">
+          <div className="absolute top-[30%] flex flex-col space-y-5 px-2 md:space-y-10">
+            <h4 className="font-Inter text-3xl font-semibold text-white">
               Sub office
             </h4>
             <div className="flex gap-2">
-              <nav className="text-white font-semibold text-2xl">
+              <nav className="text-2xl font-semibold text-white">
                 {" "}
                 <FaMapMarkedAlt />
               </nav>
-              <nav className=" text-white">
+              <nav className="text-white">
                 Apple wood,Adams Building, Ngong Road
               </nav>
             </div>
@@ -103,62 +103,57 @@ function ContactForm() {
               <nav className="text-2xl font-semibold text-white">
                 <FaPhone />
               </nav>
-              <nav className=" text-white">0712741650 | 0703704062</nav>
+              <nav className="text-white">0712741650 | 0703704062</nav>
             </div>
             <div className="flex gap-2">
-              <nav className="text-2xl text-white font-semibold">
+              <nav className="text-2xl font-semibold text-white">
                 <MdMarkEmailRead />
               </nav>
-              <nav className="text-white ">solarpointsystems1@gmail.com</nav>
+              <nav className="text-white">solarpointsystems1@gmail.com</nav>
             </div>
-          
           </div>
         </nav>
       </div>
-      <div className=" flex flex-col items-center space-y-8 justify-center bg-[#111827]">
-        <h4 className="text-3xl py-3 text-white font-semibold hover:underline transition-all delay-300 ">
+      <div className="flex flex-col items-center justify-center space-y-8 bg-[#111827]">
+        <h4 className="py-3 text-3xl font-semibold text-white transition-all delay-300 hover:underline">
           Request For Quotation
         </h4>
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="flex flex-col space-y-2   "
+          className="flex flex-col space-y-2"
         >
-          <label className="text-white font-semibold">Name</label>
+          <label className="font-semibold text-white">Name</label>
           <input
             type="text"
             name="from_name"
-            className="border-2 text-slate-600 font-Poppins font-medium hover:border-blue-800 rounded-md py-2 px-2 outline-none transition-all delay-300"
+            className="font-Poppins rounded-md border-2 px-2 py-2 font-medium text-slate-600 outline-none transition-all delay-300 hover:border-blue-800"
           />
-          <label className="text-white font-semibold">Email</label>
+          <label className="font-semibold text-white">Email</label>
           <input
             type="email"
             name="from_email"
-            className="border-2 text-slate-600 font-Poppins font-medium  hover:border-blue-800 rounded-md py-2 px-2 outline-none transition-all delay-300"
+            className="font-Poppins rounded-md border-2 px-2 py-2 font-medium text-slate-600 outline-none transition-all delay-300 hover:border-blue-800"
           />
-          <label className="text-white font-semibold">Area Code</label>
+          <label className="font-semibold text-white">Home Town</label>
           <input
-            type="number"
-            name="from_area_code"
-            
-            pattern="\d*"
-            minLength="3"
-            maxLength="5"
-            placeholder="e.g., +1"
-            className="border-2 text-slate-600 font-Poppins font-medium hover:border-blue-800 rounded-md py-2 px-2 outline-none transition-all delay-300"
+            type="text"
+            name="home_town"
+            placeholder="Thika"
+            className="font-Poppins rounded-md border-2 px-2 py-2 font-medium text-slate-600 outline-none transition-all delay-300 hover:border-blue-800"
           />
 
-          <label className="text-white font-semibold">Phone Number</label>
+          <label className="font-semibold text-white">Phone Number</label>
           <input
             type="number"
             name="from_phone_number"
-            className="border-2 text-slate-600 font-Poppins font-medium hover:border-blue-800 rounded-md py-2 px-2 outline-none transition-all delay-300"
+            className="font-Poppins rounded-md border-2 px-2 py-2 font-medium text-slate-600 outline-none transition-all delay-300 hover:border-blue-800"
           />
 
-          <label className="text-white font-semibold">Service Type</label>
+          <label className="font-semibold text-white">Service Type</label>
           <select
             name="service_type"
-            className="border-2 text-slate-600 font-Poppins font-medium hover:border-blue-800 rounded-md py-2 px-2 outline-none transition-all delay-300"
+            className="font-Poppins rounded-md border-2 px-2 py-2 font-medium text-slate-600 outline-none transition-all delay-300 hover:border-blue-800"
           >
             <option value="Home Power Backup">Home Power Backup</option>
             <option value="Solar LEDs">Solar LEDs</option>
@@ -186,16 +181,16 @@ function ContactForm() {
             </option>
           </select>
 
-          <label className="text-white font-semibold">Message / Details</label>
+          <label className="font-semibold text-white">Message / Details</label>
           <textarea
             name="message"
-            className="outline-none py-4 px-5 rounded-sm text-slate-600 font-Poppins font-medium"
+            className="font-Poppins rounded-sm px-5 py-4 font-medium text-slate-600 outline-none"
           />
           <button
             type="submit"
             disabled={isSubmitting}
             value="Send"
-            className="bg-brandC rounded-md py-4 font-semibold text-xl text-white cursor-pointer hover:bg-brandD transition-all delay-300"
+            className="cursor-pointer rounded-md bg-brandC py-4 text-xl font-semibold text-white transition-all delay-300 hover:bg-brandD"
           >
             {isSubmitting ? "Sending..." : "Send"}
           </button>

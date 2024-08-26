@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import  Team from '../Components/Team'
 
 function Aboutus() {
   const location = useLocation();
@@ -59,6 +60,7 @@ function Aboutus() {
       <OurCoreService />
       <Mission />
       <CompletedProject />
+     {/*  <Team /> */}
       <OurAchievements />
     </motion.section>
   );
