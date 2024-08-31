@@ -1,38 +1,46 @@
 import AOS from 'aos'
 import HeroImg from "../assets/hero-2..webp";
+import { useNavigate } from 'react-router-dom'
 
 function Projects() {
+const navigate =  useNavigate();
+const handleNavigate = ()=>{
+  setTimeout(()=>{
+    navigate('/projects')
+  }, 1000)
+}
   return (
-  <section data-aos="fade-up"
-  data-aos-duration="3000" className='max-w-8xl my-2 mx-auto min-h-[30rem]'>
-     <div className="w-full pb-8 flex flex-col font-poppins items-center space-y-3">
-        <h3 className="text-center text-3xl text-black  font-poppins font-bold pt-9">
+    <section
+      data-aos="fade-up"
+      data-aos-duration="3000"
+      className="max-w-8xl mx-auto my-2 min-h-[30rem]"
+    >
+      <div className="flex w-full flex-col items-center space-y-3 pb-8 font-poppins">
+        <h3 className="pt-9 text-center font-poppins text-3xl font-bold text-black">
           Projects
         </h3>
-        <hr className="w-[10rem] border-b-[3px] rounded border-textColor" />
-        <h4 className="text-center text-4xl font-medium ">
+        <hr className="w-[10rem] rounded border-b-[3px] border-textColor" />
+        <h4 className="text-center text-4xl font-medium">
           {" "}
           Explore Our Projects Catalog
         </h4>
       </div>
-  <div className="relative w-full bg-gradient-to-r from-slate-900 to-gray-600 h-[40rem]">
+      <div className="relative h-[40rem] w-full bg-gradient-to-r from-slate-900 to-gray-600">
         <img
           src={HeroImg}
           alt=""
-          className="flex-shrink-0 mix-blend-overlay h-full w-full"
+          className="h-full w-full flex-shrink-0 mix-blend-overlay"
         />
-        <div className="absolute top-[50%] left-1/2 transition -translate-x-1/2 -translate-y-1/2 text-white space-y-5 flex flex-col items-center w-[80%]">
-          <h3 className=" text-5xl md:text-6xl uppercase text-center font-bold ">
+        <div className="absolute left-1/2 top-[50%] flex w-[80%] -translate-x-1/2 -translate-y-1/2 flex-col items-center space-y-5 text-white transition">
+          <h3 className="text-center text-5xl font-bold uppercase md:text-6xl">
             Our Projects
           </h3>
-         
-          <button className="">
-            Coming soon
-          </button>
+
+          <button onClick={handleNavigate} className="btn--secondary">Explore Our Projects</button>
         </div>
       </div>
-  </section>
-  )
+    </section>
+  );
 }
 
 export default Projects

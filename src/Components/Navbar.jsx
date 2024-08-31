@@ -204,6 +204,14 @@ const Navbar = () => {
                 </div>
               )}
             </div>
+              <Link
+              className="cursor-pointer text-xl font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
+              to="/projects"
+              style={location.pathname === "/projects" ? activeStyle : null}
+              onClick={closeMenu} // Ensure the menu closes on navigation
+            >
+               PROJECTS
+            </Link>
             <Link
               className="cursor-pointer text-xl font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
               to="/blog"

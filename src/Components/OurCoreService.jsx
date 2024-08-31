@@ -75,9 +75,7 @@ function OurCoreService() {
               solar energy solutions for you. We the team at SolarPoint Systems
               E.A always strive to provide clean and green energy to all our
               clients. We always aim to deliver best service & quality Solar
-              products at reasonable price. Our team is available around the
-              clock for your services. Turn up the brightness and turn up the
-              solar power is the main aim of our company.
+              products at reasonable price.
             </p>
             {/* Download PDF Button */}
             <a

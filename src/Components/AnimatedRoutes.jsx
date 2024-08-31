@@ -8,11 +8,13 @@ import Blog from "../Pages/Blog";
 import ProductsDetailsPage from "./ProductsDetailsPage";
 import Contact from "../Pages/Contact";
 import Solutions from "../Pages/Solutions";
+import Projects from '../Pages/Projects'
 import PowerBackup from "../Pages/PowerBackup";
 import SolarHybrid from "../Pages/SolarHybrid";
 import SolarWaterHeaters from "../Pages/SolarWaterHeaters";
 import SolarWaterPump from "../Pages/SolarWaterPump";
 import { lazy, Suspense } from "react";
+const ProjectsDetailsPage = lazy(() => import("./ProjectsDetailsPage"));
 const NoPage = lazy(() => import("../Pages/NoPage"));
 
 const AnimatedRoutes = () => {
@@ -26,6 +28,8 @@ const AnimatedRoutes = () => {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<ProductsDetailsPage />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:id" element={<ProjectsDetailsPage />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/solutions" element={<Solutions />} />
