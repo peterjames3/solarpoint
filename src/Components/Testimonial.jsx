@@ -125,7 +125,7 @@ const Testimonial = () => {
                   </div>
                 </div>
                 <footer className="font-Lato mt-8 text-xl text-brandC">
-                  &mdash; Jane
+                  &mdash; Jane Muthoni
                 </footer>
               </blockquote>
             </div>
@@ -151,7 +151,7 @@ const Testimonial = () => {
                   </div>
                 </div>
                 <footer className="font-Lato mt-8 text-xl text-brandC">
-                  &mdash; Mary
+                  &mdash; Mary Mwende
                 </footer>
               </blockquote>
             </div>
@@ -177,7 +177,7 @@ const Testimonial = () => {
                   </div>
                 </div>
                 <footer className="font-Lato mt-8 text-xl text-brandC">
-                  &mdash; Michael
+                  &mdash; Michael Chege
                 </footer>
               </blockquote>
             </div>
@@ -203,7 +203,7 @@ const Testimonial = () => {
                   </div>
                 </div>
                 <footer className="font-Lato mt-8 text-xl text-brandC">
-                  &mdash; Hanzo
+                  &mdash; Hanzo munene
                 </footer>
               </blockquote>
             </div>

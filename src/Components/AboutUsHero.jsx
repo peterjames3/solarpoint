@@ -19,7 +19,7 @@ const AboutUsHero = () => {
           </div>
 
           <div className="sm:w-1/2">
-            <h2 className="text-start text-2xl font-semibold text-slate-400">
+            <h2 className="line-clamp-3 hidden text-start text-2xl font-semibold text-slate-400 sm:flex">
               Our aim is to be a leading solar company in Kenya that thrives in
               quality solar services. We have a team of solar energy experts
               which positions SolarPoint systems E.A as a trusted solar company

@@ -28,7 +28,7 @@ function Aboutus() {
       </section>
 
       <div className=" w-full  font-Rubik mx-auto  mt-4 gap-4 grid grid-rows-1 ss:grid-cols-2 sm:gap-3 sm:grid-cols-3 md:flex lg:flex ">
-        <div className="space-y-5 h-[28rem] md:h-[26.7rem] pb-2 px-2 w-full md:w-[35%] pt-2 text-cardBg text-center rounded-md shadow-lg bg-white dark:bg-gray-800 hover:scale-100 transition-all delay-300 border-y-4 border-green-700">
+        <div className="space-y-5 h-[28rem] md:h-[26.7rem] pb-2 px-2 w-full md:w-[35%] pt-2 text-cardBg text-center rounded-md shadow-lg bg-slate-800 dark:bg-gray-800 hover:scale-100 transition-all delay-300 border-y-4 border-green-700">
           <h4 className="text-2xl font-semibold font-Inter pt-5">
             We Are Commited to provide Quality Service
           </h4>

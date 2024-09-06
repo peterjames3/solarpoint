@@ -13,6 +13,8 @@ import PowerBackup from "../Pages/PowerBackup";
 import SolarHybrid from "../Pages/SolarHybrid";
 import SolarWaterHeaters from "../Pages/SolarWaterHeaters";
 import SolarWaterPump from "../Pages/SolarWaterPump";
+import SolarAirConditioner from "../Pages/SolarAirConditioner";
+import SolarWaterPurifier from "../Pages/SolarWaterPurifier";
 import { lazy, Suspense } from "react";
 const ProjectsDetailsPage = lazy(() => import("./ProjectsDetailsPage"));
 const NoPage = lazy(() => import("../Pages/NoPage"));
@@ -36,6 +38,8 @@ const AnimatedRoutes = () => {
           <Route path="/powerbackup" element={<PowerBackup />} />
           <Route path="/solarhybrid" element={<SolarHybrid />} />
           <Route path="/solarwaterheaters" element={<SolarWaterHeaters />} />
+          <Route path="/solarairconditioner" element={<SolarAirConditioner />} />
+          <Route path="/solarwaterpurifier" element={<SolarWaterPurifier />} />
           <Route path="/solarwaterpump" element={<SolarWaterPump />} />
           <Route path="*" element={<NoPage />} />
         </Routes>

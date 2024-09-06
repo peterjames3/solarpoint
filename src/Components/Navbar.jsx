@@ -4,6 +4,8 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/Spm.svg";
 import { MdAccessTime, MdOutlineEmail } from "react-icons/md";
 import { FaFacebookSquare, FaInstagram, FaTwitterSquare } from "react-icons/fa";
+import { MdOutlinePhone } from "react-icons/md";
+import QuotationModal from "./QuotationModal";
 
 // Utility function for debouncing
 const debounce = (func, delay) => {
@@ -18,6 +20,10 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClose = () => setIsOpen(false);
+  const handleOpen = () => setIsOpen(true);
   const location = useLocation();
 
   const handleNav = () => {
@@ -73,15 +79,19 @@ const Navbar = () => {
         isVisible ? "bg-[#060606]" : "custom-bg-transparent"
       } border-b border-slate-700`}
     >
-      <div className="mx-auto max-w-[1400px] items-center justify-between px-2 py-1 text-white ss:flex">
+      <div className="mx-auto hidden max-w-[1400px] items-center justify-between px-2 py-1 text-white sm:flex">
         <div className="items-center gap-7 sm:flex">
           <nav className="flex items-center gap-1 text-xl">
             <MdOutlineEmail className="text-secondaryBg" />{" "}
             <span>solarpointsystems1@gmail.com</span>{" "}
           </nav>
-          <nav className="hidden items-center gap-1 text-xl ss:flex">
+          <nav className="hidden items-center gap-1 text-xl md:flex">
             <MdAccessTime className="text-secondaryBg" />
             <span>Mon - Fri: 9:30 AM - 5:30 PM </span>
+          </nav>
+          <nav className="hidden items-center gap-1 text-xl ss:flex">
+            <MdOutlinePhone className="text-secondaryBg" />
+            <span>0703704062 </span>
           </nav>
         </div>
         <div className="flex items-center gap-4">
@@ -127,14 +137,16 @@ const Navbar = () => {
           className="flex items-center gap-2 text-3xl font-bold text-green-600 hover:cursor-pointer"
         >
           <img src={logo} alt="logo" className="size-12 flex-1" />
-          <nav className="hidden md:flex">SolarPoint Systems E.A</nav>
+          <nav className="hidden text-[1.25rem] md:flex">
+            SolarPointSystems E.A
+          </nav>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden mix-blend-difference sm:block">
-          <ul className="flex flex-row font-normal xs:space-x-5 sm:space-x-7 md:space-x-10">
+          <ul className="flex flex-row font-normal xs:space-x-5 sm:space-x-7 md:space-x-8">
             <Link
-              className="cursor-pointer text-xl font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
+              className="cursor-pointer text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
               to="/"
               style={location.pathname === "/" ? activeStyle : null}
               onClick={closeMenu} // Ensure the menu closes on navigation
@@ -142,7 +154,7 @@ const Navbar = () => {
               HOME
             </Link>
             <Link
-              className="cursor-pointer text-xl font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
+              className="cursor-pointer text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
               to="/about"
               style={location.pathname === "/about" ? activeStyle : null}
               onClick={closeMenu} // Ensure the menu closes on navigation
@@ -150,7 +162,7 @@ const Navbar = () => {
               ABOUT
             </Link>
             <Link
-              className="cursor-pointer text-xl font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
+              className="cursor-pointer text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
               to="/products"
               style={location.pathname === "/products" ? activeStyle : null}
               onClick={closeMenu} // Ensure the menu closes on navigation
@@ -159,7 +171,7 @@ const Navbar = () => {
             </Link>
             <div className="relative">
               <Link
-                className="cursor-pointer text-xl font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
+                className="cursor-pointer text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
                 onMouseOver={toggleDropdown}
               >
                 SOLUTIONS
@@ -178,7 +190,7 @@ const Navbar = () => {
                     className="block px-4 py-2 text-2xl text-black hover:bg-gray-300"
                     onClick={closeMenu}
                   >
-                    Solar LEDs
+                    Solar Lights
                   </Link>
                   <Link
                     to="/solarwaterpump"
@@ -201,19 +213,33 @@ const Navbar = () => {
                   >
                     Solar Water Heaters
                   </Link>
+                  <Link
+                    to="/solarwaterpurifier"
+                    className="block px-4 py-2 text-2xl text-black hover:bg-gray-300"
+                    onClick={closeMenu}
+                  >
+                    Solar Water Purifiers
+                  </Link>
+                  <Link
+                    to="/solarairconditioner"
+                    className="block px-4 py-2 text-2xl text-black hover:bg-gray-300"
+                    onClick={closeMenu}
+                  >
+                    Solar Air Conditioner
+                  </Link>
                 </div>
               )}
             </div>
-              <Link
-              className="cursor-pointer text-xl font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
+            <Link
+              className="cursor-pointer text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
               to="/projects"
               style={location.pathname === "/projects" ? activeStyle : null}
               onClick={closeMenu} // Ensure the menu closes on navigation
             >
-               PROJECTS
+              PROJECTS
             </Link>
             <Link
-              className="cursor-pointer text-xl font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
+              className="cursor-pointer text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
               to="/blog"
               style={location.pathname === "/blog" ? activeStyle : null}
               onClick={closeMenu} // Ensure the menu closes on navigation
@@ -221,7 +247,7 @@ const Navbar = () => {
               BLOG
             </Link>
             <Link
-              className="cursor-pointer text-xl font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
+              className="cursor-pointer text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
               to="/contact"
               style={location.pathname === "/contact" ? activeStyle : null}
               onClick={closeMenu} // Ensure the menu closes on navigation
@@ -229,6 +255,18 @@ const Navbar = () => {
               CONTACT
             </Link>
           </ul>
+        </nav>
+        <nav>
+          <button
+            onClick={handleOpen}
+            type="button" // Changed to "button" because this isn't submitting a form directly
+            className="btn--quote"
+          >
+            Get Quote
+          </button>
+          <div className="h-1">
+            <QuotationModal isOpen={isOpen} onClose={handleClose} />
+          </div>
         </nav>
 
         {/* Mobile Nav Toggle */}
@@ -241,7 +279,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {nav && (
-          <nav className="z-100 fixed left-0 top-0 h-screen w-[60%] border-r pt-16 border-r-gray-900 bg-black duration-500 ease-in-out">
+          <nav className="z-100 fixed left-0 top-0 h-screen w-[60%] border-r border-r-gray-900 bg-black pt-16 duration-500 ease-in-out">
             <Link
               to="/"
               className="flex items-center gap-2 px-4 pt-7 text-2xl font-medium text-[#00df9a] transition-all delay-300 ease-out hover:cursor-pointer"
@@ -300,7 +338,7 @@ const Navbar = () => {
                       className="block px-4 py-2 text-2xl hover:bg-gray-300"
                       onClick={closeMenu}
                     >
-                      Solar LEDs
+                      Solar Lights
                     </Link>
                     <Link
                       to="/solarwaterpump"

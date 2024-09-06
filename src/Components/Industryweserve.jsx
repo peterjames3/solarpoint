@@ -1,52 +1,57 @@
+import { useState } from "react";
 import Airportimg from "../assets/install..webp";
-import  GetQuoteButton from "./GetQuoteButton"
-import 'aos/dist/aos.css';
+import "aos/dist/aos.css";
+import QuotationModal from "./QuotationModal";
 
 function Industryweserve() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClose = () => setIsOpen(false);
+  const handleOpen = () => setIsOpen(true);
 
   return (
     <section className="w-full">
-      <div className="w-full pb-4 flex flex-col items-center space-y-3 font-poppins">
-        <h3 className="text-center text-3xl text-black  font-Poppins font-bold pt-9">
+      <div className="flex w-full flex-col items-center space-y-3 pb-4 font-poppins">
+        <h3 className="font-Poppins pt-9 text-center text-3xl font-bold text-black">
           Switch Today
         </h3>
-        <hr className="w-[10rem] border-b-[3px] rounded border-blue-700" />
-        <h4 className="text-center text-4xl font-medium ">
+        <hr className="w-[10rem] rounded border-b-[3px] border-blue-700" />
+        <h4 className="text-center text-4xl font-medium">
           {" "}
           Switch to solar in four easy steps
         </h4>
       </div>
 
-      <section className="w-full bg-cardBg  ">
-        <div className="max-w-[1700px] mx-auto py-7 sm:px-10 flex flex-col-reverse md:flex-row gap-0 md:gap-2 min-h-8 ">
-          <div className="flex row gap-2 w-full md:w-[70%] items-center justify-center  ">
+      <section className="w-full bg-cardBg">
+        <div className="mx-auto flex min-h-8 max-w-[1700px] flex-col-reverse gap-0 py-7 sm:px-10 md:flex-row md:gap-2">
+          <div className="row flex w-full items-center justify-center gap-2 md:w-[70%]">
             <div
               data-aos="fade-right"
               data-aos-delay="1200"
               data-aos-offset="50"
-              className="flex flex-col bg-slate-300 items-center py-7 h-full  w-1/2"
+              className="flex h-full w-1/2 flex-col items-center bg-slate-300 py-7"
             >
-              <ul className="grid grid-cols-1 space-y-2  list-none items-baseline justify-center divide-y-2 divide-gray-500">
-                <li className=" font-semibold  text-gray-500 ">
+              <ul className="grid list-none grid-cols-1 items-baseline justify-center space-y-2 divide-y-2 divide-gray-500">
+                <li className="font-semibold text-gray-500">
                   01. Get In Touch
                 </li>
-                <li className=" py-3 font-semibold text-gray-500 ">
+                <li className="py-3 font-semibold text-gray-500">
                   02. Consultance
                 </li>
-                <li className="py-3 font-semibold text-gray-500 ">
+                <li className="py-3 font-semibold text-gray-500">
                   03. Design and Installation
                 </li>
-                <li className=" py-3 font-semibold text-gray-500 ">
+                <li className="py-3 font-semibold text-gray-500">
                   0.4 Solar On
                 </li>
-                <li className="py-3 font-semibold  text-gray-500 ">
+                <li className="py-3 font-semibold text-gray-500">
                   05. Management
                 </li>
               </ul>
             </div>
-            <div className=" md:space-y-4 md:py-7 space-y-2 w-1/2 p-2">
-              <h3 className="text-gray-500 font-semibold font-Roboto">01</h3>
-              <h4 className="md:text-3xl text-black font-mediun font-Inter font-medium">
+            <div className="w-1/2 space-y-2 p-2 md:space-y-4 md:py-7">
+              <h3 className="font-Roboto font-semibold text-gray-500">01</h3>
+              <h4 className="font-mediun font-Inter font-medium text-black md:text-3xl">
                 Solar Power at everywhere!
               </h4>
               <p className="md:text-[1.1rem]">
@@ -66,29 +71,38 @@ function Industryweserve() {
                 04. We even monitor the systems remotely and take up full
                 maintenance for best performance.
               </p>
-              <GetQuoteButton />
+              <button
+                onClick={handleOpen}
+                type="button" // Changed to "button" because this isn't submitting a form directly
+                className="btn--primary"
+              >
+                Get Quote
+              </button>
+              <div className="h-1">
+                <QuotationModal isOpen={isOpen} onClose={handleClose} />
+              </div>
             </div>
           </div>
           <div
             data-aos="fade-left"
             data-aos-delay="1200"
             data-aos-offset="50"
-            className=" w-full md:w-[49%] flex-grow-1 relative bg-gradient-to-r from-slate-800 to-gray-500"
+            className="flex-grow-1 relative w-full bg-gradient-to-r from-slate-800 to-gray-500 md:w-[49%]"
           >
             <img
               src={Airportimg}
               alt="solar at airport"
               loading="lazy"
-              className="w-full h-full bg-cover mix-blend-overlay"
+              className="h-full w-full bg-cover mix-blend-overlay"
             />
-            <div className="absolute top-[40%] md:top-[60%] w-full bg-transparent divide-y-2 divide-slate-300 px-3">
-              <nav className="flex flex-row justify-between items-center text-white mb-2">
-                <h3 className=" font-semibold font-Inter text-2xl">
+            <div className="absolute top-[40%] w-full divide-y-2 divide-slate-300 bg-transparent px-3 md:top-[60%]">
+              <nav className="mb-2 flex flex-row items-center justify-between text-white">
+                <h3 className="font-Inter text-2xl font-semibold">
                   Installition in Process
                 </h3>
-                <h4 className="font-thin text-3xl">01</h4>
+                <h4 className="text-3xl font-thin">01</h4>
               </nav>
-              <div className="flex flex-row justify-between items-center px-2">
+              <div className="flex flex-row items-center justify-between px-2">
                 <nav className="w-1/2">
                   <h4 className="font-inter font-thin text-white">investors</h4>
                   <p className="font-semibold text-white">

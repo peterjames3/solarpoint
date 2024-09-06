@@ -34,8 +34,8 @@ function ProductDetailsPage() {
   };
 
   return (
-    <section className="wrapper bg-cardBg grid grid-cols-1 gap-3 p-4 pt-[10rem] ss:grid-cols-2 md:grid-cols-3">
-      <div>
+    <section className="wrapper grid grid-cols-1 gap-3 bg-cardBg p-4 pt-[10rem] ss:grid-cols-2 md:grid-cols-3">
+      <div className="">
         <img src={img} alt={name} className="max-h-96 w-full object-contain" />
       </div>
       <div className="pt-12">
@@ -72,10 +72,13 @@ function ProductDetailsPage() {
           <h3 className="font-poppins text-xl font-bold">Steps for Payment:</h3>
           <ul className="ml-4 list-decimal space-y-1 font-Rubik">
             <li>
-              Select &apos;Pay bill, Enter Business Number use 7116569&apos;.
+              Open Mpesa app and select lipa na Mpesa.
             </li>
-            <li>Select &apos;Enter Account Number&apos;.</li>
-            <li>Enter Your Name.</li>
+            <li>
+              Select &apos;Pay bill, Enter Business Number use &apos;:522533.
+            </li>
+            <li>Select &apos;Enter Account Number&apos;:7642435.</li>
+
             <li>Press &apos;OK&apos;.</li>
             <li>Call us on 0703704062 to confirm your delivery location.</li>
           </ul>

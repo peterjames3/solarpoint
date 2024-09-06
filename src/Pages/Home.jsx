@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-
 import Header from "../Components/Navbar";
 import Hero from "../Components/Hero";
 import WhyUs from "../Components/WhyUs";
@@ -17,6 +16,7 @@ import OurSolutions from "../Components/OurSolutions";
 import Whychoosesolar from "../Components/Whychoosesolar";
 
 function Home() {
+  
   const location = useLocation();
 
   useEffect(() => {
@@ -77,7 +77,7 @@ function Home() {
       <OurSolutions />
       <Projects />
       <SolarSystem />
-      <Industryweserve />
+       <Industryweserve />
       <Testimonials />
       <Blogsec />
     </motion.div>

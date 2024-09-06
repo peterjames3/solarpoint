@@ -147,7 +147,7 @@ function ProductsPage() {
           onClick={() => handleCategoryFilter("LEDs")}
           className="rounded border-2 border-brandD p-3 text-xl transition-all delay-200 hover:border-black hover:bg-black hover:text-white"
         >
-          LEDs
+          Solar Lights
         </button>
       </div>
 

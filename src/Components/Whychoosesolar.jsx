@@ -1,15 +1,23 @@
 const Whychoosesolar = () => {
   return (
     <section className="w-full">
-      <div className="wrapper  flex flex-col gap-4  md:px-10 md:flex-row md:my-20">
-        <div className=" font-semibold px-5  md:text-start md:px-10 py-4 md:w-[40%]">
-          <h2 className=" text-4xl uppercase font-poppins pt-3 md:pt-6">
+      <div className="wrapper flex flex-col gap-4 md:my-20 md:flex-row md:px-10">
+        <div className="px-5 py-4 font-semibold md:w-[40%] md:px-10 md:text-start">
+          <h2 className="pt-3 font-poppins text-4xl uppercase md:pt-6">
             Why must solar power?
           </h2>
         </div>
-        <div className="font-Poppins px-5 md:px-10 pt-6 md:w-[55%]">
+        <div className="font-Poppins px-5 pt-6 md:w-[55%] md:px-10">
           <p className="pt-4 font-Rubik text-xl">
-          SolarPoint systems E.A has close to 2 decades of experience as a leader and an innovator in the Kenya solar space. Which makes us one of the top solar company in Kenya.  We have a wide range of experience in various components of solar power systems including: Solar panel installation, highly efficient solar systems, sustainable energy solutions, and a leading solar energy provider.
+            Solar power is a sustainable and cost-effective energy solution
+            that reduces reliance on non-renewable resources and decreases
+            environmental impact. With nearly two decades of experience,
+            SolarPoint Systems E.A. has been a leader and innovator in Kenya&apos;s
+            solar space. We specialize in solar panel installation, highly
+            efficient solar systems, and sustainable energy solutions, making us
+            one of the top solar companies in Kenya. Our extensive expertise
+            ensures that we provide top-notch solar energy services tailored to
+            meet the unique needs of our clients.
           </p>
         </div>
       </div>
