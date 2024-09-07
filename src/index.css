@@ -6,10 +6,10 @@
   scroll-behavior: smooth;
 }
 .btn--primary {
-  @apply border border-green-700 bg-green-700 px-8 sm:px-10 py-3  text-xl font-medium text-white outline-cardBg transition-all delay-300 hover:bg-brandD focus:outline;
+  @apply border border-green-700 bg-green-700  xxs:px-6  xs:px-7 sm:px-10 xxs:py-2 sm:py-3  sm:text-xl font-medium text-white outline-cardBg transition-all delay-300 hover:bg-brandD focus:outline;
 }
 .btn--secondary {
-  @apply border border-green-700 bg-transparent px-8 sm:px-10 py-4 text-xl font-medium text-white transition-all delay-300 hover:cursor-pointer hover:bg-green-700 focus:outline focus:ring focus:ring-cardBg;
+  @apply border border-green-700 bg-transparent xxs:px-6 xs:px-7  sm:px-10 xxs:py-2 sm:py-3 sm:text-xl font-medium text-white transition-all delay-300 hover:cursor-pointer hover:bg-green-700 focus:outline focus:ring focus:ring-cardBg;
 }
 .btn--quote{
   @apply  bg-brandD px-8  py-3  text-sm xl:text-xl font-medium text-white  outline-brandD transition-all delay-300 hover:bg-brandD focus:outline;
