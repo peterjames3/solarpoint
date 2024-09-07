@@ -33,7 +33,7 @@ function Whyychooseus() {
         </div>
         <div className="font-Poppins animate-puls w-full space-y-6 px-2 py-2 xs:w-full sm:w-[50%] md:w-[50%] md:px-3">
           <h2
-            data-aos="fade-left"
+            data-aos="fade-pop"
             data-aos-delay="1000"
             data-aos-offset="50"
             className="pt-2 font-poppins text-3xl font-bold"
@@ -41,16 +41,16 @@ function Whyychooseus() {
             Why Choose us?
           </h2>
           <hr
-            data-aos="fade-left"
+            data-aos="fade-pop"
             data-aos-delay="1000"
             data-aos-offset="50"
             className="border-b-2 border-blue-700"
           />
           <p
-            data-aos="fade-left"
+            data-aos="fade-pop"
             data-aos-delay="1200"
             data-aos-offset="50"
-            className="font-Rubik text-xl text-gray-900 leading-[2.5rem]"
+            className="font-Rubik text-xl leading-[2.5rem] text-gray-900"
           >
             Unbeatable service, quality installations, and experience Having the
             correct equipment installed, and calculating the right sized solar
@@ -61,12 +61,12 @@ function Whyychooseus() {
             installation team in Kenya.
           </p>
           <div
-            data-aos="fade-left"
+            data-aos="fade-pop"
             data-aos-delay="1200"
             data-aos-offset="50"
             className="flex flex-col space-y-3 text-start font-Rubik font-medium"
           >
-            <div className="flex flex-row items-center text-Rubik">
+            <div className="text-Rubik flex flex-row items-center">
               <span className="px-2 text-brandC">
                 <TbSquareCheckFilled aria-label="Feature checked" />
               </span>

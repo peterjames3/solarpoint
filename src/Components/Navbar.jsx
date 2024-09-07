@@ -69,7 +69,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed left-0 top-0 z-10 mb-2 w-full flex-row items-center justify-between px-7 py-3 ${
+      className={`fixed left-0 top-0 z-10 mb-2 w-full flex-row items-center justify-between px-7 py-4 ${
         isVisible ? "bg-[#060606]" : "custom-bg-transparent"
       } border-b border-slate-700`}
     >

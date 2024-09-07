@@ -6,7 +6,7 @@ import { CiCircleCheck } from "react-icons/ci";
 import { TbSolarPanel2 } from "react-icons/tb";
 import { TbBuildingFactory } from "react-icons/tb";
 import AboutUsButton from "./AboutUsButton";
-import AOS from "aos";
+
 import "aos/dist/aos.css";
 
 function Aboutus() {
