@@ -1,4 +1,3 @@
-import React from "react";
 import hybridAcImage from "../assets/HybridAirconditioner.png";
 import offGridAcImage from "../assets/OffgridAirconditioner.png";
 import solarAcIntroImage from "../assets/AirconditionerIntro.png";

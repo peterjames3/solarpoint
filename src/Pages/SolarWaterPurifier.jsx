@@ -1,4 +1,4 @@
-import SolarWaterPurifiers from '../Components/ SolarWaterPurifierIntro'
+import SolarWaterPurifiers from "../Components/ SolarWaterPurifierIntro";
 import SolarWaterPurifierHero from "../Components/SolarWaterPurifierHero";
 import SolarWaterPurifierMain from "../Components/SolarWaterPurifierMain";
 import { motion } from "framer-motion";
@@ -16,24 +16,24 @@ const SolarWaterPurifier = () => {
         <title>Solar Water Purifiers | Solar Point System</title>
         <meta
           name="description"
-          content="Discover our range of solar water heaters designed for efficiency and reliability. Explore solutions that meet all your water heating needs with solar energy."
+          content="Explore advanced solar water purifiers designed for efficiency and sustainability. Learn how our solar-powered water filtration systems ensure safe, clean drinking water while reducing energy costs."
         />
         <meta
           property="og:title"
-          content="Solar Water Heaters | Solar Point System"
+          content="Solar Water Purifiers | Solar Point System"
         />
         <meta
           property="og:description"
-          content="Efficient and reliable solar water heaters for all your hot water needs. Learn more about our products and how they can save you energy and money."
+          content="Discover our solar water purifiers, a clean and sustainable way to filter water using solar energy. Perfect for residential, commercial, and industrial settings."
         />
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://yourdomain.com/solarwaterheaters" // replace with your actual URL
+          content="https://yourdomain.com/solarwaterpurifiers" // replace with your actual URL
         />
         <meta
           property="og:image"
-          content="https://yourdomain.com/images/solar-water-heater.jpg" // replace with a relevant image URL
+          content="https://yourdomain.com/images/solar-water-purifier.jpg" // replace with a relevant image URL
         />
       </Helmet>
       <SolarWaterPurifiers />

@@ -1,4 +1,3 @@
-import React from 'react'
 import purifierImg3 from "../assets/syagewaterpurifier.png";
 const SolarWaterPurifierMain = () => {
   return (

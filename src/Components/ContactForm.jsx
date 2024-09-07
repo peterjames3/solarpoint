@@ -91,7 +91,7 @@ function ContactForm() {
               <nav className="text-2xl font-semibold text-white">
                 <FaPhone />
               </nav>
-              <nav className="text-white">0712741650 | 0703704062</nav>
+              <nav className="text-white">+254 703704062</nav>
             </div>
             <div className="flex gap-2">
               <nav className="text-2xl font-semibold text-white">

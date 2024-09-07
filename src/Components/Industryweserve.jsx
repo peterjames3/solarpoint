@@ -26,7 +26,7 @@ function Industryweserve() {
         <div className="mx-auto flex min-h-8 max-w-[1700px] flex-col-reverse gap-0 py-7 sm:px-10 md:flex-row md:gap-2">
           <div className="row flex w-full items-center justify-center gap-2 md:w-[70%]">
             <div
-              data-aos="fade-right"
+              data-aos="fade-up"
               data-aos-delay="1200"
               data-aos-offset="50"
               className="flex h-full w-1/2 flex-col items-center bg-slate-300 py-7"
@@ -84,7 +84,7 @@ function Industryweserve() {
             </div>
           </div>
           <div
-            data-aos="fade-left"
+            data-aos="fade-up"
             data-aos-delay="1200"
             data-aos-offset="50"
             className="flex-grow-1 relative w-full bg-gradient-to-r from-slate-800 to-gray-500 md:w-[49%]"

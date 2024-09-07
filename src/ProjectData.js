@@ -6,9 +6,6 @@ import solarInstallation1 from './assets/solar-installation1.jpeg'
 import solarInstallation2 from './assets/solar-installation2.jpeg'
 import solarization1 from './assets/solarization1.jpeg'
 import solarization2 from './assets/solarization2.jpeg'
-import Blog2 from "./assets/carousel-2..webp";
-import Blog3 from "./assets/carousel-3..webp";
-import SolarPanel from "./assets/Solarpanel..webp";
 import Unesco from "./assets/unesco.jpeg";
 import unesco2 from "./assets/unesco2.jpeg";
 

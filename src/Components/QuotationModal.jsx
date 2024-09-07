@@ -98,8 +98,8 @@ const QuotationModal = ({ isOpen, onClose }) => {
             <p className="mb-4 font-Rubik text-gray-600">
               Please fill out the form below and our team will get back to you
               within 1 business day. You can also contact us to arrange a site
-              survey anywhere in the country by calling: 0712741650 |
-              0703704062.
+              survey anywhere in the country by calling: 
+              +254 703704062.
             </p>
           </div>
           <form

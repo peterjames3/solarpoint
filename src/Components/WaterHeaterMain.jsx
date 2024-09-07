@@ -35,7 +35,7 @@ function WaterHeaterMain() {
             In the niche arena of merging solar energy technology with water
             heating solutions, we are leaders. Our proficiency encompasses
             small-scale residential projects to large-scale commercial
-            installations. Whether it's a stand-alone system or integrated with
+            installations. Whether it&apos;s a stand-alone system or integrated with
             batteries for enhanced efficiency, solar water heaters can provide
             significant ongoing savings in energy costs. This is true for
             settings anywhere, from remote rural homes to bustling urban
@@ -99,7 +99,7 @@ function WaterHeaterMain() {
           <div className="h-[35rem] py-5 space-y-3 text-xl space-x-2">
             <p>
               A typical water heater system operates by converting energy into
-              heat and transferring that heat to water. It's done either through
+              heat and transferring that heat to water. It&apos;s done either through
               direct means in tankless systems or indirectly via a heating
               element in storage water heaters.
             </p>
@@ -114,7 +114,7 @@ function WaterHeaterMain() {
               travels through a pipe into the unit, and either a gas burner or
               an electric element heats the water. This process ensures a
               constant supply of hot water, offering a more energy-efficient
-              solution as the system heats water only when it's needed.
+              solution as the system heats water only when it&apos;s needed.
             </p>
           </div>
           <div  className="h-[35rem] py-5 space-y-3 text-xl space-x-2">
@@ -123,9 +123,9 @@ function WaterHeaterMain() {
               These water heaters involve heating water and storing it in a tank
               for later use. The heating element heats the water from the bottom
               of the tank, and the hot water rises to the top, ready to be
-              distributed through the home's hot water lines. Although less
+              distributed through the home&apos;s hot water lines. Although less
               efficient than tankless models, due to energy losses from standing
-              water, they can provide a large volume of hot water that's readily
+              water, they can provide a large volume of hot water that&apos;s readily
               available.
             </p>
             <h6 className="font-medium"> 3). Pipes</h6>
@@ -137,7 +137,7 @@ function WaterHeaterMain() {
             <h6 className="font-medium"> 4) Water tank</h6>
             <p>
               The water pumping system will often include a water tank to store
-              water that may be used when sunshine isn’t available.
+              water that may be used when sunshine isn&apos;t available.
             </p>
             <h6 className="font-medium"> 5). Pump controllers</h6>
             <p>

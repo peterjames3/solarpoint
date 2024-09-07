@@ -3,18 +3,12 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/Spm.svg";
 import { MdAccessTime, MdOutlineEmail } from "react-icons/md";
-import { FaFacebookSquare, FaInstagram, FaTwitterSquare } from "react-icons/fa";
 import { MdOutlinePhone } from "react-icons/md";
 import QuotationModal from "./QuotationModal";
-
-// Utility function for debouncing
-const debounce = (func, delay) => {
-  let timeoutId;
-  return (...args) => {
-    if (timeoutId) clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => func(...args), delay);
-  };
-};
+import { debounce } from "../utils/debounce";
+import { socials } from "../socialLinks";
+import { navLinks } from "../navLinks";
+import { solutionsLinks } from "../solutinsLinks";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -79,7 +73,8 @@ const Navbar = () => {
         isVisible ? "bg-[#060606]" : "custom-bg-transparent"
       } border-b border-slate-700`}
     >
-      <div className="mx-auto hidden max-w-[1400px] items-center justify-between px-2 py-1 text-white sm:flex">
+      {/* Top Bar */}
+      <div className="mx-auto hidden max-w-[1400px] items-center justify-between px-2 pb-5 text-white sm:flex">
         <div className="items-center gap-7 sm:flex">
           <nav className="flex items-center gap-1 text-xl">
             <MdOutlineEmail className="text-secondaryBg" />{" "}
@@ -91,53 +86,33 @@ const Navbar = () => {
           </nav>
           <nav className="hidden items-center gap-1 text-xl ss:flex">
             <MdOutlinePhone className="text-secondaryBg" />
-            <span>0703704062 </span>
+            <span>+254 703704062 </span>
           </nav>
         </div>
+        {/*Social Links */}
         <div className="flex items-center gap-4">
           <div className="text-xl">Follow on:</div>
-          <div className="my-6 flex justify-between gap-3">
-            <a
-              href="https://web.facebook.com/profile.php?id=61557063135392"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaFacebookSquare
-                size={30}
-                className="cursor-pointer transition-all delay-300 hover:text-blue-700"
-              />
+          {socials.map((link, index) => (
+            <a key={index}>
+              <Link href={link.href} target="_blank" rel="noopener noreferrer">
+                <link.icon
+                  size={24}
+                  className={`cursor-pointer transition-all delay-300 ${link.hoverClass}`}
+                />
+              </Link>
             </a>
-            <a
-              href="https://www.instagram.com/sola21759?igsh=MXc5bTN0Mnk1a3g5dw=="
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaInstagram
-                size={30}
-                className="cursor-pointer transition-all delay-300 hover:text-pink-600"
-              />
-            </a>
-            <a
-              href="https://x.com/Solarsystems_1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaTwitterSquare
-                size={30}
-                className="cursor-pointer transition-all delay-300 hover:text-blue-400"
-              />
-            </a>
-          </div>
+          ))}
         </div>
       </div>
-
+      {/* Main Navbar */}
       <nav className="mx-auto mt-0 flex w-full items-center justify-between md:max-w-[1400px] md:gap-[5rem]">
+        {/* Logo */}
         <Link
           to="/"
           className="flex items-center gap-2 text-3xl font-bold text-green-600 hover:cursor-pointer"
         >
           <img src={logo} alt="logo" className="size-12 flex-1" />
-          <nav className="hidden text-[1.25rem] md:flex">
+          <nav className="hidden text-[1.25rem] xl:flex">
             SolarPointSystems E.A
           </nav>
         </Link>
@@ -145,30 +120,18 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden mix-blend-difference sm:block">
           <ul className="flex flex-row font-normal xs:space-x-5 sm:space-x-7 md:space-x-8">
-            <Link
-              className="cursor-pointer text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
-              to="/"
-              style={location.pathname === "/" ? activeStyle : null}
-              onClick={closeMenu} // Ensure the menu closes on navigation
-            >
-              HOME
-            </Link>
-            <Link
-              className="cursor-pointer text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
-              to="/about"
-              style={location.pathname === "/about" ? activeStyle : null}
-              onClick={closeMenu} // Ensure the menu closes on navigation
-            >
-              ABOUT
-            </Link>
-            <Link
-              className="cursor-pointer text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
-              to="/products"
-              style={location.pathname === "/products" ? activeStyle : null}
-              onClick={closeMenu} // Ensure the menu closes on navigation
-            >
-              PRODUCTS
-            </Link>
+            {navLinks.map((link, index) => (
+              <li key={index}>
+                <Link
+                  className="cursor-pointer text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
+                  to={link.path}
+                  style={location.pathname === link.to ? activeStyle : null}
+                  onClick={closeMenu} // Ensure the menu closes on navigation
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
             <div className="relative">
               <Link
                 className="cursor-pointer text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
@@ -178,74 +141,20 @@ const Navbar = () => {
               </Link>
               {isDropdownOpen && (
                 <div className="fadeIn absolute -left-10 mt-7 w-[20rem] divide-y-2 divide-slate-500 rounded bg-slate-600 font-poppins font-medium shadow-md shadow-black">
-                  <Link
-                    to="/powerbackup"
-                    className="block px-4 py-2 text-2xl text-black hover:bg-gray-300"
-                    onClick={closeMenu}
-                  >
-                    Power Backup
-                  </Link>
-                  <Link
-                    to="/solutions"
-                    className="block px-4 py-2 text-2xl text-black hover:bg-gray-300"
-                    onClick={closeMenu}
-                  >
-                    Solar Lights
-                  </Link>
-                  <Link
-                    to="/solarwaterpump"
-                    className="block px-4 py-2 text-2xl text-black hover:bg-gray-300"
-                    onClick={closeMenu}
-                  >
-                    Solar Water Pump
-                  </Link>
-                  <Link
-                    to="/solarhybrid"
-                    className="block px-4 py-2 text-2xl text-black hover:bg-gray-300"
-                    onClick={closeMenu}
-                  >
-                    Solar Hybrid
-                  </Link>
-                  <Link
-                    to="/solarwaterheaters"
-                    className="block px-4 py-2 text-2xl text-black hover:bg-gray-300"
-                    onClick={closeMenu}
-                  >
-                    Solar Water Heaters
-                  </Link>
-                  <Link
-                    to="/solarwaterpurifier"
-                    className="block px-4 py-2 text-2xl text-black hover:bg-gray-300"
-                    onClick={closeMenu}
-                  >
-                    Solar Water Purifiers
-                  </Link>
-                  <Link
-                    to="/solarairconditioner"
-                    className="block px-4 py-2 text-2xl text-black hover:bg-gray-300"
-                    onClick={closeMenu}
-                  >
-                    Solar Air Conditioner
-                  </Link>
+                  {/* Map over the solutionsLinks array */}
+                  {solutionsLinks.map((link, index) => (
+                    <Link
+                      key={index}
+                      to={link.path}
+                      className="block px-4 py-2 text-2xl text-black hover:bg-gray-300"
+                      onClick={closeMenu}
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
                 </div>
               )}
             </div>
-            <Link
-              className="cursor-pointer text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
-              to="/projects"
-              style={location.pathname === "/projects" ? activeStyle : null}
-              onClick={closeMenu} // Ensure the menu closes on navigation
-            >
-              PROJECTS
-            </Link>
-            <Link
-              className="cursor-pointer text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
-              to="/blog"
-              style={location.pathname === "/blog" ? activeStyle : null}
-              onClick={closeMenu} // Ensure the menu closes on navigation
-            >
-              BLOG
-            </Link>
             <Link
               className="cursor-pointer text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
               to="/contact"
@@ -253,7 +162,7 @@ const Navbar = () => {
               onClick={closeMenu} // Ensure the menu closes on navigation
             >
               CONTACT
-            </Link>
+            </Link>{" "}
           </ul>
         </nav>
         <nav>
@@ -279,7 +188,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {nav && (
-          <nav className="z-100 fixed left-0 top-0 h-screen w-[60%] border-r border-r-gray-900 bg-black pt-16 duration-500 ease-in-out">
+          <nav className="z-100 fixed left-0 top-0 h-screen w-[60%] border-r border-r-gray-900 bg-black duration-500 ease-in-out">
             <Link
               to="/"
               className="flex items-center gap-2 px-4 pt-7 text-2xl font-medium text-[#00df9a] transition-all delay-300 ease-out hover:cursor-pointer"
@@ -288,34 +197,24 @@ const Navbar = () => {
               <img
                 src={logo}
                 alt="logo"
+                loading="lazy"
                 className="flex size-12 items-center gap-2"
               />
             </Link>
             <ul className="flex flex-col space-y-10 px-4 pt-10 font-normal">
-              <Link
-                to="/"
-                className="cursor-pointer font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
-                onClick={closeMenu}
-                style={location.pathname === "/" ? activeStyle : null}
-              >
-                HOME
-              </Link>
-              <Link
-                to="/about"
-                className="cursor-pointer font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
-                onClick={closeMenu}
-                style={location.pathname === "/about" ? activeStyle : null}
-              >
-                ABOUT US
-              </Link>
-              <Link
-                to="/products"
-                className="cursor-pointer font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
-                onClick={closeMenu}
-                style={location.pathname === "/products" ? activeStyle : null}
-              >
-                PRODUCTS
-              </Link>
+              {navLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    className="cursor-pointer text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
+                    to={link.path}
+                    style={location.pathname === link.to ? activeStyle : null}
+                    onClick={closeMenu} // Ensure the menu closes on navigation
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+
               <div className="relative">
                 <Link
                   className="cursor-pointer font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
@@ -326,52 +225,21 @@ const Navbar = () => {
                 </Link>
                 {isDropdownOpen && (
                   <div className="fadeIn absolute left-5 mt-2 w-[20rem] divide-y-2 rounded bg-gray-700 font-poppins font-medium text-white shadow-md shadow-black">
-                    <Link
-                      to="/powerbackup"
-                      className="block px-4 py-2 text-2xl hover:bg-gray-300"
-                      onClick={closeMenu}
-                    >
-                      Power Backup
-                    </Link>
-                    <Link
-                      to="/solarleds"
-                      className="block px-4 py-2 text-2xl hover:bg-gray-300"
-                      onClick={closeMenu}
-                    >
-                      Solar Lights
-                    </Link>
-                    <Link
-                      to="/solarwaterpump"
-                      className="block px-4 py-2 text-2xl hover:bg-gray-300"
-                      onClick={closeMenu}
-                    >
-                      Solar Water Pump
-                    </Link>
-                    <Link
-                      to="/solarhybrid"
-                      className="block px-4 py-2 text-2xl hover:bg-gray-300"
-                      onClick={closeMenu}
-                    >
-                      Solar Hybrid
-                    </Link>
-                    <Link
-                      to="/solarwaterheaters"
-                      className="block px-4 py-2 text-2xl hover:bg-gray-300"
-                      onClick={closeMenu}
-                    >
-                      Solar Water Heaters
-                    </Link>
+                    {/* Map over the solutionsLinks array */}
+                    {solutionsLinks.map((link, index) => (
+                      <Link
+                        key={index}
+                        to={link.path}
+                        className="block px-4 py-2 text-2xl text-black hover:bg-gray-300"
+                        onClick={closeMenu}
+                      >
+                        {link.name}
+                      </Link>
+                    ))}
                   </div>
                 )}
               </div>
-              <Link
-                to="/blog"
-                className="cursor-pointer font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
-                onClick={closeMenu}
-                style={location.pathname === "/blog" ? activeStyle : null}
-              >
-                BLOG
-              </Link>
+
               <Link
                 to="/contact"
                 className="cursor-pointer font-medium text-white transition-all delay-300 ease-out hover:text-brandC"

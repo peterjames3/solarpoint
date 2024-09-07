@@ -1,4 +1,3 @@
-
 import { FaMapMarkedAlt } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import { MdMarkEmailRead } from "react-icons/md";
@@ -18,7 +17,7 @@ function OurContact() {
           <nav className="text-2xl font-semibold text-brandD">
             <FaPhone />
           </nav>
-          <nav> 0712741650 | 0703704062</nav>
+          <nav> +254 703704062</nav>
         </div>
         <div className="flex gap-4">
           <nav className="text-2xl font-semibold text-brandD">

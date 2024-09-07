@@ -14,22 +14,22 @@ function Aboutus() {
     <section
       data-aos="fade-up"
       data-aos-duration="3000"
-      className="wrapper px-10  "
+      className="wrapper px-10"
     >
-      <section className="w-full pb-4 flex font-poppins flex-col items-center space-y-3">
-        <h3 className="text-center text-3xl text-black  font-poppins font-bold pt-9">
+      <section className="flex w-full flex-col items-center space-y-3 pb-4 font-poppins">
+        <h3 className="pt-9 text-center font-poppins text-3xl font-bold text-black">
           About Us
         </h3>
-        <hr className="w-[10rem] border-b-[3px] rounded border-textColor" />
-        <h4 className="text-center text-4xl font-medium ">
+        <hr className="w-[10rem] rounded border-b-[3px] border-textColor" />
+        <h4 className="text-center text-4xl font-medium">
           {" "}
           We are #1 In The World Of Solar & Renewable Energy
         </h4>
       </section>
 
-      <div className=" w-full  font-Rubik mx-auto  mt-4 gap-4 grid grid-rows-1 ss:grid-cols-2 sm:gap-3 sm:grid-cols-3 md:flex lg:flex ">
-        <div className="space-y-5 h-[28rem] md:h-[26.7rem] pb-2 px-2 w-full md:w-[35%] pt-2 text-cardBg text-center rounded-md shadow-lg bg-slate-800 dark:bg-gray-800 hover:scale-100 transition-all delay-300 border-y-4 border-green-700">
-          <h4 className="text-2xl font-semibold font-Inter pt-5">
+      <div className="mx-auto mt-4 grid w-full grid-cols-1 gap-4 font-Rubik sm:grid-cols-2 sm:gap-3 md:flex md:grid-cols-3 lg:flex">
+        <div className="h-[28rem] w-full space-y-5 rounded-md border-y-4 border-green-700 bg-slate-800 px-2 pb-2 pt-2 text-center text-cardBg shadow-lg transition-all delay-300 hover:scale-100 dark:bg-gray-800 md:h-[26.7rem] md:w-[35%]">
+          <h4 className="font-Inter pt-5 text-2xl font-semibold">
             We Are Commited to provide Quality Service
           </h4>
           <p className="font-medium">
@@ -38,30 +38,27 @@ function Aboutus() {
             energy solutions that ensure a sustainable future for all.
           </p>
 
-          <div className="flex xs:hidden sm:hidden md:flex w-full text-center justify-center flex-row items-center font-Roboto uppercase gap-5">
-            <p className="text-white font-bold text-5xl">3+</p>
-            <p className="text-cardBg font-semibold">Years Experience </p>
+          <div className="font-Roboto flex w-full flex-row items-center justify-center gap-5 text-center uppercase xs:hidden sm:hidden md:flex">
+            <p className="text-5xl font-bold text-white">3+</p>
+            <p className="font-semibold text-cardBg">Years Experience </p>
           </div>
           <AboutUsButton />
         </div>
 
-        <div
-          className="flex-grow rounded-md overflow-hidden 
-    w-full md:w-[32%] relative bg-gradient-to-r from-slate-800 to-gray-500 h-[26.2rem] md:h-[26.7rem]"
-        >
+        <div className="relative h-[26.2rem] w-full flex-grow overflow-hidden rounded-md bg-gradient-to-r from-slate-800 to-gray-500 md:h-[26.7rem] md:w-[32%]">
           <img
             src={Green}
             alt="man working"
             loading="lazy"
-            className="w-full h-full object-cover mix-blend-overlay"
+            className="h-full w-full object-cover mix-blend-overlay"
           />
 
-          <div className="absolute space-y-5 bg-gray-800 text-white top-[60%] left-[50%] transform[-translate-x-1/2] text-center pt-3 cursor-pointer hover:top-0 hover:left-0 w-full h-full transition-all duration-500 ease-in-out hover:translate-y-0 hover:scale-100 pb-6">
+          <div className="transform[-translate-x-1/2] absolute left-[50%] top-[60%] h-full w-full cursor-pointer space-y-5 bg-gray-800 pb-6 pt-3 text-center text-white transition-all duration-500 ease-in-out hover:left-0 hover:top-0 hover:translate-y-0 hover:scale-100">
             {" "}
-            <nav className=" flex justify-center text-7xl text-yellow-800">
+            <nav className="flex justify-center text-7xl text-yellow-800">
               <TbBuildingFactory />
             </nav>
-            <h4 className="text-xl font-semibold font-Rubik underline underline-offset-2 text-cardBg">
+            <h4 className="font-Rubik text-xl font-semibold text-cardBg underline underline-offset-2">
               Manufacturing
             </h4>
             <p className="font-medium">
@@ -69,7 +66,7 @@ function Aboutus() {
               from powering various systems to running farm equipment. Our solar
               solutions for agriculture help farmers and agribusinesses:
             </p>
-            <div className=" flex flex-col px-6 text-start text-green-600">
+            <div className="flex flex-col px-6 text-start text-green-600">
               <div className="flex flex-row items-center">
                 <span className="px-2">
                   <CiCircleCheck aria-label="Feature checked" />
@@ -92,20 +89,17 @@ function Aboutus() {
           </div>
         </div>
 
-        <div
-          className="flex-grow rounded-md overflow-hidden 
-    w-full md:w-[32%] relative bg-gradient-to-r from-slate-800 to-gray-500 h-[26.2rem] md:h-[26.7rem]"
-        >
+        <div className="relative h-[26.2rem] w-full flex-grow overflow-hidden rounded-md bg-gradient-to-r from-slate-800 to-gray-500 md:h-[26.7rem] md:w-[32%]">
           <img
             src={factory}
             alt="man working"
-            className="w-full h-full object-cover mix-blend-overlay"
+            className="h-full w-full object-cover mix-blend-overlay"
           />
-          <div className="absolute space-y-5 bg-gray-800 text-white top-[60%] left-[50%] transform[-translate-x-1/2] text-center pt-3 cursor-pointer hover:top-0 hover:left-0 w-full h-full transition-all duration-500 ease-in-out hover:translate-y-0 hover:scale-100 pb-6">
-            <nav className=" flex justify-center text-7xl text-yellow-800">
+          <div className="transform[-translate-x-1/2] absolute left-[50%] top-[60%] h-full w-full cursor-pointer space-y-5 bg-gray-800 pb-6 pt-3 text-center text-white transition-all duration-500 ease-in-out hover:left-0 hover:top-0 hover:translate-y-0 hover:scale-100">
+            <nav className="flex justify-center text-7xl text-yellow-800">
               <GiGreenPower />
             </nav>
-            <h4 className="text-xl font-semibold font-Rubik underline underline-offset-2 text-cardBg">
+            <h4 className="font-Rubik text-xl font-semibold text-cardBg underline underline-offset-2">
               The Greenhouse Effect
             </h4>
             <p className="font-medium">
@@ -113,7 +107,7 @@ function Aboutus() {
               from powering irrigation systems to running farm equipment. Our
               solar solutions for agriculture help farmers and agribusinesses:
             </p>
-            <div className=" flex flex-col px-6 text-start text-green-600">
+            <div className="flex flex-col px-6 text-start text-green-600">
               <div className="flex flex-row items-center">
                 <span className="px-2">
                   <CiCircleCheck aria-label="Feature checked" />
@@ -135,20 +129,17 @@ function Aboutus() {
             </div>
           </div>
         </div>
-        <div
-          className="flex-grow rounded-md overflow-hidden 
-    w-full md:w-[32%] relative bg-gradient-to-r from-slate-800 to-gray-500  h-[28.7rem] md:h-[26.7rem]"
-        >
+        <div className="relative h-[28.7rem] w-full flex-grow overflow-hidden rounded-md bg-gradient-to-r from-slate-800 to-gray-500 md:h-[26.7rem] md:w-[32%]">
           <img
             src={SolarPanel}
             alt="man working"
-            className="w-full h-full object-cover mix-blend-overlay"
+            className="h-full w-full object-cover mix-blend-overlay"
           />
-          <div className="absolute space-y-5 bg-gray-800 text-white top-[60%] left-[50%] transform[-translate-x-1/2] text-center pt-3 cursor-pointer hover:top-0 hover:left-0 w-full h-full transition-all duration-500 ease-in-out hover:translate-y-0 hover:scale-100 pb-6">
-            <nav className=" flex justify-center text-7xl text-yellow-800">
+          <div className="transform[-translate-x-1/2] absolute left-[50%] top-[60%] h-full w-full cursor-pointer space-y-5 bg-gray-800 pb-6 pt-3 text-center text-white transition-all duration-500 ease-in-out hover:left-0 hover:top-0 hover:translate-y-0 hover:scale-100">
+            <nav className="flex justify-center text-7xl text-yellow-800">
               <TbSolarPanel2 />
             </nav>
-            <h4 className="text-xl font-semibold font-Rubik underline text-cardBg">
+            <h4 className="font-Rubik text-xl font-semibold text-cardBg underline">
               Solar Panels
             </h4>
             <p className="font-medium">
@@ -158,7 +149,7 @@ function Aboutus() {
               energy sources, offering a clean. fossil fuels. They different
               types including:
             </p>
-            <div className=" flex flex-col px-6 text-start text-green-600 space-y-4">
+            <div className="flex flex-col space-y-4 px-6 text-start text-green-600">
               <div className="flex flex-row items-center">
                 <span className="px-2">
                   <CiCircleCheck aria-label="Feature checked" />
@@ -173,20 +164,17 @@ function Aboutus() {
               </div>
             </div>
           </div>
-          <div
-            className="flex-grow rounded-md overflow-hidden 
-    w-full md:w-[32%] relative bg-gradient-to-r from-slate-800 to-gray-500  h-[28.7rem] md:h-[22.5rem]"
-          >
+          <div className="relative h-[28.7rem] w-full flex-grow overflow-hidden rounded-md bg-gradient-to-r from-slate-800 to-gray-500 md:h-[22.5rem] md:w-[32%]">
             <img
               src={SolarPanel}
               alt="man working"
-              className="w-full h-full object-cover mix-blend-overlay"
+              className="h-full w-full object-cover mix-blend-overlay"
             />
-            <div className="absolute space-y-5 bg-gray-800 text-white top-[60%] text-center pt-3 cursor-pointer hover:top-[0%] hover:height-[100%] transition-all delay-600 hover:-traslate-y-60  hover:scale-100 pb-6">
-              <nav className=" flex justify-center text-7xl text-yellow-800">
+            <div className="hover:height-[100%] delay-600 hover:-traslate-y-60 absolute top-[60%] cursor-pointer space-y-5 bg-gray-800 pb-6 pt-3 text-center text-white transition-all hover:top-[0%] hover:scale-100">
+              <nav className="flex justify-center text-7xl text-yellow-800">
                 <TbSolarPanel2 />
               </nav>
-              <h4 className="text-xl font-semibold font-Inter underline">
+              <h4 className="font-Inter text-xl font-semibold underline">
                 Solar Panels
               </h4>
               <p className="font-medium">
@@ -195,7 +183,7 @@ function Aboutus() {
                 They play a crucial role in the global shift towards sustainable
                 energy sources, offering a clean. fossil fuels. They include:
               </p>
-              <div className=" flex flex-col px-6 text-start text-green-600">
+              <div className="flex flex-col px-6 text-start text-green-600">
                 <div className="flex flex-row items-center">
                   <span className="px-2">
                     <CiCircleCheck aria-label="Feature checked" />

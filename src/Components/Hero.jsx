@@ -32,18 +32,18 @@ function Hero() {
           loading="lazy"
           className="h-full w-full flex-shrink-0 object-cover mix-blend-overlay"
         />
-        <div className="absolute left-[0%] top-[10%] ss:top-[22%] max-w-[890px] space-y-6 py-4 pl-8 sm:left-[0%] xl:translate-x-[14%] xl:pl-2 xxl:translate-x-[40%]">
-          <div className="h-full w-full space-y-10">
-            <h1 className="font-body py-2 text-4xl ss:text-5xl font-semibold text-brandC md:text-7xl">
+        <div className="absolute left-[0%] top-[10%] ss:top-[20%] max-w-[890px] space-y-6 py-4 pl-8 sm:left-[0%] xl:translate-x-[14%] xl:pl-2 xxl:translate-x-[40%]">
+          <div className="h-full w-full space-y-10 px-3 sm:px-0">
+            <h1 className="font-body py-2 text-5xl  font-semibold text-brandC md:text-7xl">
               Empowering Sustainable Energy Solutions for a Brighter Tomorrow
             </h1>
 
-            <h2 className="font-Rubik text-xl font-medium  text-white xs:text-3xl">
+            <h2 className="font-Rubik text-2xl font-medium  text-white xs:text-3xl">
               Explore our range of high-quality solar solutions and solar
               products designed to provide sustainable energy solutions for
               homes and businesses.
             </h2>
-            <p className="font-Rubik  text-xl ss:text-2xl font-medium leading-tight text-dimWhite xs:text-3xl">
+            <p className="font-Rubik  text-2xl  font-medium leading-tight text-dimWhite xs:text-3xl">
               Powering your future with{" "}
               <span className="text-brandC">{typeEffect}</span>
             </p>

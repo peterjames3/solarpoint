@@ -1,7 +1,8 @@
-import  SolarAirConditionerIntro  from '../Components/SolarAirConditionerIntro'
+import SolarAirConditionerIntro from "../Components/SolarAirConditionerIntro";
 import SolarAirConditionerHero from "../Components/ SolarAirConditionerHero";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+
 const SolarAirConditioner = () => {
   return (
     <motion.section
@@ -10,33 +11,33 @@ const SolarAirConditioner = () => {
       exit={{ opacity: 0 }}
     >
       <Helmet>
-        <title>Solar Water Purifiers | Solar Point System</title>
+        <title>Solar Air Conditioners | Solar Point System</title>
         <meta
           name="description"
-          content="Discover our range of solar water heaters designed for efficiency and reliability. Explore solutions that meet all your water heating needs with solar energy."
+          content="Explore our range of solar air conditioners, designed to efficiently cool and heat your space using solar energy. Reduce energy costs while helping the environment."
         />
         <meta
           property="og:title"
-          content="Solar Water Heaters | Solar Point System"
+          content="Solar Air Conditioners | Solar Point System"
         />
         <meta
           property="og:description"
-          content="Efficient and reliable solar water heaters for all your hot water needs. Learn more about our products and how they can save you energy and money."
+          content="Discover how solar air conditioners can help reduce energy costs while providing reliable cooling and heating. Learn more about our hybrid and off-grid solar air conditioning solutions."
         />
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://yourdomain.com/solarwaterheaters" // replace with your actual URL
+          content="https://yourdomain.com/solarairconditioners" // replace with your actual URL
         />
         <meta
           property="og:image"
-          content="https://yourdomain.com/images/solar-water-heater.jpg" // replace with a relevant image URL
+          content="https://yourdomain.com/images/solar-air-conditioner.jpg" // replace with a relevant image URL
         />
       </Helmet>
       <SolarAirConditionerIntro />
       <SolarAirConditionerHero />
     </motion.section>
   );
-}
+};
 
-export default SolarAirConditioner
+export default SolarAirConditioner;
