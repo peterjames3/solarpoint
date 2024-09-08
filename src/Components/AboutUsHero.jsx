@@ -11,22 +11,22 @@ const AboutUsHero = () => {
           loading="lazy"
           className="aspect-video h-full w-full flex-shrink-0 object-fill mix-blend-overlay"
         />
-        <div className="absolute left-1/2 top-[60%] flex w-full -translate-x-1/2 -translate-y-1/2 flex-col transition ss:flex-row sm:w-[80%]">
+        <div className="absolute left-1/2 top-[60%] flex justify-between w-full -translate-x-1/2 -translate-y-1/2 flex-col transition ss:flex-row sm:w-[65%]">
           <div className="w-full sm:w-1/2">
-            <h1 className="text-center text-4xl font-semibold uppercase text-green-500 md:text-5xl">
+            <h2 className="text-center text-4xl font-semibold uppercase text-green-500 md:text-5xl">
               About Us
-            </h1>
+            </h2>
           </div>
 
           <div className="sm:w-1/2">
-            <h2 className="line-clamp-3 hidden text-start text-2xl font-semibold text-slate-400 sm:flex">
+            <h3 className="line-clamp-3 hidden text-start text-2xl font-semibold text-slate-400 sm:flex">
               Our aim is to be a leading solar company in Kenya that thrives in
               quality solar services. We have a team of solar energy experts
               which positions SolarPoint systems E.A as a trusted solar company
               in the region. We guide customers into taking the right decision
               that will address their solar energy needs and reduce their
               electricity bill through installing reliable solar solutions.
-            </h2>
+            </h3>
           </div>
         </div>
       </div>

@@ -79,7 +79,7 @@ function OurCoreService() {
             </p>
             {/* Download PDF Button */}
             <a
-              href={`${import.meta.env.BASE_URL}/SolarpointSystemE.A.pdf`}
+              href="/public/SolarpointSystemE.A.pdf"
               download="SolarpointSystemE.A.pdf"
               className="btn--primary inline-block"
             >
