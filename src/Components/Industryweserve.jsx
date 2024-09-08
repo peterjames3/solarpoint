@@ -74,7 +74,7 @@ function Industryweserve() {
               <button
                 onClick={handleOpen}
                 type="button" // Changed to "button" because this isn't submitting a form directly
-                className="btn--primary"
+                className="btn font-semibold transition-all delay-300 hover:text-white focus:ring-1 focus:ring-brandC"
               >
                 Get Quote
               </button>

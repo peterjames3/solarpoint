@@ -3,12 +3,14 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/Spm.svg";
 import { MdAccessTime, MdOutlineEmail } from "react-icons/md";
+import { FaAngleDown } from "react-icons/fa";
 import { MdOutlinePhone } from "react-icons/md";
 import QuotationModal from "./QuotationModal";
 import { debounce } from "../utils/debounce";
 import { socials } from "../socialLinks";
 import { navLinks } from "../navLinks";
 import { solutionsLinks } from "../solutinsLinks";
+/* import { Button, MegaMenu, Navbar } from 'flowbite-react' */
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -125,7 +127,7 @@ const Navbar = () => {
                 <Link
                   className="cursor-pointer text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
                   to={link.path}
-                  style={location.pathname === link.to ? activeStyle : null}
+                  style={location.pathname === link.path ? activeStyle : null}
                   onClick={closeMenu} // Ensure the menu closes on navigation
                 >
                   {link.name}
@@ -134,13 +136,13 @@ const Navbar = () => {
             ))}
             <div className="relative">
               <Link
-                className="cursor-pointer text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
-                onMouseOver={toggleDropdown}
+                className=" flex  items-center gap-1 cursor-pointer text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
+                onClick={toggleDropdown}
               >
-                SOLUTIONS
+                SOLUTIONS <FaAngleDown className="text-white" />
               </Link>
               {isDropdownOpen && (
-                <div className="fadeIn absolute -left-10 mt-7 w-[20rem] divide-y-2 divide-slate-500 rounded bg-slate-600 font-poppins font-medium shadow-md shadow-black">
+                <div className="fadeIn absolute -left-10 mt-7 w-[20rem] divide-y-2 divide-slate-300 rounded bg-white font-poppins font-medium shadow-md shadow-black">
                   {/* Map over the solutionsLinks array */}
                   {solutionsLinks.map((link, index) => (
                     <Link
@@ -207,8 +209,8 @@ const Navbar = () => {
                   <Link
                     className="cursor-pointer text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
                     to={link.path}
-                    style={location.pathname === link.to ? activeStyle : null}
-                    onClick={closeMenu} // Ensure the menu closes on navigation
+                    style={location.pathname === link.path ? activeStyle : null}
+                    onClick={closeMenu}
                   >
                     {link.name}
                   </Link>
@@ -217,11 +219,11 @@ const Navbar = () => {
 
               <div className="relative">
                 <Link
-                  className="cursor-pointer font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
+                  className=" flex  items-center gap-1 cursor-pointer font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
                   to="/solutions"
                   onClick={toggleDropdown}
                 >
-                  SOLUTIONS
+                  SOLUTIONS <FaAngleDown className="text-white" />
                 </Link>
                 {isDropdownOpen && (
                   <div className="fadeIn absolute left-5 mt-2 w-[20rem] divide-y-2 rounded bg-gray-700 font-poppins font-medium text-white shadow-md shadow-black">

@@ -94,7 +94,7 @@ function Footer() {
               </div>
               <div className="mt-6 w-[40%]">
                 <button
-                  className={`rounded bg-brandC px-2 py-3 transition-all delay-300 ${isSubmitting ? "bg-brandD" : "bg-brandC"} font-medium text-white hover:bg-brandD lg:w-[70%]`}
+                  className={`w-full cursor-pointer rounded bg-brandC py-3 text-center transition-all delay-300 ${isSubmitting ? "bg-brandD" : "bg-brandC"} font-medium text-white hover:bg-brandD`}
                 >
                   {isSubmitting ? "Sending..." : "Subscribe"}
                 </button>

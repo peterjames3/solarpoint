@@ -1,15 +1,30 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 
-function OrderNow() {
-  let navigate = useNavigate();
+function OrderNow({ name, price, features }) {
+  const navigate = useNavigate();
+
   const handleOrderNowClick = () => {
-    navigate('/contact')
-  }
+    // Navigate to the /order page with system details
+    navigate("/order", { state: { name, price, features } });
+  };
+
   return (
     <div>
-      <button onClick={handleOrderNowClick}type="submit" className="btn font-semibold hover:text-white transition-all delay-300">Order Now</button>
+      <button
+        onClick={handleOrderNowClick}
+        type="button"
+        className="btn font-semibold transition-all delay-300 hover:text-white"
+      >
+        Order Now
+      </button>
     </div>
-  )
+  );
 }
+OrderNow.propTypes = {
+  name: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  features: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
-export default OrderNow
+export default OrderNow;

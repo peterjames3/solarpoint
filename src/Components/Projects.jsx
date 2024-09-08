@@ -1,4 +1,3 @@
-import AOS from 'aos'
 import HeroImg from "../assets/hero-2..webp";
 import { useNavigate } from 'react-router-dom'
 

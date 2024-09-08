@@ -1,29 +1,45 @@
 import { FaMapMarkedAlt } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import { MdMarkEmailRead } from "react-icons/md";
+
 function OurContact() {
   return (
-    <section className="mx-auto my-20 max-w-6xl space-y-5 rounded-sm bg-slate-100 p-10 shadow-md shadow-black">
-      <h4 className="font-Inter text-3xl font-semibold">Head office</h4>
-      <div className="flex w-full cursor-pointer flex-col space-y-6">
-        <div className="flex gap-4">
-          <nav className="text-2xl font-semibold text-brandD">
-            {" "}
+    <section className="mx-auto my-20 max-w-6xl space-y-5 rounded-sm p-10 shadow-md shadow-black">
+      <h4 className="font-Inter mb-10 text-center text-3xl font-semibold">
+        Head Office
+      </h4>
+      <div className="flex flex-col justify-between gap-6 text-center md:flex-row md:gap-10 md:text-left">
+        {/* Office Address */}
+        <div className="flex-1 space-y-4 rounded-lg bg-white p-6 shadow">
+          <nav className="mx-auto text-4xl text-brandD md:mx-0">
             <FaMapMarkedAlt />
           </nav>
-          <nav className=" ">Apple wood,Adams Building, Ngong Road</nav>
+          <div>
+            <h5 className="text-xl font-semibold">Visit Our Office</h5>
+            <p>Apple wood, Adams Building, Ngong Road</p>
+          </div>
         </div>
-        <div className="flex gap-4">
-          <nav className="text-2xl font-semibold text-brandD">
+
+        {/* Phone Number */}
+        <div className="flex-1 space-y-4 rounded-lg bg-white p-6 shadow">
+          <nav className="mx-auto text-4xl text-brandD md:mx-0">
             <FaPhone />
           </nav>
-          <nav> +254 703704062</nav>
+          <div>
+            <h5 className="text-xl font-semibold">Call Us</h5>
+            <p>+254 703704062</p>
+          </div>
         </div>
-        <div className="flex gap-4">
-          <nav className="text-2xl font-semibold text-brandD">
+
+        {/* Email */}
+        <div className="flex-1 space-y-4 rounded-lg bg-white p-6 shadow">
+          <nav className="mx-auto text-4xl text-brandD md:mx-0">
             <MdMarkEmailRead />
           </nav>
-          <nav className=" ">solarpointsystems1@gmail.com</nav>
+          <div>
+            <h5 className="text-xl font-semibold">Email Us</h5>
+            <p>solarpointsystems1@gmail.com</p>
+          </div>
         </div>
       </div>
     </section>

@@ -86,7 +86,6 @@ const QuotationModal = ({ isOpen, onClose }) => {
         onClose={onClose}
         position="right"
         backdrop={true}
-        bodyScrolling={false}
         className="w-[80%] bg-cardBg sm:w-[50%] md:w-1/3"
       >
         <Drawer.Header title="Quotation" />
@@ -98,8 +97,7 @@ const QuotationModal = ({ isOpen, onClose }) => {
             <p className="mb-4 font-Rubik text-gray-600">
               Please fill out the form below and our team will get back to you
               within 1 business day. You can also contact us to arrange a site
-              survey anywhere in the country by calling: 
-              +254 703704062.
+              survey anywhere in the country by calling: +254 703704062.
             </p>
           </div>
           <form
@@ -270,7 +268,7 @@ const QuotationModal = ({ isOpen, onClose }) => {
             <button
               disabled={isSubmitting}
               type="submit"
-              className={`w-full rounded-md bg-brandC p-3 font-semibold text-white shadow-sm hover:bg-brandD ${isSubmitting ? 'bg-brandD':'bg-brandC'} focus:outline-none focus:ring-2 focus:ring-brandC`}
+              className={`w-full rounded-md bg-brandC p-3 font-semibold text-white shadow-sm hover:bg-brandD ${isSubmitting ? "bg-brandD" : "bg-brandC"} focus:outline-none focus:ring-2 focus:ring-brandC`}
             >
               {isSubmitting ? "Sending..." : "Get Quote"}
             </button>

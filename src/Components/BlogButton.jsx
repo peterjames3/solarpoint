@@ -11,7 +11,13 @@ function BlogButton() {
   }
 
   return (
-    <button onClick={handleClick} type="button" className=' w-[100%] xs:w-[30%] md:w-[35%]  mt-5 btn--primary md:py-3 md:px-8  lg:py-3 lg:px-10' >See More..</button>
+    <button
+      onClick={handleClick}
+      type="button"
+      className="btn mt-5 w-[100%] font-semibold transition-all delay-300 hover:text-white xs:w-[30%] md:w-[30%] md:px-8 lg:px-10 lg:py-3"
+    >
+      See More..
+    </button>
   );
 }
 

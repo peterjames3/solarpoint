@@ -1,9 +1,10 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "keen-slider/keen-slider.min.css";
 import KeenSlider from "keen-slider";
 
 const Testimonial = () => {
   const sliderRef = useRef(null);
+  const [sliderInstance, setSliderInstance] = useState(null);
   const previousRef = useRef(null);
   const nextRef = useRef(null);
 
@@ -27,41 +28,28 @@ const Testimonial = () => {
         },
       });
 
-      const prevHandler = () => slider.prev();
-      const nextHandler = () => slider.next();
-
-      if (previousRef.current) {
-        previousRef.current.addEventListener("click", prevHandler);
-      }
-
-      if (nextRef.current) {
-        nextRef.current.addEventListener("click", nextHandler);
-      }
+      // Store the KeenSlider instance in state to use it in event handlers
+      setSliderInstance(slider);
 
       return () => {
-        if (previousRef.current) {
-          previousRef.current.removeEventListener("click", prevHandler);
-        }
-        if (nextRef.current) {
-          nextRef.current.removeEventListener("click", nextHandler);
-        }
         slider.destroy();
       };
     }
   }, []);
 
   return (
-    <section className="">
+    <section>
       <div className="wrapper px-4 py-12 sm:px-6 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
         <div className="items-end justify-between sm:flex sm:pe-6 lg:pe-8">
-          <h2 className="max-w-xl font-poppins text-4xl font-bold text-black ">
+          <h2 className="max-w-xl font-poppins text-4xl font-bold text-black">
             Read trusted reviews from our customers
           </h2>
           <div className="mt-8 flex gap-4 lg:mt-0">
             <button
               aria-label="Previous slide"
               ref={previousRef}
-              className="rounded-full border border-brandD p-3 text-brandC transition hover:bg-brandD hover:text-white"
+              onClick={() => sliderInstance?.prev()}
+              className="cursor-pointer rounded-full border border-brandD p-3 text-brandC transition hover:bg-brandD hover:text-white"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +69,8 @@ const Testimonial = () => {
             <button
               aria-label="Next slide"
               ref={nextRef}
-              className="rounded-full border border-brandD p-3 text-brandC transition hover:bg-brandD hover:text-white"
+              onClick={() => sliderInstance?.next()}
+              className="cursor-pointer rounded-full border border-brandD p-3 text-brandC transition hover:bg-brandD hover:text-white"
             >
               <svg
                 className="size-5 rtl:rotate-180"

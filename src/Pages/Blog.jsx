@@ -33,7 +33,7 @@ function Blog() {
               setTimeout(() => setSelectedBlog(blog), 600);
             }}
             type="button"
-            className="mt-2 bg-transparent px-10 py-3 text-xl font-semibold text-textColor transition-all delay-300 hover:bg-black hover:text-white"
+            className="btn  font-semibold transition-all delay-300 hover:text-white focus:ring-1 focus:ring-brandC"
           >
             Read More
           </button>

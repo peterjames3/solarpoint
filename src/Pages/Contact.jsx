@@ -13,7 +13,7 @@ function Contact() {
   }, [location])
   return (
     <motion.section
-      className="w-full"
+      className="w-full bg-gray-100"
       intial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

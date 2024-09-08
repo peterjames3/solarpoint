@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet-async";
 function SolarHybrid() {
   return (
     <motion.section
-      className="h-auto w-full"
+      className="h-auto w-full bg-gray-100"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

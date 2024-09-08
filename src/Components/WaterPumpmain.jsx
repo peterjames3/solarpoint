@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 function WaterPumpmain() {
   return (
     <section className="h-auto my-5 py-20 overflow-y-scroll">
-      <div className="wrapper px-5 flex flex-col sx:flex-col ss:flex-row md:flex-row md:gap-5  md:px-7 bg-cardBg py-3">
+      <div className="wrapper px-5 flex flex-col sx:flex-col ss:flex-row md:flex-row md:gap-5  shadow-lg  md:px-7 py-3 rounded-lg bg-white">
         <div
           data-aos="fade-right"
           data-aos-delay="1200"
@@ -36,10 +36,10 @@ function WaterPumpmain() {
           data-aos-offset="50"
           className="w-full px-2 md:w-[50%] md:px-3 ss:space-y-2 md:space-y-4 font-Poppins py-2 animate-puls"
         >
-          <h2 className="font-bold font-poppins text-3xl text-textColor pt-2">
+          <h2 className="font-bold font-poppins text-3xl text-black pt-2">
             Solar Water Pumping
           </h2>
-          <hr className="border-b-2 border-blue-700" />
+          
           <p className="font-Rubik text-xl">
             In the specialized field of integrating solar energy with water
             pumping, we stand at the forefront. Our expertise spans from
