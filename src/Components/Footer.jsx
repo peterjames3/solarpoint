@@ -38,7 +38,7 @@ function Footer() {
         )
         .then(
           (result) => {
-            notifySuccess('Subscription:', result.text);
+            notifySuccess("Subscription successful:", result.text);
             setIsSubmitting(false);
             formik.resetForm();
           },
@@ -94,6 +94,7 @@ function Footer() {
               </div>
               <div className="mt-6 w-[40%]">
                 <button
+                  type="submit"
                   className={`w-full cursor-pointer rounded bg-brandC py-3 text-center transition-all delay-300 ${isSubmitting ? "bg-brandD" : "bg-brandC"} font-medium text-white hover:bg-brandD`}
                 >
                   {isSubmitting ? "Sending..." : "Subscribe"}

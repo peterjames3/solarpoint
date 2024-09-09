@@ -8,7 +8,7 @@ import MoreProductsButton from "../Components/MoreProductsButton";
 
 function ProductsSlider() {
   return (
-    <section>
+    <section className="bg-cardBg pb-4">
       <div className="flex w-full flex-col items-center space-y-3">
         <h3 className="pt-9 text-center font-poppins text-3xl font-bold text-black">
           Products
@@ -19,7 +19,7 @@ function ProductsSlider() {
         </h4>
       </div>
       <div className="wrapper h-[35rem]">
-        <Carousel slide={false} className="bg-gray-400">
+        <Carousel slide={false} className="">
           <section className="max-w-8xl mx-auto mt-2 flex flex-col-reverse gap-0 px-2 xs:flex-col-reverse ss:flex-col-reverse ss:gap-2 ss:px-16 sm:flex-row md:flex-row md:gap-3">
             <div className="w-full space-y-6 px-4 md:w-1/2">
               <div className="title font-bond py-4 font-poppins text-5xl text-black">
