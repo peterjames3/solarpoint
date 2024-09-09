@@ -1,6 +1,6 @@
-import SolarPanel from "../assets/carousel-2..webp";
-import Green from "../assets/green.jpg";
-import factory from "../assets/factory.jpg";
+import SolarPanel from "../assets/solar-installation2.webp";
+import Green from "../assets/Solarpanel..webp";
+import factory from "../assets/factory.webp";
 import { GiGreenPower } from "react-icons/gi";
 import { CiCircleCheck } from "react-icons/ci";
 import { TbSolarPanel2 } from "react-icons/tb";
@@ -38,10 +38,7 @@ function Aboutus() {
             energy solutions that ensure a sustainable future for all.
           </p>
 
-          <div className="font-Roboto flex w-full flex-row items-center justify-center gap-5 text-center uppercase xs:hidden sm:hidden md:flex">
-            <p className="text-5xl font-bold text-white">3+</p>
-            <p className="font-semibold text-cardBg">Years Experience </p>
-          </div>
+  
           <AboutUsButton />
         </div>
 

@@ -1,4 +1,4 @@
-import purifierImg3 from "../assets/syagewaterpurifier.png";
+import purifierImg3 from "../assets/syagewaterpurifier.webp";
 const SolarWaterPurifierMain = () => {
   return (
     <section className='w-full'>

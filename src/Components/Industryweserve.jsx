@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Airportimg from "../assets/install..webp";
+import Airportimg from "../assets/solarInstallation.webp";
 import "aos/dist/aos.css";
 import QuotationModal from "./QuotationModal";
 

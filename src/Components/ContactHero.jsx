@@ -1,4 +1,4 @@
-import Renewable from "../assets/Renewable..webp";
+import Renewable from "../assets/blog3.webp";
 
 function ContactHero() {
   return (
@@ -6,8 +6,9 @@ function ContactHero() {
         <div className='relative w-full bg-gradient-to-r from-slate-700 to-gray-800 h-[35rem]  '>
      <img
           src={Renewable}
-          alt=""
-          className=" bg-cover bg-center flex-shrink-0 mix-blend-overlay h-full w-full"
+          alt="renewable"
+          loading='lazy'
+          className=" object-fill flex-shrink-0 mix-blend-overlay h-full w-full"
         />
         <div className="absolute top-[50%] left-1/2 transition -translate-x-1/2 -translate-y-1/2 text-white px-5 flex items-center justify-between w-full md:max-w-[1400px] ">
             <div className="">

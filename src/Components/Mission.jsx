@@ -1,5 +1,5 @@
 import "aos/dist/aos.css";
-import missionImg from "../assets/mission.jpg";
+import missionImg from "../assets/mission.webp";
 function Mission() {
   return (
     <section data-aos="fade-up" data-aos-duration="3000" className="wrapper">

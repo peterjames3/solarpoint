@@ -1,6 +1,6 @@
-import hybridAcImage from "../assets/HybridAirconditioner.png";
-import offGridAcImage from "../assets/OffgridAirconditioner.png";
-import solarAcIntroImage from "../assets/AirconditionerIntro.png";
+import hybridAcImage from "../assets/HybridAirconditioner.webp";
+import offGridAcImage from "../assets/OffgridAirconditioner.webp";
+import solarAcIntroImage from "../assets/AirconditionerIntro.webp";
 const airConditioners = [
   {
     id: 1,

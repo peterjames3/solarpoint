@@ -1,13 +1,13 @@
-import waterheater1 from "./assets/waterheater1.jpeg"
-import waterheater2 from "./assets/waterheater2.jpeg"
-import repair1 from './assets/repair1.jpeg'
-import repair2 from './assets/repair2.jpeg'
-import solarInstallation1 from './assets/solar-installation1.jpeg'
-import solarInstallation2 from './assets/solar-installation2.jpeg'
-import solarization1 from './assets/solarization1.jpeg'
-import solarization2 from './assets/solarization2.jpeg'
-import Unesco from "./assets/unesco.jpeg";
-import unesco2 from "./assets/unesco2.jpeg";
+import waterheater1 from "./assets/waterheater1.webp"
+import waterheater2 from "./assets/waterheater2.webp"
+import repair1 from './assets/repair1.webp'
+import repair2 from './assets/repair2.webp'
+import solarInstallation1 from './assets/solar-installation1.webp'
+import solarInstallation2 from './assets/solar-installation2.webp'
+import solarization1 from './assets/solarization1.webp'
+import solarization2 from './assets/solarization2.webp'
+import Unesco from "./assets/unesco.webp";
+import unesco2 from "./assets/unesco2.webp";
 
 export default [
     {

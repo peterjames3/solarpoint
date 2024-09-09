@@ -16,7 +16,6 @@ import OurSolutions from "../Components/OurSolutions";
 import Whychoosesolar from "../Components/Whychoosesolar";
 
 function Home() {
-  
   const location = useLocation();
 
   useEffect(() => {
@@ -77,7 +76,7 @@ function Home() {
       <OurSolutions />
       <Projects />
       <SolarSystem />
-       <Industryweserve />
+      <Industryweserve />
       <Testimonials />
       <Blogsec />
     </motion.div>

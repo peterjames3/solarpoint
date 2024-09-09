@@ -1,61 +1,71 @@
 import { useState, useEffect } from "react";
+import { useSearchParams, useNavigate } from "react-router-dom"; // Import for URL query handling
 import ProductsData from "../ProductsData";
 import ProductsIntro from "../Components/ProductsIntro";
 import BestSellingProducts from "../Components/BestSellingProducts";
-import AccordionSection from "../Components/AccordionSection";
 import ProductsItems from "../Components/ProductsItems";
 import { motion } from "framer-motion";
-/* import { useLocation } from "react-router-dom"; */
 import { Helmet } from "react-helmet-async";
 
 function ProductsPage() {
-  /*  const location = useLocation(); */
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
 
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState(
+    () => searchParams.get("search") || "",
+  );
   const [filteredData, setFilteredData] = useState(ProductsData);
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 9; // Updated to display 9 items per page
+  const [currentPage, setCurrentPage] = useState(
+    () => parseInt(searchParams.get("page")) || 1,
+  );
+  const [activeCategory, setActiveCategory] = useState(
+    () => searchParams.get("category") || "All",
+  );
+  const itemsPerPage = 9;
+
+  useEffect(() => {
+    /* window.scrollTo(0, 0); */
+    filterProducts(searchTerm, activeCategory);
+  }, [searchTerm, activeCategory]);
 
   const handleSearch = (event) => {
     const value = event.target.value.toLowerCase();
     setSearchTerm(value);
-    filterProducts(value);
+    setSearchParams({ search: value, category: activeCategory, page: 1 });
+    filterProducts(value, activeCategory);
   };
 
-  const filterProducts = (value) => {
+  const filterProducts = (searchValue, categoryValue) => {
     const filtered = ProductsData.filter(
       (item) =>
-        item.name.toLowerCase().includes(value) ||
-        item.desc.toLowerCase().includes(value) ||
-        item.price.toLowerCase().includes(value) ||
-        item.category.toLowerCase().includes(value),
+        (item.name.toLowerCase().includes(searchValue) ||
+          item.desc.toLowerCase().includes(searchValue) ||
+          item.price.toLowerCase().includes(searchValue)) &&
+        (categoryValue === "All" || item.category === categoryValue),
     );
     setFilteredData(filtered);
-    setCurrentPage(1); // Reset to the first page after filtering
+    setCurrentPage(1);
   };
 
   const handleCategoryFilter = (category) => {
-    if (category === "All") {
-      setFilteredData(ProductsData);
-    } else {
-      const filtered = ProductsData.filter(
-        (item) => item.category === category,
-      );
-      setFilteredData(filtered);
-    }
-    setCurrentPage(1); // Reset to the first page after filtering
+    setActiveCategory(category);
+    setSearchParams({ search: searchTerm, category, page: 1 });
+    filterProducts(searchTerm, category);
+  };
+
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    setSearchParams({
+      search: searchTerm,
+      category: activeCategory,
+      page: pageNumber,
+    });
   };
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = filteredData.slice(indexOfFirstItem, indexOfLastItem);
 
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
-  // Dynamically adjust grid based on the number of items to display
   const getGridClass = () => {
     switch (currentItems.length) {
       case 1:
@@ -71,6 +81,11 @@ function ProductsPage() {
 
   let gridContainerClasses = `max-w-7xl mt-1 mx-auto grid items-center gap-5 ${getGridClass()}`;
 
+  const activeStyle = {
+    backgroundColor: "black",
+    color: "white",
+  };
+
   return (
     <motion.section
       className="flex w-full flex-col"
@@ -80,29 +95,12 @@ function ProductsPage() {
     >
       <Helmet>
         <title>Our Products | SolarPoint System</title>
-        <meta
-          name="description"
-          content="Discover our range of best-selling solar products including inverters, charge controllers, batteries, solar panels, and LEDs. Find the perfect products to meet your solar energy needs."
-        />
-        <meta
-          name="keywords"
-          content="Solar Products, Best Selling, Solar Inverters, Charge Controllers, Solar Batteries, Solar Panels, LEDs, SolarPoint System"
-        />
-        <link rel="canonical" href="https://kimgym.netlify.app/products" />
-        <meta property="og:title" content="Our Products | SolarPoint System" />
-        <meta
-          property="og:description"
-          content="Explore our top-quality solar products and find the best solutions to enhance your renewable energy setup. Visit SolarPoint System now!"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://kimgym.netlify.app/products" />
-        <meta
-          property="og:image"
-          content="https://kimgym.netlify.app/images/solar-products.jpg" // Replace with your actual image URL
-        />
+        {/* SEO meta tags */}
       </Helmet>
+
       <ProductsIntro />
       <BestSellingProducts />
+
       {/* Search and Filter Section */}
       <div className="mx-auto mb-4 flex flex-wrap items-center gap-2 px-5">
         <input
@@ -110,48 +108,54 @@ function ProductsPage() {
           placeholder="Search products..."
           value={searchTerm}
           onChange={handleSearch}
-          className="rounded border-2 border-brandD p-3 text-xl outline-none"
+          className="rounded border-2 border-brandD p-3 text-xl outline-none focus:ring-1 focus:ring-brandC"
         />
-        {/* Filter Buttons */}
+
         <button
           onClick={() => handleCategoryFilter("All")}
+          style={activeCategory === "All" ? activeStyle : null}
           className="rounded border-2 border-brandD p-3 text-xl transition-all delay-200 hover:border-black hover:bg-black hover:text-white"
         >
           All
         </button>
         <button
           onClick={() => handleCategoryFilter("Inverters")}
+          style={activeCategory === "Inverters" ? activeStyle : null}
           className="rounded border-2 border-brandD p-3 text-xl transition-all delay-200 hover:border-black hover:bg-black hover:text-white"
         >
           Inverters
         </button>
         <button
           onClick={() => handleCategoryFilter("Charge controllers")}
+          style={activeCategory === "Charge controllers" ? activeStyle : null}
           className="rounded border-2 border-brandD p-3 text-xl transition-all delay-200 hover:border-black hover:bg-black hover:text-white"
         >
           Charge controllers
         </button>
         <button
           onClick={() => handleCategoryFilter("Batteries")}
+          style={activeCategory === "Batteries" ? activeStyle : null}
           className="rounded border-2 border-brandD p-3 text-xl transition-all delay-200 hover:border-black hover:bg-black hover:text-white"
         >
           Batteries
         </button>
         <button
           onClick={() => handleCategoryFilter("Solar Panel")}
+          style={activeCategory === "Solar Panel" ? activeStyle : null}
           className="rounded border-2 border-brandD p-3 text-xl transition-all delay-200 hover:border-black hover:bg-black hover:text-white"
         >
           Solar Panels
         </button>
         <button
           onClick={() => handleCategoryFilter("LEDs")}
+          style={activeCategory === "LEDs" ? activeStyle : null}
           className="rounded border-2 border-brandD p-3 text-xl transition-all delay-200 hover:border-black hover:bg-black hover:text-white"
         >
           Solar Lights
         </button>
       </div>
 
-      {/* Product Display Section - Apply dynamic classes here */}
+      {/* Product Display Section */}
       <div className={gridContainerClasses}>
         {currentItems.length > 0 ? (
           currentItems.map((item) => <ProductsItems key={item.id} {...item} />)
@@ -179,8 +183,6 @@ function ProductsPage() {
           )}
         </div>
       )}
-
-      <AccordionSection />
     </motion.section>
   );
 }

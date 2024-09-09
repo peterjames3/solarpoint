@@ -40,7 +40,7 @@ const Testimonial = () => {
   return (
     <section>
       <div className="wrapper px-4 py-12 sm:px-6 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
-        <div className="items-end justify-between sm:flex sm:pe-6 lg:pe-8">
+        <div className=" sm:pe-6 lg:pe-8">
           <h2 className="max-w-xl font-poppins text-4xl font-bold text-black">
             Read trusted reviews from our customers
           </h2>
@@ -48,7 +48,10 @@ const Testimonial = () => {
             <button
               aria-label="Previous slide"
               ref={previousRef}
-              onClick={() => sliderInstance?.prev()}
+
+              onClick={() =>{
+                 console.log("Prev button clicked");
+               sliderInstance?.prev()}}
               className="cursor-pointer rounded-full border border-brandD p-3 text-brandC transition hover:bg-brandD hover:text-white"
             >
               <svg

@@ -1,6 +1,6 @@
-import Blog1 from "../assets/carousel-1..webp";
-import Blog2 from "../assets/carousel-2..webp";
-import Blog3 from "../assets/carousel-3..webp";
+import Blog1 from "../assets/blo3.webp";
+import Blog2 from "../assets/blog2.webp";
+import Blog3 from "../assets/blog3.webp";
 import SolarPanel from "../assets/Solarpanel..webp";
 import BlogButton from "./BlogButton";
 

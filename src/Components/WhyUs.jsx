@@ -1,6 +1,6 @@
 import { TbSquareCheckFilled } from "react-icons/tb";
 import { VscWorkspaceTrusted } from "react-icons/vsc";
-import UsImg from "../assets/factory.jpg";
+import UsImg from "../assets/factory.webp";
 
 function Whyychooseus() {
   return (

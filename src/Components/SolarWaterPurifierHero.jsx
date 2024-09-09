@@ -1,7 +1,7 @@
 
-import purifierImg1 from "../assets/Purifier1.png"; // Add appropriate image paths
-import purifierImg2 from "../assets/Purifier2.png";
-import purifierImg3 from "../assets/syagewaterpurifier.png";
+import purifierImg1 from "../assets/Purifier1.webp"; // Add appropriate image paths
+import purifierImg2 from "../assets/Purifier2.webp";
+import purifierImg3 from "../assets/syagewaterpurifier.webp";
 
 const purifiers = [
   {

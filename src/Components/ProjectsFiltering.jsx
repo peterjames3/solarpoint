@@ -7,7 +7,7 @@ import ProjectsListing from "./ProjectsListing";
 const ProjectsFiltering = () => {
   const navigate = useNavigate();
   const activeStyle = {
-    fontWeight: "bold",
+ 
     color: "#16a34a",
   };
 

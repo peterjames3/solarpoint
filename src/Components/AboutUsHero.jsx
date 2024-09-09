@@ -1,5 +1,5 @@
 // Import Swiper React components
-import Carousel3 from "../assets/carousel-3..webp";
+import Carousel3 from "../assets/solar-installation1.webp";
 
 const AboutUsHero = () => {
   return (

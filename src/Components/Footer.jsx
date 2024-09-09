@@ -38,7 +38,7 @@ function Footer() {
         )
         .then(
           (result) => {
-            notifySuccess(result.text);
+            notifySuccess('Subscription:', result.text);
             setIsSubmitting(false);
             formik.resetForm();
           },
@@ -53,7 +53,7 @@ function Footer() {
     <section className="w-full">
       <div className="bg-slate-800 py-12">
         {/* Newsletter Subscription Section */}
-        <div className="mx-auto mt-0 max-w-[1400px] items-center justify-between space-y-10 px-9 py-2 sm:flex sm:space-y-0">
+        <div className="mx-auto mt-0 max-w-[1400px] items-center justify-around space-y-10 py-2 sm:flex sm:space-y-0">
           <div>
             <h6 className="text-2xl font-medium text-brandC underline">
               Subscribe to our Newsletter

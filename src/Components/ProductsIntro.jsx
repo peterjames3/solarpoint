@@ -1,29 +1,27 @@
-import cart from "../assets/green-blue-shopping-cart-yellow.jpg"
-
+import cart from "../assets/green-blue-shopping-cart-yellow.webp";
 
 function ProductsIntro() {
   return (
-    <section className="w-full  mx-auto bg-gradient-to-r from-slate-700 to-gray-800">
-      <div className="wrapperproduct flex flex-col xs:flex-col  sm:flex-row gap-5 min-h-[30rem] pt-[6rem] sm:pt-[5rem]  px-5 ">
-      <div className="w-full sm:w-1/2 text-center sm:text-start space-y-3 ss:pt-1">
-        <h3 className="text-4xl  sm:text-6xl  font-bold text-green-600 font-poppins py-4 ">
-          Shop Top Solar Products at Unmatched Prices
-        </h3>
-        <nav className="text-xl sm:text-2xl font-medium font-Rubik">
-          <p className="leading-[1.5em] text-slate-400">
-            Step into a greener future without stretching your budget. Our
-            online solar panel shop is committed to making renewable energy
-            accessible for all by offering the most competitive prices on the
-            market. Experience cutting-edge technology that turns sunlight into
-            electricity.
-          </p>
-         
-        </nav>
-      </div>
+    <section className="mx-auto w-full bg-gradient-to-r from-slate-700 to-gray-800">
+      <div className="wrapperproduct flex min-h-[30rem] flex-col gap-5 px-5 pt-[6rem] xs:flex-col sm:flex-row sm:pt-[5rem]">
+        <div className="w-full space-y-3 text-center ss:pt-1 sm:w-1/2 sm:text-start">
+          <h3 className="py-4 font-poppins text-4xl font-bold text-green-600 sm:text-6xl">
+            Shop Top Solar Products at Unmatched Prices
+          </h3>
+          <nav className="font-Rubik text-xl font-medium sm:text-2xl">
+            <p className="leading-[1.5em] text-slate-400">
+              Step into a greener future without stretching your budget. Our
+              online solar panel shop is committed to making renewable energy
+              accessible for all by offering the most competitive prices on the
+              market. Experience cutting-edge technology that turns sunlight
+              into electricity.
+            </p>
+          </nav>
+        </div>
 
-      <div className=" w-full sm:w-1/2  rounded-md overflow-hidden py-3 ">
-        <img src={cart} alt="cart" className="object-fill w-full h-full"/>
-      </div>
+        <div className="w-full overflow-hidden rounded-md py-3 sm:w-1/2">
+          <img src={cart} alt="cart" className="h-full w-full object-fill" />
+        </div>
       </div>
     </section>
   );

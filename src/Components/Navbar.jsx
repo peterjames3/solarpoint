@@ -37,7 +37,7 @@ const Navbar = () => {
   };
 
   const activeStyle = {
-    fontWeight: "bold",
+    
     color: "#16a34a",
   };
 
@@ -95,13 +95,14 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           <div className="text-xl">Follow on:</div>
           {socials.map((link, index) => (
-            <a key={index}>
-              <Link href={link.href} target="_blank" rel="noopener noreferrer">
-                <link.icon
-                  size={24}
-                  className={`cursor-pointer transition-all delay-300 ${link.hoverClass}`}
-                />
-              </Link>
+            <a
+              key={index}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer transition-all delay-300"
+            >
+              <link.icon size={24} className={link.hoverClass} />
             </a>
           ))}
         </div>
@@ -136,7 +137,7 @@ const Navbar = () => {
             ))}
             <div className="relative">
               <Link
-                className=" flex  items-center gap-1 cursor-pointer text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
+                className="flex cursor-pointer items-center gap-1 text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
                 onClick={toggleDropdown}
               >
                 SOLUTIONS <FaAngleDown className="text-white" />
@@ -219,7 +220,7 @@ const Navbar = () => {
 
               <div className="relative">
                 <Link
-                  className=" flex  items-center gap-1 cursor-pointer font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
+                  className="flex cursor-pointer items-center gap-1 font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
                   to="/solutions"
                   onClick={toggleDropdown}
                 >

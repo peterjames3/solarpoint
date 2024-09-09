@@ -4,6 +4,7 @@ import ContactHero from '../Components/ContactHero'
 import OurContact from '../Components/OurContact'
 import  ContactForm from "../Components/ContactForm"
 import { motion } from "framer-motion"
+import AccordionSection from "../Components/AccordionSection";
 import {useLocation } from  'react-router-dom'
 
 function Contact() {
@@ -29,6 +30,7 @@ function Contact() {
       <ContactHero />
       <OurContact />
       <ContactForm />
+       <AccordionSection /> 
     </motion.section>
   );
 }
