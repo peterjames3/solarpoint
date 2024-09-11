@@ -38,11 +38,13 @@ function Footer() {
         )
         .then(
           (result) => {
+            console.log("Success:", result.text); // Add this line
             notifySuccess("Subscription successful:", result.text);
             setIsSubmitting(false);
             formik.resetForm();
           },
           (error) => {
+            console.error("Error:", error.text); // Add this line
             notifyError(error.text);
             setIsSubmitting(false);
           },

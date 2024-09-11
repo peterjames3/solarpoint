@@ -25,7 +25,7 @@ const ProjectsDetailsPage = () => {
     <section className="min-h-[15rem] w-full px-5">
       <div className="wrapper space-y-10 pt-[10rem]">
         <h3 className="text-4xl font-semibold text-black">{title}</h3>
-        <div className="flex gap-16 items-center">
+        <div className="items-center gap-16 space-y-4 sm:flex sm:space-y-0">
           <p>
             {" "}
             <strong>Client:</strong> {client} / <strong> Year: </strong> {year}{" "}
@@ -33,8 +33,8 @@ const ProjectsDetailsPage = () => {
             {type}
           </p>
           <button onClick={handleGoBack} className="btn--primary">
-          Go Back
-        </button>
+            Go Back
+          </button>
         </div>
         <div className="h-[40rem] w-full overflow-hidden rounded-xl">
           <img
@@ -45,11 +45,11 @@ const ProjectsDetailsPage = () => {
           />
         </div>
 
-        <div className="sm:flex  w-full gap-5 md:gap-10">
-          <div className="pt-5 w-full sm:w-1/2">
+        <div className="w-full gap-5 sm:flex md:gap-10">
+          <div className="w-full pt-5 sm:w-1/2">
             <p className="text-xl leading-10">{content}</p>
           </div>
-          <div className="w-full sm:w-1/2 md:flex gap-3">
+          <div className="w-full gap-3 sm:w-1/2 md:flex">
             <img
               src={otherImage1}
               alt={title}
@@ -64,7 +64,6 @@ const ProjectsDetailsPage = () => {
             />
           </div>
         </div>
-        
       </div>
     </section>
   );

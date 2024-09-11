@@ -1,25 +1,34 @@
-import { useState } from "react";
-import projectData from "../ProjectData"; 
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import projectData from "../ProjectData";
 import ProjectsListing from "./ProjectsListing";
-
 
 const ProjectsFiltering = () => {
   const navigate = useNavigate();
-  const activeStyle = {
- 
-    color: "#16a34a",
-  };
+  const [searchParams, setSearchParams] = useSearchParams();
 
+  // Get the filter value from the query param (default is "All")
+  const initialFilter = searchParams.get("filter") || "All";
 
   // State to manage the current filter type
-  const [filter, setFilter] = useState("All");
+  const [filter, setFilter] = useState(initialFilter);
+
+  // Effect to update the filter when searchParams change
+  useEffect(() => {
+    setFilter(searchParams.get("filter") || "All");
+  }, [searchParams]);
 
   // Function to handle filtering logic
   const filteredProjects =
     filter === "All"
       ? projectData
       : projectData.filter((project) => project.type === filter);
+
+  // Handle filter change and update query parameter
+  const handleFilterChange = (type) => {
+    setFilter(type);
+    setSearchParams({ filter: type });
+  };
 
   const handleViewDetails = (project) => {
     navigate(`/projects/${project.id}`, { state: project });
@@ -38,11 +47,11 @@ const ProjectsFiltering = () => {
         ].map((type) => (
           <button
             key={type}
-            style={filter === type ? activeStyle : null}
+            style={filter === type ? { color: "#16a34a" } : null}
             className="hover:text-brandD"
-            onClick={() => setFilter(type)}
+            onClick={() => handleFilterChange(type)}
           >
-            {type === "All" ? "All" : type}
+            {type}
           </button>
         ))}
       </div>

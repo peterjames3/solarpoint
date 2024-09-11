@@ -16,6 +16,8 @@ function Hero() {
       "Lithium Batteries",
       "Power Backups",
       "LEDs",
+      "Off-grid Solar Systems",
+      "Solar energy for homes",
     ],
     loop: {},
     typeSpeed: 150,
@@ -34,16 +36,16 @@ function Hero() {
         />
         <div className="absolute left-[0%] top-[10%] max-w-[890px] space-y-6 py-4 pl-8 ss:top-[20%] sm:left-[0%] xl:translate-x-[14%] xl:pl-2 xxl:translate-x-[40%]">
           <div className="h-full w-full space-y-10 px-3 sm:px-0">
-            <h1 className="font-body xxs:text-3xl xs:text-5xl py-2 font-semibold text-brandC sm:text-6xl md:text-7xl">
-              Empowering Sustainable Energy Solutions for a Brighter Tomorrow
+            <h1 className="font-body py-2 font-semibold text-brandC xxs:text-3xl xs:text-5xl sm:text-6xl md:text-7xl">
+              Empowering Sustainable Energy Solutions for a Greener Future
             </h1>
 
-            <h2 className="xxs:text-xl font-Rubik font-medium text-white xs:text-3xl ">
-              Explore our range of high-quality solar solutions and solar
-              products designed to provide sustainable energy solutions for
-              homes and businesses.
+            <h2 className="font-Rubik font-medium text-white xxs:text-xl xs:text-3xl">
+              Discover reliable, eco-friendly solar energy systems designed to
+              reduce energy costs and promote a sustainable lifestyle for homes
+              and businesses.
             </h2>
-            <p className="xxs:text-xl font-Rubik font-medium leading-tight text-dimWhite xs:text-3xl sm:text-3xl">
+            <p className="font-Rubik font-medium leading-tight text-dimWhite xxs:text-xl xs:text-3xl sm:text-3xl">
               Powering your future with{" "}
               <span className="text-brandC">{typeEffect}</span>
             </p>

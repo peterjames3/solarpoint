@@ -52,13 +52,14 @@ function Whyychooseus() {
             data-aos-offset="50"
             className="font-Rubik text-xl leading-[2.5rem] text-gray-900"
           >
-            Unbeatable service, quality installations, and experience Having the
-            correct equipment installed, and calculating the right sized solar
-            array to match the power needs for any home or business requires
-            technical knowledge, planning, product knowledge, and
-            expertise.There is no substitute for experience when getting this
-            right, and we are the most qualified, and the most experienced solar
-            installation team in Kenya.
+            At SolarPoint Systems E.A., we deliver more than just
+            installations—we provide tailored solar solutions backed by decades
+            of expertise. Choosing the right solar panels and designing the
+            correct system to meet your home or business&apos;s unique energy demands
+            requires precise planning, product knowledge, and technical skills.
+            With extensive experience in solar panel installation, we are proud
+            to be Kenya’s most qualified and trusted solar installation team,
+            ensuring top-quality solar energy systems for every client.
           </p>
           <div
             data-aos="fade-pop"

@@ -78,22 +78,22 @@ const Navbar = () => {
       {/* Top Bar */}
       <div className="mx-auto hidden max-w-[1400px] items-center justify-between px-2 pb-5 text-white sm:flex">
         <div className="items-center gap-7 sm:flex">
-          <nav className="flex items-center gap-1 text-xl">
+          <nav className="flex items-center gap-1 text-[.95rem] md:text-[1.1rem]">
             <MdOutlineEmail className="text-secondaryBg" />{" "}
             <span>solarpointsystems1@gmail.com</span>{" "}
           </nav>
-          <nav className="hidden items-center gap-1 text-xl md:flex">
+          <nav className="hidden items-center gap-1 text-[.95rem] md:flex md:text-[1.1rem]">
             <MdAccessTime className="text-secondaryBg" />
             <span>Mon - Fri: 9:30 AM - 5:30 PM </span>
           </nav>
-          <nav className="hidden items-center gap-1 text-xl ss:flex">
+          <nav className="hidden items-center gap-1 text-[.95rem] ss:flex md:text-[1.1rem]">
             <MdOutlinePhone className="text-secondaryBg" />
             <span>+254 703704062 </span>
           </nav>
         </div>
         {/*Social Links */}
         <div className="flex items-center gap-4">
-          <div className="text-xl">Follow on:</div>
+          <div className="text-[.95rem] md:text-[1.1rem]">Follow on:</div>
           {socials.map((link, index) => (
             <a
               key={index}
@@ -114,7 +114,7 @@ const Navbar = () => {
           to="/"
           className="flex items-center gap-2 text-3xl font-bold text-green-600 hover:cursor-pointer"
         >
-          <img src={logo} alt="logo" className="size-12 flex-1" />
+          <img src={logo} alt="logo" className="size-12" />
           <nav className="hidden text-[1.25rem] xl:flex">
             SolarPointSystems E.A
           </nav>
@@ -126,7 +126,7 @@ const Navbar = () => {
             {navLinks.map((link, index) => (
               <li key={index}>
                 <Link
-                  className="cursor-pointer text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
+                  className="cursor-pointer text-[.95rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC md:text-[1.1rem]"
                   to={link.path}
                   style={location.pathname === link.path ? activeStyle : null}
                   onClick={closeMenu} // Ensure the menu closes on navigation
@@ -137,7 +137,7 @@ const Navbar = () => {
             ))}
             <div className="relative">
               <Link
-                className="flex cursor-pointer items-center gap-1 text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
+                className="flex cursor-pointer items-center gap-1 text-[.95rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC md:text-[1.1rem]"
                 onClick={toggleDropdown}
               >
                 SOLUTIONS <FaAngleDown className="text-white" />
@@ -149,7 +149,7 @@ const Navbar = () => {
                     <Link
                       key={index}
                       to={link.path}
-                      className="block px-4 py-2 text-2xl text-black hover:bg-gray-300"
+                      className="block px-4 py-2 text-[1rem] text-black hover:bg-gray-300 md:text-[1.1rem]"
                       onClick={closeMenu}
                     >
                       {link.name}
@@ -159,7 +159,7 @@ const Navbar = () => {
               )}
             </div>
             <Link
-              className="cursor-pointer text-[1.1rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC"
+              className="cursor-pointer text-[.95rem] font-medium text-white transition-all delay-300 ease-out hover:text-brandC md:text-[1.1rem]"
               to="/contact"
               style={location.pathname === "/contact" ? activeStyle : null}
               onClick={closeMenu} // Ensure the menu closes on navigation

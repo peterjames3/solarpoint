@@ -9,15 +9,15 @@ const Whychoosesolar = () => {
         </div>
         <div className="font-Poppins px-5 pt-6 md:w-[55%] md:px-10">
           <p className="pt-4 font-Rubik text-xl">
-            Solar power is a sustainable and cost-effective energy solution
-            that reduces reliance on non-renewable resources and decreases
-            environmental impact. With nearly two decades of experience,
-            SolarPoint Systems E.A. has been a leader and innovator in Kenya&apos;s
-            solar space. We specialize in solar panel installation, highly
-            efficient solar systems, and sustainable energy solutions, making us
-            one of the top solar companies in Kenya. Our extensive expertise
-            ensures that we provide top-notch solar energy services tailored to
-            meet the unique needs of our clients.
+            SolarPoint Systems E.A. offers sustainable and cost-effective solar
+            energy solutions that help reduce reliance on non-renewable
+            resources and minimize environmental impact. With nearly two decades
+            of expertise, we are a trusted leader and innovator in Kenya&apos;s
+            solar energy industry. Specializing in solar panel installation,
+            highly efficient solar systems, and renewable energy solutions, we
+            are among the top solar companies in Kenya. Our extensive experience
+            guarantees customized solar services designed to meet your unique
+            energy needs, ensuring energy efficiency and sustainability.
           </p>
         </div>
       </div>

@@ -1,10 +1,10 @@
 import SolarPanel from "../assets/solar-installation2.webp";
-import Green from "../assets/Solarpanel..webp";
+
 import factory from "../assets/factory.webp";
-import { GiGreenPower } from "react-icons/gi";
+import Resident from "../assets/solarization1.webp";
+import commercial from "../assets/solarInstallation.webp";
 import { CiCircleCheck } from "react-icons/ci";
-import { TbSolarPanel2 } from "react-icons/tb";
-import { TbBuildingFactory } from "react-icons/tb";
+
 import AboutUsButton from "./AboutUsButton";
 
 import "aos/dist/aos.css";
@@ -14,9 +14,9 @@ function Aboutus() {
     <section
       data-aos="fade-up"
       data-aos-duration="3000"
-      className="wrapper px-10"
+      className="wrapper px-2"
     >
-      <section className="flex w-full flex-col items-center space-y-3 pb-4 font-poppins">
+      <section className="flex w-full flex-col items-center space-y-3 overflow-hidden pb-4 font-poppins">
         <h3 className="pt-9 text-center font-poppins text-3xl font-bold text-black">
           About Us
         </h3>
@@ -26,44 +26,56 @@ function Aboutus() {
           We are #1 In The World Of Solar & Renewable Energy
         </h4>
       </section>
-
-      <div className="mx-auto mt-4 grid w-full grid-cols-1 gap-4 font-Rubik sm:grid-cols-2 sm:gap-3 md:flex md:grid-cols-3 lg:flex">
-        <div className="h-[28rem] w-full space-y-5 rounded-md border-y-4 border-green-700 bg-slate-800 px-2 pb-2 pt-2 text-center text-cardBg shadow-lg transition-all delay-300 hover:scale-100 dark:bg-gray-800 md:h-[26.7rem] md:w-[35%]">
-          <h4 className="font-Inter pt-5 text-2xl font-semibold">
-            We Are Commited to provide Quality Service
+      <div className="w-full items-start justify-between space-y-10 sm:flex sm:space-y-0">
+        <div className="space-y-4 pt-2 font-poppins sm:w-1/2">
+          <h3
+            className="text-[1.1rem] font-medium text-brandC"
+            data-aos="fade-right"
+            data-aos-duration="3000"
+          >
+            Enhancing Solar Energy Performance
+          </h3>
+          <h4 className="text-4xl font-semibold">
+            Power Your Future with Dependable and Sustainable Energy Solutions!
           </h4>
-          <p className="font-medium">
-            We have over two decades of experience, our mission remains to
-            empower communities and businesses by providing top-tier renewable
-            energy solutions that ensure a sustainable future for all.
+        </div>
+        <div className="space-y-2 font-poppins text-xl sm:w-1/2">
+          <p>
+            Our expertise spans energy generation, energy management, and
+            electric mobility, offering comprehensive solutions for solar
+            installation, solar maintenance, and off-grid systems. We excel in
+            generation, consumption monitoring, and reporting on energy
+            efficiency. Our reference projects highlight our success in
+            delivering solar home systems/commercial to leading investors in the
+            photovoltaic (PV) sector. We provide customized solutions tailored
+            to meet specific customer needs, all while ensuring a strong
+            commitment to environmental sustainability.
           </p>
-
-  
           <AboutUsButton />
         </div>
+      </div>
 
-        <div className="relative h-[26.2rem] w-full flex-grow overflow-hidden rounded-md bg-gradient-to-r from-slate-800 to-gray-500 md:h-[26.7rem] md:w-[32%]">
+      <div className="mx-auto mt-4 grid w-full grid-cols-1 gap-4 font-Rubik sm:grid-cols-2 sm:gap-3 md:flex md:grid-cols-3 lg:flex">
+        <div className="relative h-[26.2rem] w-full flex-grow overflow-hidden rounded-md bg-gradient-to-r from-slate-800 to-gray-600 md:h-[26.7rem] md:w-[32%]">
           <img
-            src={Green}
+            src={Resident}
             alt="man working"
             loading="lazy"
             className="h-full w-full object-cover mix-blend-overlay"
           />
 
-          <div className="transform[-translate-x-1/2] absolute left-[50%] top-[60%] h-full w-full cursor-pointer space-y-5 bg-gray-800 pb-6 pt-3 text-center text-white transition-all duration-500 ease-in-out hover:left-0 hover:top-0 hover:translate-y-0 hover:scale-100">
+          <div className="transform[-translate-x-1/2] absolute left-[50%] top-[60%] h-full w-full cursor-pointer space-y-5 bg-dimWhite pb-6 pt-3 text-center text-white transition-all duration-500 ease-in-out hover:left-0 hover:top-0 hover:translate-y-0 hover:scale-100">
             {" "}
-            <nav className="flex justify-center text-7xl text-yellow-800">
-              <TbBuildingFactory />
-            </nav>
-            <h4 className="font-Rubik text-xl font-semibold text-cardBg underline underline-offset-2">
-              Manufacturing
+            <h4 className="font-Rubik text-xl font-semibold text-brandC underline underline-offset-2">
+              Residential Solar Solutions
             </h4>
-            <p className="font-medium">
-              Solar energy offers immense benefits to the manufacturing sector,
-              from powering various systems to running farm equipment. Our solar
-              solutions for agriculture help farmers and agribusinesses:
+            <p className="font-medium text-black">
+              Our Smart Home system ensures that the solar power you produce me
+              your need. You can cover an especially large portion of your
+              energy needs and gain greater independence, for example from
+              rising energy costs.
             </p>
-            <div className="flex flex-col px-6 text-start text-green-600">
+            <div className="flex flex-col px-6 text-start text-brandD">
               <div className="flex flex-row items-center">
                 <span className="px-2">
                   <CiCircleCheck aria-label="Feature checked" />
@@ -86,25 +98,27 @@ function Aboutus() {
           </div>
         </div>
 
-        <div className="relative h-[26.2rem] w-full flex-grow overflow-hidden rounded-md bg-gradient-to-r from-slate-800 to-gray-500 md:h-[26.7rem] md:w-[32%]">
+        <div className="relative h-[26.2rem] w-full flex-grow overflow-hidden rounded-md bg-gradient-to-r from-slate-800 to-gray-600 md:h-[26.7rem] md:w-[32%]">
           <img
-            src={factory}
+            src={commercial}
             alt="man working"
+            loading="lazy"
             className="h-full w-full object-cover mix-blend-overlay"
           />
-          <div className="transform[-translate-x-1/2] absolute left-[50%] top-[60%] h-full w-full cursor-pointer space-y-5 bg-gray-800 pb-6 pt-3 text-center text-white transition-all duration-500 ease-in-out hover:left-0 hover:top-0 hover:translate-y-0 hover:scale-100">
-            <nav className="flex justify-center text-7xl text-yellow-800">
-              <GiGreenPower />
-            </nav>
-            <h4 className="font-Rubik text-xl font-semibold text-cardBg underline underline-offset-2">
-              The Greenhouse Effect
+
+          <div className="transform[-translate-x-1/2] absolute left-[50%] top-[60%] h-full w-full cursor-pointer space-y-5 bg-dimWhite pb-6 pt-3 text-center transition-all duration-500 ease-in-out hover:left-0 hover:top-0 hover:translate-y-0 hover:scale-100">
+            {" "}
+            <h4 className="font-Rubik text-xl font-semibold text-brandC underline underline-offset-2">
+              Commercial & Industrial Solar Solutions
             </h4>
-            <p className="font-medium">
-              Solar energy offers immense benefits to the agricultural sector,
-              from powering irrigation systems to running farm equipment. Our
-              solar solutions for agriculture help farmers and agribusinesses:
+            <p className="font-medium text-black">
+              We offer a complete commercial and industrial solar solutions for
+              photovoltaic integration & connection, including inverters,
+              transformers and switchgear, electrical distribution, monitoring,
+              supervision and technical support. This is a full solution for DC
+              output to the grid connection point of common coupling.
             </p>
-            <div className="flex flex-col px-6 text-start text-green-600">
+            <div className="flex flex-col px-6 text-start text-brandD">
               <div className="flex flex-row items-center">
                 <span className="px-2">
                   <CiCircleCheck aria-label="Feature checked" />
@@ -126,27 +140,63 @@ function Aboutus() {
             </div>
           </div>
         </div>
-        <div className="relative h-[28.7rem] w-full flex-grow overflow-hidden rounded-md bg-gradient-to-r from-slate-800 to-gray-500 md:h-[26.7rem] md:w-[32%]">
+
+        <div className="relative h-[26.2rem] w-full flex-grow overflow-hidden rounded-md bg-gradient-to-r from-slate-800 to-gray-700 md:h-[26.7rem] md:w-[32%]">
+          <img
+            src={factory}
+            alt="man working"
+            className="h-full w-full object-cover mix-blend-overlay"
+          />
+          <div className="transform[-translate-x-1/2] absolute left-[50%] top-[60%] h-full w-full cursor-pointer space-y-5 bg-dimWhite pb-6 pt-3 text-center transition-all duration-500 ease-in-out hover:left-0 hover:top-0 hover:translate-y-0 hover:scale-100">
+            <h4 className="font-Rubik text-xl font-semibold text-brandC underline underline-offset-2">
+              Operation and Maintenance
+            </h4>
+            <p className="font-medium text-black">
+              We provide services for repairing and upgrading existing solar
+              power systems for our customers to ensure the systems meet their
+              power demand and increase their days of autonomy. This service is
+              crucial for clients looking to optimize their solar investments
+            </p>
+            <div className="flex flex-col px-6 text-start text-brandD">
+              <div className="flex flex-row items-center">
+                <span className="px-2">
+                  <CiCircleCheck aria-label="Feature checked" />
+                </span>
+                <span>Reduce energy costs</span>
+              </div>
+              <div className="flex flex-row items-center">
+                <span className="px-2">
+                  <CiCircleCheck aria-label="Feature checked" />
+                </span>
+                <span>Increase productivity,</span>
+              </div>
+              <div className="flex flex-row items-center">
+                <span className="px-2">
+                  <CiCircleCheck aria-label="Feature checked" />
+                </span>
+                <span>Contribute to a cleaner environment.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="relative h-[28.7rem] w-full flex-grow overflow-hidden rounded-md bg-gradient-to-r from-slate-800 to-gray-600 md:h-[26.7rem] md:w-[32%]">
           <img
             src={SolarPanel}
             alt="man working"
             className="h-full w-full object-cover mix-blend-overlay"
           />
-          <div className="transform[-translate-x-1/2] absolute left-[50%] top-[60%] h-full w-full cursor-pointer space-y-5 bg-gray-800 pb-6 pt-3 text-center text-white transition-all duration-500 ease-in-out hover:left-0 hover:top-0 hover:translate-y-0 hover:scale-100">
-            <nav className="flex justify-center text-7xl text-yellow-800">
-              <TbSolarPanel2 />
-            </nav>
-            <h4 className="font-Rubik text-xl font-semibold text-cardBg underline">
+        <div className="transform[-translate-x-1/2] absolute left-[50%] top-[60%] h-full w-full cursor-pointer space-y-5 bg-dimWhite pb-6 pt-3 text-center transition-all duration-500 ease-in-out hover:left-0 hover:top-0 hover:translate-y-0 hover:scale-100">
+            <h4 className="font-Rubik text-xl font-semibold text-brandC underline">
               Solar Panels
             </h4>
-            <p className="font-medium">
+            <p className="font-medium text-black">
               Solar panels are a cornerstone of renewable energy technology,
               allowing for the direct conversion of sunlight into electricity.
               They play a crucial role in the global shift towards sustainable
               energy sources, offering a clean. fossil fuels. They different
               types including:
             </p>
-            <div className="flex flex-col space-y-4 px-6 text-start text-green-600">
+            <div className="flex flex-col space-y-4 px-6 text-start text-brandD">
               <div className="flex flex-row items-center">
                 <span className="px-2">
                   <CiCircleCheck aria-label="Feature checked" />
@@ -160,43 +210,8 @@ function Aboutus() {
                 <span>Polycrystalline Solar Panels</span>
               </div>
             </div>
-          </div>
-          <div className="relative h-[28.7rem] w-full flex-grow overflow-hidden rounded-md bg-gradient-to-r from-slate-800 to-gray-500 md:h-[22.5rem] md:w-[32%]">
-            <img
-              src={SolarPanel}
-              alt="man working"
-              className="h-full w-full object-cover mix-blend-overlay"
-            />
-            <div className="hover:height-[100%] delay-600 hover:-traslate-y-60 absolute top-[60%] cursor-pointer space-y-5 bg-gray-800 pb-6 pt-3 text-center text-white transition-all hover:top-[0%] hover:scale-100">
-              <nav className="flex justify-center text-7xl text-yellow-800">
-                <TbSolarPanel2 />
-              </nav>
-              <h4 className="font-Inter text-xl font-semibold underline">
-                Solar Panels
-              </h4>
-              <p className="font-medium">
-                Solar panels are a cornerstone of renewable energy technology,
-                allowing for the direct conversion of sunlight into electricity.
-                They play a crucial role in the global shift towards sustainable
-                energy sources, offering a clean. fossil fuels. They include:
-              </p>
-              <div className="flex flex-col px-6 text-start text-green-600">
-                <div className="flex flex-row items-center">
-                  <span className="px-2">
-                    <CiCircleCheck aria-label="Feature checked" />
-                  </span>
-                  <span>Monocrystalline Solar Panels</span>
-                </div>
-                <div className="flex flex-row items-center">
-                  <span className="px-2">
-                    <CiCircleCheck aria-label="Feature checked" />
-                  </span>
-                  <span>Polycrystalline Solar Panels</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          </div> 
+        </div> 
       </div>
     </section>
   );

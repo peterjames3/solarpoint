@@ -29,41 +29,39 @@ function Industryweserve() {
               data-aos="fade-up"
               data-aos-delay="1200"
               data-aos-offset="50"
-              className="flex h-full w-1/2 flex-col items-center bg-slate-300 py-7"
+              className="flex h-full w-1/2 flex-col items-center bg-gray-200 py-7"
             >
-              <ul className="grid list-none grid-cols-1 items-baseline justify-center space-y-2 divide-y-2 divide-gray-500">
-                <li className="font-semibold text-gray-500">
-                  01. Get In Touch
-                </li>
-                <li className="py-3 font-semibold text-gray-500">
+              <ul className="text-brabdC grid list-none grid-cols-1 items-baseline justify-center space-y-2 divide-y-2 divide-gray-500 font-poppins text-brandD font-semibold">
+                <li className="">01. Get In Touch</li>
+                <li className="py-3 ">
                   02. Consultance
                 </li>
-                <li className="py-3 font-semibold text-gray-500">
+                <li className="py-3 ">
                   03. Design and Installation
                 </li>
-                <li className="py-3 font-semibold text-gray-500">
+                <li className="py-3">
                   0.4 Solar On
                 </li>
-                <li className="py-3 font-semibold text-gray-500">
+                <li className="py-3 ">
                   05. Management
                 </li>
               </ul>
             </div>
             <div className="w-1/2 space-y-2 p-2 md:space-y-4 md:py-7">
               <h3 className="font-Roboto font-semibold text-gray-500">01</h3>
-              <h4 className="font-mediun font-Inter font-medium text-black md:text-3xl">
+              <h4 className="font-mediun font-poppins font-semibold text-brandC md:text-3xl">
                 Solar Power at everywhere!
               </h4>
-              <p className="md:text-[1.1rem]">
+              <p className="font-Rubik md:text-[1.1rem]">
                 {" "}
                 01. Few minutes on the phone with one of our experienced solar
                 energy consultant is all it takes for begin.{" "}
               </p>
-              <p className="md:text-[1.1rem]">
+              <p className="font-Rubik md:text-[1.1rem]">
                 02. We&apos;ll design a custome solar energy system that fits
                 your electricity needs.
               </p>
-              <p className="md:text-[1.1rem]">
+              <p className="font-Rubik md:text-[1.1rem]">
                 03. Turn on your new solar energy system then sit back and watch
                 the saving add up!
               </p>
@@ -97,20 +95,20 @@ function Industryweserve() {
             />
             <div className="absolute top-[40%] w-full divide-y-2 divide-slate-300 bg-transparent px-3 md:top-[60%]">
               <nav className="mb-2 flex flex-row items-center justify-between text-white">
-                <h3 className="font-Inter text-2xl font-semibold">
+                <h3 className="font-poppins text-xl font-semibold">
                   Installition in Process
                 </h3>
                 <h4 className="text-3xl font-thin">01</h4>
               </nav>
-              <div className="flex flex-row items-center justify-between px-2">
+              <div className="flex flex-row items-center justify-between px-2 font-Rubik">
                 <nav className="w-1/2">
-                  <h4 className="font-inter font-thin text-white">investors</h4>
+                  <h4 className=" font-thin text-white">investors</h4>
                   <p className="font-semibold text-white">
                     15 x Fronius Eco 27kW
                   </p>
                 </nav>
                 <nav className="w-1/2">
-                  <h4 className="font-inter font-thin text-white">Panels</h4>
+                  <h4 className=" font-thin text-white">Panels</h4>
                   <p className="font-semibold text-white">
                     1330 x 355W Solar Panels
                   </p>
